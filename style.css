@@ -1,0 +1,19 @@
+/* Set the background color */
+body {
+    background-color: #010101;
+}
+
+/* Add the Adlery Pro font */
+@font-face {
+    font-family: 'Adlery Pro';
+    src: url('path-to-your-font-file.woff2') format('tff'), /* Modern Browsers */
+         url('path-to-your-font-file.woff') format('tff'); /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the font to specific elements */
+h1, h2, h3, p {
+    font-family: 'Adlery Pro', sans-serif; /* Use the font as a fallback */
+    /* Add additional CSS properties for font size, weight, etc., as needed */
+}
