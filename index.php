@@ -29,55 +29,84 @@
     </header>
 
     <section id="about">
-        <div class="profileImage">
-            <img src="profile.jpg" alt="profile image">
+    <div class="topLevel">
+        <div class="introduction">
+            <h1>Hello, my name is Ernests!</h1>
+            <h2>I'm a professional web developer and graphic designer</h2>
         </div>
-        <div class="information">
+    </div>
+    <div class="middleLevel">
+        <div class="profileImage">
+            <img src="assets/images/profile.jpg" alt="profile image">
+        </div>
+        <div class="social">
+            <h1>Follow me on social media</h1>
             <div class="icons">
-                <div class="experience">
-
-                </div>
-                <div class="values">
-
-                </div>
-                <div class="approach">
-
-                </div>
-                <div class="passion">
-
-                </div>
-            </div>
-            <div class="generalInformation">
-                <div class="education">
-
-                </div>
-                <div class="work">
-
-                </div>
-            </div>
-            <div class="social">
-                <h1>Follow me on social media</h1>
                 <div class="twitter">
-                    <!--Icon-->
+                    <!-- Icon -->
+                    <i class="fa fa-twitter"></i>
                     <p>Twitter/X</p>
                 </div>
                 <div class="youtube">
-                    <!--Icon-->
+                    <!-- Icon -->
+                    <i class="fa fa-youtube"></i>
                     <p>YouTube</p>
                 </div>
                 <div class="instagram">
-                    <!--Icon-->
+                    <!-- Icon -->
+                    <i class="fa fa-instagram"></i>
                     <p>Instagram</p>
                 </div>
                 <div class="tiktok">
-                    <!--Icon-->
+                    <!-- Icon -->
+                    <i class="fa fa-tiktok"></i>
                     <p>TikTok</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="bottomLevel">
+        <div class="information">
+            <div class="icons">
+                <div class="experience">
+                    <!-- Icon -->
+                    <i class="fa fa-clock"></i>
+                    <p>Nearly 2000 hours spent on web development and graphic design projects</p>
+                </div>
+                <div class="values">
+                    <!-- Icon -->
+                    <i class="fa fa-thumbs-up"></i>
+                    <p>Focusing on feedback and client's satisfaction</p>
+                </div>
+                <div class="approach">
+                    <!-- Icon -->
+                    <i class="fa fa-book"></i>
+                    <p>Constantly developing to deliver the highest quality products</p>
+                </div>
+                <div class="passion">
+                    <!-- Icon -->
+                    <i class="fa fa-heart"></i>
+                    <p>Every project is personal and approached with professionalism</p>
+                </div>
+            </div>
+            <div class="generalInformation">
+                <div class="education">
+                    <!-- Icon -->
+                    <i class="fa fa-graduation-cap"></i>
+                    <p>Graduated from Valmieras tehnikums</p>
+                    <p>Participated in web development and iOS app development bootcamps</p>
+                </div>
+                <div class="work">
+                    <!-- Icon -->
+                    <i class="fa fa-briefcase"></i>
+                    <p>Gained experience on personal projects and as a freelancer</p>
+                    <p>Now working as an individual merchant</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-    </section>
 
     <section id="portfolio">
         <h1>Latest work</h1>
