@@ -126,6 +126,7 @@
 
     <section id="services">
         <h1>services</h1>
+        <p>Coming soon</p>
         <table>
             <tr>
                 <h2>Service name</h2>
