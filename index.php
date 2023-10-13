@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ernests Smalikis Portfolio</title>
     <link rel="stylesheet" href="https://use.typekit.net/akm8mel.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css">    <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -29,83 +29,71 @@
     </header>
 
     <section id="about">
-    <div class="topLevel">
-        <div class="introduction">
-            <h1>Hello, my name is Ernests!</h1>
-            <h2>I'm a professional web developer and graphic designer</h2>
-        </div>
+    <div class="sectionTitle">
+        <h1>Hello, my name is Ernests Smaliķis</h1>
+        <h2>I'm a professional web developer and graphic designer</h2>
     </div>
-    <div class="middleLevel">
+    <div class="sectionContent">
         <div class="profileImage">
-            <img src="assets/images/profile.jpg" alt="profile image">
+            <img src="assets/images/profile.jpg" alt="profile picture">
         </div>
-        <div class="social">
-            <h1>Follow me on social media</h1>
-            <div class="icons">
-                <div class="twitter">
-                    <!-- Icon -->
-                    <i class="fa fa-twitter"></i>
-                    <p>Twitter/X</p>
+        <div class="textContent">
+            <div class="social">
+                <div class="caption">
+                    <h1>Follow me on social media:</h1>
                 </div>
-                <div class="youtube">
-                    <!-- Icon -->
-                    <i class="fa fa-youtube"></i>
-                    <p>YouTube</p>
-                </div>
-                <div class="instagram">
-                    <!-- Icon -->
-                    <i class="fa fa-instagram"></i>
-                    <p>Instagram</p>
-                </div>
-                <div class="tiktok">
-                    <!-- Icon -->
-                    <i class="fa fa-tiktok"></i>
-                    <p>TikTok</p>
+                <div class="icons">
+                    <!-- Twitter -->
+                    <i class="bi bi-twitter"></i>
+                    <!-- YouTube -->
+                    <i class="bi bi-youtube"></i>
+                    <!-- Instagram -->
+                    <i class="bi bi-instagram"></i>
+                    <!-- GitHub -->
+                    <i class="bi bi-github"></i>
+                    <!-- LinkedIn -->
+                    <i class="bi bi-linkedin"></i>
+                    <!-- TikTok -->
+                    <i class="bi bi-tiktok"></i>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="bottomLevel">
-        <div class="information">
-            <div class="icons">
-                <div class="experience">
-                    <!-- Icon -->
-                    <i class="fa fa-clock"></i>
-                    <p>Nearly 2000 hours spent on web development and graphic design projects</p>
+            <br>
+            <div class="values">
+                <!-- Clock icon -->
+                <div class="icon-container">
+                  <i class="bi bi-clock"></i>
+                  <p>2000 Hours invested in web development and graphic design projects</p>
                 </div>
-                <div class="values">
-                    <!-- Icon -->
-                    <i class="fa fa-thumbs-up"></i>
-                    <p>Focusing on feedback and client's satisfaction</p>
+                <!-- Thumbs up icon -->
+                <div class="icon-container">
+                  <i class="bi bi-hand-thumbs-up"></i>
+                  <p>Valuing client's feedback</p>
                 </div>
-                <div class="approach">
-                    <!-- Icon -->
-                    <i class="fa fa-book"></i>
-                    <p>Constantly developing to deliver the highest quality products</p>
+                <!-- Open book icon -->
+                <div class="icon-container">
+                  <i class="bi bi-book"></i>
+                  <p>Constantly developing to ensure the highest quality standards</p>
                 </div>
-                <div class="passion">
-                    <!-- Icon -->
-                    <i class="fa fa-heart"></i>
-                    <p>Every project is personal and approached with professionalism</p>
+                <!-- Filled heart icon -->
+                <div class="icon-container">
+                  <i class="bi bi-heart-fill"></i>
+                  <p>Passionate</p>
                 </div>
             </div>
-            <div class="generalInformation">
-                <div class="education">
-                    <!-- Icon -->
-                    <i class="fa fa-graduation-cap"></i>
-                    <p>Graduated from Valmieras tehnikums</p>
-                    <p>Participated in web development and iOS app development bootcamps</p>
-                </div>
-                <div class="work">
-                    <!-- Icon -->
-                    <i class="fa fa-briefcase"></i>
-                    <p>Gained experience on personal projects and as a freelancer</p>
-                    <p>Now working as an individual merchant</p>
-                </div>
+
+            <div class="background">
+                <!-- Education icon -->
+                <i class="bi bi-journal"></i>
+                <p>Education</p>
+                <!-- Work icon -->
+                <i class="bi bi-briefcase"></i>
+                <p>Work</p>
             </div>
         </div>
     </div>
 </section>
+
+
 
 
     <section id="portfolio">
@@ -234,5 +222,6 @@
             <i><p>All rights reserved</p></i>
         </div>
     </footer>
+
 </body>
 </html>

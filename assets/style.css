@@ -1,220 +1,178 @@
 /* Set the background color */
 body {
-    font-family: "adlery-pro", sans-serif;
-    background-color: #010101;
+  font-family: "adlery-pro", sans-serif;
+  background-color: #010101;
 }
 
-h1{
-    display: flex;
-    font-family: "adlery-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    size: 48pt;
-    align-items: center;
-    justify-content: center;
-    margin: 0%;
+h1 {
+  display: flex;
+  font-family: "adlery-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 48pt; /* Use "font-size" instead of "size" */
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
 }
 
-h2{
-    display: flex;
-    font-family: "adlery-pro-swash", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: white;
-    size: 24pt;
-    align-items: center;
-    justify-content: center;
-    margin: 0%;
+h2 {
+  display: flex;
+  font-family: "adlery-pro-swash", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 24pt; /* Use "font-size" instead of "size" */
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
 }
 
-h3{
-    font-family: "adlery-pro-swash", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-style: normal;
-    color: white;
-    size: 18pt;
-    align-items: center;
-    justify-content: center;
-    margin: 0%;
+h3 {
+  font-family: "adlery-pro-swash", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 18pt; /* Use "font-size" instead of "size" */
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
 }
 
-p{
-    font-family: "adlery-pro-blockletter", sans-serif;
-    font-weight: 20;
-    font-style: italic;
-    font-style: normal;
-    color: white;
-    size: 16pt;
-    align-items: center;
-    justify-content: center;
-    margin: 0%;
+p {
+  font-family: "adlery-pro-blockletter", sans-serif;
+  font-weight: 20;
+  font-style: italic;
+  font-size: 16pt; /* Use "font-size" instead of "size" */
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
 }
+
 button {
-    display: inline-block; /* Use inline-block to keep buttons on the same line */
-    padding: 10px 20px; /* Adjust padding for a balanced look */
-    color: #ffffff; /* White text color */
-    background-color: #010101; /* Background color */
-    border: none; /* Remove the button border */
-    font-family: "adlery-pro-blockletter", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 14px; /* Correct the property name to "font-size" */
-    cursor: pointer; /* Add a pointer cursor for better UX */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-  }
-  
-  button:hover {
-    background-color: #333; /* Darken the background color on hover */
-  }
-  
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #010101;
+  border: none;
+  font-family: "adlery-pro-blockletter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
 
 /* Define the initial state of the header */
 header {
-    opacity: 0; /* Start with the header hidden */
-    transform: translateY(-20px); /* Move it up slightly for a smooth entrance */
-  }
-  
-  /* Define a CSS animation called 'fadeIn' */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0; /* Start with full transparency */
-      transform: translateY(-20px); /* Start slightly above its final position */
-    }
-    100% {
-      opacity: 1; /* End with full opacity */
-      transform: translateY(0); /* Move to its final position */
-    }
-  }
-  
-  /* Apply the animation to the header element */
-  header {
-    animation: fadeIn 1s ease-in-out forwards; /* Play the animation over 1 second with ease-in-out timing and keep the final state */
-  }
-
-  /* Initial styles for header elements */
-header {
-    opacity: 0;
-    transform: translateY(-20px);
-    text-align: center;
-  }
-  
-  .siteTitle h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  
-  /* Apply fadeIn animation to header */
-  header {
-    animation: fadeIn 1s ease-in-out forwards;
-    }
-
-.navbar {
-    display: flex;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeInWithDelay 1s ease-in-out 0.1s forwards;
-    flex-direction: row; /* Display buttons horizontally */
-  }
-  
-  .navbar button {
-    margin: 0 5px; /* Adjust the left and right margins to control spacing between buttons */
-  }
-  
-  
-  
-  
-  
-  
-  /* Dropdown initially hidden */
-  .dropdown-content {
-    display: none;
-  }
-  
-  /* Add transition for dropdown animation */
-  .dropdown:hover .dropdown-content {
-    display: block;
-    animation: fadeInDropdown 0.3s ease-in-out;
-  }
-  
-  /* Keyframes for animations */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInWithDelay {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInDropdown {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-
-/* Styling for the about section container */
-#about {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-/* Styling for the top level (introduction) */
-.topLevel {
+  opacity: 0;
+  transform: translateY(-20px);
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.topLevel h1 {
+.siteTitle h1 {
   font-size: 24px;
   margin: 0;
 }
 
-.topLevel h2 {
-  font-size: 18px;
-  color: #777;
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
-/* Styling for the middle level (profileImage and social) */
-.middleLevel {
+/* Apply fadeIn animation to header */
+header {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInWithDelay 1s ease-in-out 0.1s forwards;
+  flex-direction: row;
+}
+
+.navbar button {
+  margin: 0 5px;
+}
+
+/* Dropdown initially hidden */
+.dropdown-content {
+  display: none;
+}
+
+/* Add transition for dropdown animation */
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: fadeInDropdown 0.3s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInWithDelay {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDropdown {
+  0% {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Add these CSS rules for section layout */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sectionTitle {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-/* Styling for the profile image (align to the left) */
+.sectionContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* Add this to align content to the start */
+  width: 100%;
+}
+
+
 .profileImage {
   flex: 1;
   max-width: 50%;
@@ -224,38 +182,86 @@ header {
 .profileImage img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: Rounded corners for the profile image */
+  border-radius: 10px;
 }
 
-/* Styling for the social (align to the right) */
-.social {
+.textContent {
   flex: 1;
+  margin-left: 10px; /* Add margin to separate profileImage and textContent */
+  
 }
-
-/* Styling for the h1 tag in .social */
-.social h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* Styling for the icons */
-.icons {
+/* Styling for .social to center its content */
+.social {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   margin-top: 20px;
 }
 
-.icons > div {
-  flex: 0 0 calc(50% - 20px);
-  text-align: left;
+/* Styling for social icons */
+.icons {
+  display: flex; /* Use flexbox to center the icons horizontally */
+  align-items: center; /* Center items vertically within the div */
 }
 
-/* Styling for the icons themselves (Font Awesome icons used) */
 .icons i {
-  font-size: 24px;
-  color: #333;
-  margin-right: 10px;
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #ffffff; /* Icon color */
+  margin-right: 10px; /* Add some spacing between the icons */
+}
+
+/* Styling for the text next to social icons */
+.icons span {
+  font-family: "adlery-pro-blockletter", sans-serif;
+  font-weight: 20;
+  font-style: italic;
+  font-size: 16px;
+  color: #ffffff; /* Text color */
+  text-align: left; /* Align text to the left */
+  margin: 0;
+}
+
+
+/* Styling for the text next to social icons */
+.icons span {
+  font-family: "adlery-pro-blockletter", sans-serif;
+  font-weight: 20;
+  font-style: italic;
+  font-size: 16px;
+  color: #ffffff; /* Text color */
+  text-align: left; /* Align text to the left */
+  margin: 0;
+}
+/* Styling for .values */
+.values {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  justify-content: space-between; /* Space items evenly across the container */
+  align-items: flex-start; /* Align items to the top */
+  margin-top: 20px;
+}
+
+/* Styling for individual icon and text containers */
+.values .icon-container {
+  flex: 0 0 calc(50% - 10px); /* Make each container take 50% of the available space with some spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally within the container */
+  text-align: center; /* Center text horizontally within the container */
+  margin-bottom: 20px; /* Add spacing between each icon and text pair */
+}
+
+/* Styling for the icons themselves (Bootstrap Icons used) */
+.values .icons i {
+  font-size: 20px; /* Adjust the font size as needed */
+  color: #ffffff; /* Icon color */
+  margin-bottom: 5px; /* Add spacing between icon and text */
+}
+
+/* Styling for the text under the icons */
+.values .icons p {
+  font-size: 12px; /* Adjust font size as needed */
+  color: #ffffff; /* Text color */
+  margin: 0; /* Reset default margin */
 }
