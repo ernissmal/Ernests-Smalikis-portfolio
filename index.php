@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ernests Smalikis Portfolio</title>
+    <!-- Other meta tags and title -->
     <link rel="stylesheet" href="https://use.typekit.net/akm8mel.css">
-    <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css">    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css"> 
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="siteTitle">
