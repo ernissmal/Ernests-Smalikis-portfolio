@@ -3,6 +3,7 @@
 <head>
     <!-- Other meta tags and title -->
     <link rel="stylesheet" href="https://use.typekit.net/akm8mel.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css"> 
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -59,23 +60,19 @@
             </div>
             <br>
             <div class="values">
-                <!-- Clock icon -->
-                <div class="icon-container">
+                <div class="box" id="box1">
                   <i class="bi bi-clock"></i>
                   <p>2000 Hours invested in web development and graphic design projects</p>
                 </div>
-                <!-- Thumbs up icon -->
-                <div class="icon-container">
+                <div class="box" id="box2">
                   <i class="bi bi-hand-thumbs-up"></i>
                   <p>Valuing client's feedback</p>
                 </div>
-                <!-- Open book icon -->
-                <div class="icon-container">
+                <div class="box" id="box3">
                   <i class="bi bi-book"></i>
                   <p>Constantly developing to ensure the highest quality standards</p>
                 </div>
-                <!-- Filled heart icon -->
-                <div class="icon-container">
+                <div class="box" id="box4">
                   <i class="bi bi-heart-fill"></i>
                   <p>Passionate</p>
                 </div>

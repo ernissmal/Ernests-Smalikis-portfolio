@@ -1,6 +1,7 @@
 /* Set the background color */
 body {
   font-family: "adlery-pro", sans-serif;
+  color: #ffffff;
   background-color: #010101;
 }
 
@@ -233,35 +234,46 @@ header {
   text-align: left; /* Align text to the left */
   margin: 0;
 }
+
 /* Styling for .values */
 .values {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-  justify-content: space-between; /* Space items evenly across the container */
-  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
 }
 
 /* Styling for individual icon and text containers */
-.values .icon-container {
-  flex: 0 0 calc(50% - 10px); /* Make each container take 50% of the available space with some spacing */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally within the container */
-  text-align: center; /* Center text horizontally within the container */
-  margin-bottom: 20px; /* Add spacing between each icon and text pair */
+.values .box {
+  width: 45%;
+  text-align: center;
+  animation: handwriting 0.5s ease-in-out;
+  opacity: 0; /* Set the initial opacity to 0 */
+  transition: opacity 0.5s; /* Add opacity transition for smoother appearance */
 }
 
 /* Styling for the icons themselves (Bootstrap Icons used) */
-.values .icons i {
-  font-size: 20px; /* Adjust the font size as needed */
-  color: #ffffff; /* Icon color */
-  margin-bottom: 5px; /* Add spacing between icon and text */
+.values .box i {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 /* Styling for the text under the icons */
-.values .icons p {
-  font-size: 12px; /* Adjust font size as needed */
-  color: #ffffff; /* Text color */
-  margin: 0; /* Reset default margin */
+.values .box p {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}
+
+@keyframes handwriting {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
