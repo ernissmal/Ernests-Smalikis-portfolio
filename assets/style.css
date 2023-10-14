@@ -248,9 +248,6 @@ header {
 .values .box {
   width: 45%;
   text-align: center;
-  animation: handwriting 0.5s ease-in-out;
-  opacity: 0; /* Set the initial opacity to 0 */
-  transition: opacity 0.5s; /* Add opacity transition for smoother appearance */
 }
 
 /* Styling for the icons themselves (Bootstrap Icons used) */
@@ -265,15 +262,4 @@ header {
   font-size: 16px;
   color: #ffffff;
   margin: 0;
-}
-
-@keyframes handwriting {
-  from {
-    opacity: 0; /* Start with opacity 0 */
-    transform: translateX(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
 }

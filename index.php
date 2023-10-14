@@ -80,11 +80,13 @@
 
             <div class="background">
                 <!-- Education icon -->
-                <i class="bi bi-journal"></i>
-                <p>Education</p>
+                <i class="bi bi-graduation-cap"></i>
+                <p>Valmieras tehnikums(Senior year)<br>
+            <b>Programming technician</b></p>
                 <!-- Work icon -->
                 <i class="bi bi-briefcase"></i>
-                <p>Work</p>
+                <p>Programmer <br>
+            Freelance</p>
             </div>
         </div>
     </div>

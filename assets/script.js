@@ -7,7 +7,7 @@ dropdownButton.addEventListener("mouseenter", () => {
 });
 
 dropdownButton.addEventListener("mouseleave", () => {
-  dropdownContent.style.display = "none";
+  dropdownContent.style.display = "block";
 });
 
 const section = document.querySelector('.values');
