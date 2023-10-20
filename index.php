@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/font/bootstrap-icons.min.css"> 
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -19,11 +19,11 @@
   <button>Home</button>
   <button>Portfolio</button>
   <div class="dropdown">
-    <button>Open Dropdown</button>
+    <a href="#services"><button>Services</button></a>
     <div class="dropdown-content">
-      <a href="">Item 1</a>
-      <a href="#">Item 2</a>
-      <a href="#">Item 3</a>
+      <a href="#service1">Simple website</a>
+      <a href="#service2">Small business landing page</a>
+      <a href="#service3">Small internet store</a>
     </div>
   </div>
 </nav>
@@ -123,8 +123,8 @@
                 </div>
             </div>
             <div class="project1Description">
-                <h2>Project name</h2>
-                <p>Project description</p>
+                <h2>My portfolio page</h2>
+                <p>Website You're currently visiting, showcases my skills in designing and prototyping.</p>
             </div>
         </div>
 
@@ -137,8 +137,8 @@
                 </div>
             </div>
             <div class="project2Description">
-                <h2>Project name</h2>
-                <p>Project description</p>
+                <h2>NomadCanvasHaven landing page</h2>
+                <p>New canva store, that specialises in creating bohemian style art and is looking to expand in ecommerce.</p>
             </div>
         </div>
     </section>
@@ -148,85 +148,87 @@
         <p>Coming soon</p>
         <table>
             <tr>
-                <h2>Service name</h2>
-                <h3>Price</h3>
+                <h2>Persinal websites for individual use</h2>
+                <h3>Starting at 199 EUR</h3>
                 <div class="Service1Description">
+                    <p>Perfect for personal blogs, portfolios and other light weight functionalities.</p>
                     <div class="service1DescriptionPoint1">
-                        <!--Icon-->
-                        <p>Point 1</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Premade design adjusted just for You!</p>
                     </div>
                     <div class="service1DescriptionPoint2">
-                        <!--Icon-->
-                        <p>Point 2</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Up to 6 pages of Your content and 1 database with 6 tables!</p>
                     </div>
                     <div class="service1DescriptionPoint3">
-                        <!--Icon-->
-                        <p>Point 3</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Backend and Securiity files included!</p>
                     </div>
                     <div class="service1DescriptionPoint4">
-                        <!--Icon-->
-                        <p>Point 4</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Instructions how to use the website and manage it like a PRO!</p>
                     </div>
                     <div class="service1ApplyNowBtn">
-                        <!--Icon-->
-                        <button>Apply now</button>
+                        <button><i class="bi bi-arrow-right"></i> Apply now</button>
                     </div>
                 </div>
             </tr>
 
             <tr>
-                <h2>Service name</h2>
-                <h3>Price</h3>
+                <h2>Small business landing page with mailing lists</h2>
+                <p>For small businesses that are scheduling an online launch.</p>
+                <h3>Starting from 239 EUR</h3>
                 <div class="Service2Description">
                     <div class="service2DescriptionPoint1">
-                        <!--Icon-->
-                        <p>Point 1</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>up to 12 pages and 2 databases with total of 24 tables!</p>
                     </div>
                     <div class="service2DescriptionPoint2">
-                        <!--Icon-->
-                        <p>Point 2</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Premade design, adjusted just for You!</p>
                     </div>
                     <div class="service2DescriptionPoint3">
-                        <!--Icon-->
-                        <p>Point 3</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Mailing lists and chatbots for the FAQ!</p>
                     </div>
                     <div class="service2DescriptionPoint4">
-                        <!--Icon-->
-                        <p>Point 4</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Instructions how to use the website and manage it like a PRO!</p>
                     </div>
                     <div class="service2ApplyNowBtn">
-                        <!--Icon-->
-                        <button>Apply now</button>
+                        <button><i class="bi bi-arrow-right"></i> Apply now</button>
                     </div>
                 </div>
             </tr>
 
             <tr>
-                <h2>Service name</h2>
-                <h3>Price</h3>
+                <h2>Small internet store</h2>
+                <h3>Starting from 599 EUR</h3>
+                <p>For small businesses that want to sell products online.</p>
                 <div class="Service3Description">
                     <div class="service3DescriptionPoint1">
-                        <!--Icon-->
-                        <p>Point 1</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>All functionalities from previous services!</p>
                     </div>
                     <div class="service3DescriptionPoint2">
-                        <!--Icon-->
-                        <p>Point 2</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Ecommerce support, including up to 6 API'S</p>
                     </div>
                     <div class="service3DescriptionPoint3">
-                        <!--Icon-->
-                        <p>Point 3</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Advanced Security for Your business!</p>
                     </div>
                     <div class="service3DescriptionPoint4">
-                        <!--Icon-->
-                        <p>Point 4</p>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <p>Weekly SEO optimisation procedures!</p>
                     </div>
                     <div class="service3ApplyNowBtn">
-                        <!--Icon-->
-                        <button>Apply now</button>
+                        <button><i class="bi bi-arrow-right"></i> Apply now</button>
                     </div>
                 </div>
             </tr>
+            <h2>NOTE:</h2>
+            <p>All websites are size responsive for most popular devices after year 2020.</p>
         </table>
     </section>
 
