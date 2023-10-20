@@ -169,3 +169,210 @@ header {
       transform: translateY(0);
   }
 }
+
+/* Add these CSS rules for section layout */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.sectionContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.profileImage {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 1.25rem;
+}
+
+.profileImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.textContent {
+  flex: 1;
+  margin-left: 0.625rem;
+  
+}
+/* Styling for .social to center its content */
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+:root {
+  --icon-color: #ffffff;
+}
+
+/* Styling for social icons */
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  color: var(--icon-color);
+  margin-right: 0.625rem;
+}
+
+/* Styling for the text next to social icons */
+.icons span {
+  font-family: "adlery-pro-blockletter", sans-serif;
+  font-weight: 20;
+  font-style: italic;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: left;
+  margin: 0;
+}
+
+/* Styling for .values */
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+/* Styling for individual icon and text containers */
+.values .box {
+  width: 45%;
+  text-align: center;
+}
+
+/* Styling for the icons themselves (Bootstrap Icons used) */
+.values .box i {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Styling for the text under the icons */
+.values .box p {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* 
+  This code snippet styles a section with a background and an icon with text in the center.
+  It utilizes flexbox for layout and applies styling to the icon and text.
+*/
+
+.background {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh; /* Utilize all available space vertically */
+}
+
+.icon {
+  text-align: center;
+  margin: 0 20px; /* Add spacing between the icon and text */
+}
+
+/* Styling for the icons themselves (Bootstrap Icons used) */
+.icon i {
+  font-size: 50px;
+  color: #ffffff; /* Change color to your preference */
+}
+
+/* Styling for the text */
+.icon p {
+  font-size: 20px;
+  color: #ffffff; /* Change color to your preference */
+  text-align: center;
+}
+
+
+/* Project styles */
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.project-images {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.project-additionalImages {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.project-description {
+  text-align: center;
+}
+
+/* Add media queries for responsive layout */
+@media screen and (max-width: 768px) {
+  .project {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .project-images {
+    margin-bottom: 1rem;
+  }
+
+  .project-additionalImages {
+    width: 100%;
+  }
+}
+
+
+#services {
+  text-align: center;
+}
+
+#services table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#services h2, #services h3 {
+  text-align: center;
+}
+
+#services .service1Description {
+  margin-top: 20px;
+}
+
+#services .service1DescriptionPoint1, #services .service1DescriptionPoint2, #services .service1DescriptionPoint3, #services .service1DescriptionPoint4 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#services .service1DescriptionPoint1 i, #services .service1DescriptionPoint2 i, #services .service1DescriptionPoint3 i, #services .service1DescriptionPoint4 i {
+  color: #007bff;
+  margin-right: 10px;
+}
