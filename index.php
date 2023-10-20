@@ -44,27 +44,21 @@
                     <h1>Follow me on social media:</h1>
                 </div>
                 <div class="icons">
-                    <!-- Twitter -->
                     <a href="">
                         <i class="bi bi-twitter"></i>
                     </a>
-                    <!-- YouTube -->
                     <a href="">
                         <i class="bi bi-youtube"></i>
                     </a>
-                    <!-- Instagram -->
                     <a href="">
                         <i class="bi bi-instagram"></i>
                     </a>
-                    <!-- GitHub -->
                     <a href="">
                         <i class="bi bi-github"></i>
                     </a>
-                    <!-- LinkedIn -->
                     <a href="">
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <!-- TikTok -->
                     <a href="">
                         <i class="bi bi-tiktok"></i>
                     </a>
