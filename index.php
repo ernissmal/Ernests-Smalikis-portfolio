@@ -21,9 +21,9 @@
   <div class="dropdown">
     <a href="#services"><button>Services</button></a>
     <div class="dropdown-content">
-      <a href="#service1">Simple website</a>
-      <a href="#service2">Small business landing page</a>
-      <a href="#service3">Small internet store</a>
+      <button href="#service1">Simple website</button>
+      <button href="#service2">Small business landing page</button>
+      <button href="#service3">Small internet store</button>
     </div>
   </div>
 </nav>

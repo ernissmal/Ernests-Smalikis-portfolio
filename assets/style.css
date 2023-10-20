@@ -75,6 +75,18 @@ header {
   transform: translateY(-20px);
   text-align: center;
 }
+/* Animate the header when it becomes visible */
+header.visible {
+  animation: fadeInUp 1s, slideDown 1s forwards;
+  }
+  @keyframes fadeInUp {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+    }
+    @keyframes slideDown {
+      from {transform: translateY(+20px)};
+      to   {transform: translateY(0)};
+      }
 
 .siteTitle h1 {
   font-size: 24px;
@@ -117,6 +129,11 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
   animation: fadeInDropdown 0.3s ease-in-out;
+  color: #ffffff;
+  a{
+    color: #ffffff;
+    background-color: #333;
+  }
 }
 
 /* Keyframes for animations */
@@ -151,140 +168,4 @@ header {
       opacity: 1;
       transform: translateY(0);
   }
-}
-
-/* Add these CSS rules for section layout */
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.sectionTitle {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.sectionContent {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start; /* Add this to align content to the start */
-  width: 100%;
-}
-
-
-.profileImage {
-  flex: 1;
-  max-width: 50%;
-  margin-right: 20px;
-}
-
-.profileImage img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.textContent {
-  flex: 1;
-  margin-left: 10px; /* Add margin to separate profileImage and textContent */
-  
-}
-/* Styling for .social to center its content */
-.social {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  margin-top: 20px;
-}
-
-/* Styling for social icons */
-.icons {
-  display: flex; /* Use flexbox to center the icons horizontally */
-  align-items: center; /* Center items vertically within the div */
-}
-
-.icons i {
-  font-size: 24px; /* Adjust the font size as needed */
-  color: #ffffff; /* Icon color */
-  margin-right: 10px; /* Add some spacing between the icons */
-}
-
-/* Styling for the text next to social icons */
-.icons span {
-  font-family: "adlery-pro-blockletter", sans-serif;
-  font-weight: 20;
-  font-style: italic;
-  font-size: 16px;
-  color: #ffffff; /* Text color */
-  text-align: left; /* Align text to the left */
-  margin: 0;
-}
-
-
-/* Styling for the text next to social icons */
-.icons span {
-  font-family: "adlery-pro-blockletter", sans-serif;
-  font-weight: 20;
-  font-style: italic;
-  font-size: 16px;
-  color: #ffffff; /* Text color */
-  text-align: left; /* Align text to the left */
-  margin: 0;
-}
-
-/* Styling for .values */
-.values {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
-
-/* Styling for individual icon and text containers */
-.values .box {
-  width: 45%;
-  text-align: center;
-}
-
-/* Styling for the icons themselves (Bootstrap Icons used) */
-.values .box i {
-  font-size: 30px;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-/* Styling for the text under the icons */
-.values .box p {
-  font-size: 16px;
-  color: #ffffff;
-  margin: 0;
-}
-
-.background {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vh; /* Utilize all available space vertically */
-}
-.icon {
-  text-align: center;
-  margin: 0 20px; /* Add spacing between the icon and text */
-}
-
-/* Styling for the icons themselves (Bootstrap Icons used) */
-.icon i {
-  font-size: 50px;
-  color: #ffffff; /* Change color to your preference */
-}
-
-/* Styling for the text */
-.icon p {
-  font-size: 20px;
-  color: #ffffff; /* Change color to your preference */
-  text-align: center;
 }
