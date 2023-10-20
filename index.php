@@ -14,19 +14,19 @@
         <div class="siteTitle">
             <h1>Ernests Smaliķis</h1>
         </div>
-        <div class="navbar">
-            <button>About</button>
-            <button>Home</button>
-            <button>Portfolio</button>
-            <div class="dropdown">
-                <button>Open Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="">Item 1</a>
-                    <a href="#">Item 2</a>
-                    <a href="#">Item 3</a>
-                </div>
-            </div>
-        </div>
+        <nav class="navbar">
+  <button>About</button>
+  <button>Home</button>
+  <button>Portfolio</button>
+  <div class="dropdown">
+    <button>Open Dropdown</button>
+    <div class="dropdown-content">
+      <a href="">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+    </div>
+  </div>
+</nav>
     </header>
 
     <section id="about">
@@ -35,9 +35,9 @@
         <h2>I'm a professional web developer and graphic designer</h2>
     </div>
     <div class="sectionContent">
-        <div class="profileImage">
-            <img src="assets/images/profile.jpg" alt="profile picture">
-        </div>
+    <div class="profileImage">
+        <img src="assets/images/profile.jpg" alt="Ernests Smaliķis profile picture">
+    </div>
         <div class="textContent">
             <div class="social">
                 <div class="caption">
@@ -45,17 +45,29 @@
                 </div>
                 <div class="icons">
                     <!-- Twitter -->
-                    <i class="bi bi-twitter"></i>
+                    <a href="">
+                        <i class="bi bi-twitter"></i>
+                    </a>
                     <!-- YouTube -->
-                    <i class="bi bi-youtube"></i>
+                    <a href="">
+                        <i class="bi bi-youtube"></i>
+                    </a>
                     <!-- Instagram -->
-                    <i class="bi bi-instagram"></i>
+                    <a href="">
+                        <i class="bi bi-instagram"></i>
+                    </a>
                     <!-- GitHub -->
-                    <i class="bi bi-github"></i>
+                    <a href="">
+                        <i class="bi bi-github"></i>
+                    </a>
                     <!-- LinkedIn -->
-                    <i class="bi bi-linkedin"></i>
+                    <a href="">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
                     <!-- TikTok -->
-                    <i class="bi bi-tiktok"></i>
+                    <a href="">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
                 </div>
             </div>
             <br>
@@ -74,20 +86,25 @@
                 </div>
                 <div class="box" id="box4">
                   <i class="bi bi-heart-fill"></i>
-                  <p>Passionate</p>
+                  <p>Every project I take is taken seriously, Your success is personal to me</p>
                 </div>
             </div>
 
             <div class="background">
-                <!-- Education icon -->
-                <i class="bi bi-graduation-cap"></i>
-                <p>Valmieras tehnikums(Senior year)<br>
-            <b>Programming technician</b></p>
-                <!-- Work icon -->
-                <i class="bi bi-briefcase"></i>
-                <p>Programmer <br>
-            Freelance</p>
-            </div>
+    <div class="icon">
+        <i class="bi bi-building"></i>
+        <p>Valmieras tehnikums(Senior year)<br>
+            <b>Programming technician</b>
+        </p>
+    </div>
+    <div class="icon">
+        <i class="bi bi-briefcase"></i>
+        <p>Programmer <br>
+            Freelance
+        </p>
+    </div>
+</div>
+
         </div>
     </div>
 </section>
@@ -97,7 +114,7 @@
 
     <section id="portfolio">
         <h1>Latest work</h1>
-        <div class="project1">
+        <div class="Portfolio page">
             <div class=project1-images>
                 <img src="" alt="main-image">
                 <div class="project1-additionalImages">

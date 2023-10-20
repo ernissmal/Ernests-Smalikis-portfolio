@@ -263,3 +263,28 @@ header {
   color: #ffffff;
   margin: 0;
 }
+
+.background {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh; /* Utilize all available space vertically */
+}
+.icon {
+  text-align: center;
+  margin: 0 20px; /* Add spacing between the icon and text */
+}
+
+/* Styling for the icons themselves (Bootstrap Icons used) */
+.icon i {
+  font-size: 50px;
+  color: #ffffff; /* Change color to your preference */
+}
+
+/* Styling for the text */
+.icon p {
+  font-size: 20px;
+  color: #ffffff; /* Change color to your preference */
+  text-align: center;
+}
