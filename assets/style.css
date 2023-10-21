@@ -349,30 +349,57 @@ header {
 }
 
 
-#services {
-  text-align: center;
+:root {
+  --background-color: #010101;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-duration: 0.3s;
 }
 
-#services table {
-  width: 100%;
-  margin-top: 20px;
-}
-
-#services h2, #services h3 {
-  text-align: center;
-}
-
-#services .service1Description {
-  margin-top: 20px;
-}
-
-#services .service1DescriptionPoint1, #services .service1DescriptionPoint2, #services .service1DescriptionPoint3, #services .service1DescriptionPoint4 {
+.services {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
-#services .service1DescriptionPoint1 i, #services .service1DescriptionPoint2 i, #services .service1DescriptionPoint3 i, #services .service1DescriptionPoint4 i {
-  color: #007bff;
-  margin-right: 10px;
+.service-card {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px var(--box-shadow-color);
+  transition: background-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+  flex-basis: 33.33%;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.note {
+  text-align: center;
+  font-size: 0.9rem;
+  size: 12px;
+  color: #777;
+  margin-top: 20px;
+}
+
+.note a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #ffffff;
+  size: 12px;
+}
+
+/* Remove bulletpoints from <ul> */
+.service-card ul {
+  list-style-type: none;
+}
+
+/* Style <li> elements within <ul> */
+.service-card ul li {
+  margin: 5px 0;
+  color: #ffffff;
 }
