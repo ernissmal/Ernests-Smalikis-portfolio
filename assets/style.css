@@ -1,9 +1,27 @@
+/* Apply a scroll-behavior to enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Set the background color */
 body {
   font-family: "adlery-pro", sans-serif;
   color: #ffffff;
   background-color: #010101;
 }
+
+/* Animate elements as they become visible */
+.animated-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 h1 {
   font-family: "adlery-pro", sans-serif;

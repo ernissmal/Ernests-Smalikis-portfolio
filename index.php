@@ -10,20 +10,20 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="siteTitle">
             <h1>Ernests Smaliķis</h1>
         </div>
         <nav class="navbar">
-  <button>About</button>
-  <button>Home</button>
-  <button>Portfolio</button>
+  <a href="#about"><button>About</button></a>
+  <a href="#header"><button>Home</button></a>
+  <a href="#portfolio"><button>Portfolio</button></a>
   <div class="dropdown">
     <a href="#services"><button>Services</button></a>
     <div class="dropdown-content">
-      <button href="#service1">Simple website</button>
-      <button href="#service2">Small business landing page</button>
-      <button href="#service3">Small internet store</button>
+      <a href="#service1"><button>Simple website</button></a>
+      <a href="#service2"><button>Small business landing page</button></a>
+      <a href="service3"><button>Small internet store</button></a>
     </div>
   </div>
 </nav>
@@ -200,7 +200,7 @@
     </section>
 
     <section id="services">
-  <div class="service-card">
+  <div class="service-card" id="service1">
     <h2>Personal websites for individual use</h2>
     <p>Starting at 199 EUR</p>
     <p>Perfect for personal blogs, portfolios, and other lightweight functionalities.</p>
@@ -213,7 +213,7 @@
     <button class="apply-now-btn"><i class="bi bi-arrow-right"></i> Apply now</button>
   </div>
 
-  <div class="service-card">
+  <div class="service-card" id="service2">
     <h2>Small business landing page with mailing lists</h2>
     <p>For small businesses scheduling an online launch</p>
     <p>Starting from 239 EUR</p>
@@ -226,7 +226,7 @@
     <button class="apply-now-btn"><i class="bi bi-arrow-right"></i> Apply now</button>
   </div>
 
-  <div class="service-card">
+  <div class="service-card" id="service3">
     <h2>Small internet store</h2>
     <p>For small businesses that want to sell products online.</p>
     <p>Starting from 599 EUR</p>
