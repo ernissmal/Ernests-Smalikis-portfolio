@@ -10,24 +10,86 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="siteTitle">
             <h1>Ernests Smaliķis</h1>
         </div>
         <nav class="navbar">
-  <button>About</button>
-  <button>Home</button>
-  <button>Portfolio</button>
+  <a href="#about"><button>About</button></a>
+  <a href="#header"><button>Home</button></a>
+  <a href="#portfolio"><button>Portfolio</button></a>
   <div class="dropdown">
     <a href="#services"><button>Services</button></a>
     <div class="dropdown-content">
-      <a href="#service1">Simple website</a>
-      <a href="#service2">Small business landing page</a>
-      <a href="#service3">Small internet store</a>
+      <a href="#service1"><button>Simple website</button></a>
+      <a href="#service2"><button>Small business landing page</button></a>
+      <a href="service3"><button>Small internet store</button></a>
     </div>
   </div>
 </nav>
     </header>
+ <!-- Popup for beta--->
+    <style>
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .popup-content h2 {
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .popup-content p {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .popup-content button {
+            background-color: black;
+            color: #ffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Rotate Device</h2>
+            <p>Please rotate your device for the best experience.</p>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('popup');
+        const closePopupButton = document.getElementById('close-popup');
+
+        // Show the popup
+        popup.style.display = 'flex';
+
+        // Close the popup when the button is clicked
+        closePopupButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    </script>
 
     <section id="about">
     <div class="sectionTitle">
@@ -44,22 +106,22 @@
                     <h1>Follow me on social media:</h1>
                 </div>
                 <div class="icons">
-                    <a href="">
+                    <a href="https://twitter.com/ESmalikis">
                         <i class="bi bi-twitter"></i>
                     </a>
-                    <a href="">
+                    <a href="https://youtube.com/@ESmalikis?si=VoRrorED2I6F_4Eo">
                         <i class="bi bi-youtube"></i>
                     </a>
-                    <a href="">
+                    <a href="https://instagram.com/erenesto_smalikis?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
                         <i class="bi bi-instagram"></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/ernissmal">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/ernests-smali%C4%B7is-202a48202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.tiktok.com/@e.smalikis?_t=8gisCd34Ldg&_r=1">
                         <i class="bi bi-tiktok"></i>
                     </a>
                 </div>
@@ -138,93 +200,53 @@
     </section>
 
     <section id="services">
-        <h1>services</h1>
-        <p>Coming soon</p>
-        <table>
-            <tr>
-                <h2>Persinal websites for individual use</h2>
-                <h3>Starting at 199 EUR</h3>
-                <div class="Service1Description">
-                    <p>Perfect for personal blogs, portfolios and other light weight functionalities.</p>
-                    <div class="service1DescriptionPoint1">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Premade design adjusted just for You!</p>
-                    </div>
-                    <div class="service1DescriptionPoint2">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Up to 6 pages of Your content and 1 database with 6 tables!</p>
-                    </div>
-                    <div class="service1DescriptionPoint3">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Backend and Securiity files included!</p>
-                    </div>
-                    <div class="service1DescriptionPoint4">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Instructions how to use the website and manage it like a PRO!</p>
-                    </div>
-                    <div class="service1ApplyNowBtn">
-                        <button><i class="bi bi-arrow-right"></i> Apply now</button>
-                    </div>
-                </div>
-            </tr>
+  <div class="service-card" id="service1">
+    <h2>Personal websites for individual use</h2>
+    <p>Starting at 199 EUR</p>
+    <p>Perfect for personal blogs, portfolios, and other lightweight functionalities.</p>
+    <ul>
+      <li><i class="bi bi-check-circle-fill"></i>Premade design adjusted just for you!</li>
+      <li><i class="bi bi-check-circle-fill"></i>Up to 6 pages of your content and 1 database with 6 tables!</li>
+      <li><i class="bi bi-check-circle-fill"></i>Backend and security files included!</li>
+      <li><i class="bi bi-check-circle-fill"></i>Instructions on how to use the website and manage it like a pro!</li>
+    </ul>
+    <button class="apply-now-btn"><i class="bi bi-arrow-right"></i> Apply now</button>
+  </div>
 
-            <tr>
-                <h2>Small business landing page with mailing lists</h2>
-                <p>For small businesses that are scheduling an online launch.</p>
-                <h3>Starting from 239 EUR</h3>
-                <div class="Service2Description">
-                    <div class="service2DescriptionPoint1">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>up to 12 pages and 2 databases with total of 24 tables!</p>
-                    </div>
-                    <div class="service2DescriptionPoint2">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Premade design, adjusted just for You!</p>
-                    </div>
-                    <div class="service2DescriptionPoint3">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Mailing lists and chatbots for the FAQ!</p>
-                    </div>
-                    <div class="service2DescriptionPoint4">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Instructions how to use the website and manage it like a PRO!</p>
-                    </div>
-                    <div class="service2ApplyNowBtn">
-                        <button><i class="bi bi-arrow-right"></i> Apply now</button>
-                    </div>
-                </div>
-            </tr>
+  <div class="service-card" id="service2">
+    <h2>Small business landing page with mailing lists</h2>
+    <p>For small businesses scheduling an online launch</p>
+    <p>Starting from 239 EUR</p>
+    <ul>
+      <li><i class="bi bi-check-circle-fill"></i>Up to 12 pages and 2 databases with a total of 24 tables!</li>
+      <li><i class="bi bi-check-circle-fill"></i>Premade design, adjusted just for you!</li>
+      <li><i class="bi bi-check-circle-fill"></i>Mailing lists and chatbots for the FAQ!</li>
+      <li><i class="bi bi-check-circle-fill"></i>Instructions on how to use the website and manage it like a pro!</li>
+    </ul>
+    <button class="apply-now-btn"><i class="bi bi-arrow-right"></i> Apply now</button>
+  </div>
 
-            <tr>
-                <h2>Small internet store</h2>
-                <h3>Starting from 599 EUR</h3>
-                <p>For small businesses that want to sell products online.</p>
-                <div class="Service3Description">
-                    <div class="service3DescriptionPoint1">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>All functionalities from previous services!</p>
-                    </div>
-                    <div class="service3DescriptionPoint2">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Ecommerce support, including up to 6 API'S</p>
-                    </div>
-                    <div class="service3DescriptionPoint3">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Advanced Security for Your business!</p>
-                    </div>
-                    <div class="service3DescriptionPoint4">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <p>Weekly SEO optimisation procedures!</p>
-                    </div>
-                    <div class="service3ApplyNowBtn">
-                        <button><i class="bi bi-arrow-right"></i> Apply now</button>
-                    </div>
-                </div>
-            </tr>
-            <h2>NOTE:</h2>
-            <p>All websites are size responsive for most popular devices after year 2020.</p>
-        </table>
-    </section>
+  <div class="service-card" id="service3">
+    <h2>Small internet store</h2>
+    <p>For small businesses that want to sell products online.</p>
+    <p>Starting from 599 EUR</p>
+    <ul>
+      <li><i class="bi bi-check-circle-fill"></i>All functionalities from previous services!</li>
+      <li><i class="bi bi-check-circle-fill"></i>E-commerce support, including up to 6 APIs</li>
+      <li><i class="bi bi-check-circle-fill"></i>Advanced security for your business!</li>
+      <li><i class="bi bi-check-circle-fill"></i>Weekly SEO optimization procedures!</li>
+    </ul>
+    <button class="apply-now-btn"><i class="bi bi-arrow-right"></i> Apply now</button>
+  </div>
+    <br>
+  <div class="note">
+  <h2>NOTE:</h2>
+  <p>All websites are size-responsive for most popular devices after the year 2020.<br>
+View the full device list <a href="device-list.html">here!</a></p>
+</div>
+
+</section>
+
 
     <footer>
         <div class="copyright">
@@ -233,6 +255,7 @@
 
         <div class="copyrightDescription">
             <i><p>All rights reserved</p></i>
+            <p>Version 1.0 BETA</p>
         </div>
     </footer>
 

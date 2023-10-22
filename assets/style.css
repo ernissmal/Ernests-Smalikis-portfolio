@@ -1,3 +1,8 @@
+/* Apply a scroll-behavior to enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Set the background color */
 body {
   font-family: "adlery-pro", sans-serif;
@@ -5,27 +10,36 @@ body {
   background-color: #010101;
 }
 
+/* Animate elements as they become visible */
+.animated-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 h1 {
-  display: flex;
   font-family: "adlery-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: white;
-  font-size: 48pt; /* Use "font-size" instead of "size" */
-  align-items: center;
-  justify-content: center;
+  font-size: 3rem; /* Use rem or em units instead of pt */
+  text-align: center; /* Use text-align instead of flexbox */
   margin: 0%;
 }
 
 h2 {
-  display: flex;
   font-family: "adlery-pro-swash", sans-serif;
   font-weight: 500;
   font-style: normal;
   color: white;
-  font-size: 24pt; /* Use "font-size" instead of "size" */
-  align-items: center;
-  justify-content: center;
+  font-size: 1.5rem; /* Use rem or em units instead of pt */
+  text-align: center; /* Use text-align instead of flexbox */
   margin: 0%;
 }
 
@@ -34,9 +48,8 @@ h3 {
   font-weight: 700;
   font-style: normal;
   color: white;
-  font-size: 18pt; /* Use "font-size" instead of "size" */
-  align-items: center;
-  justify-content: center;
+  font-size: 1.125rem; /* Use rem or em units instead of pt */
+  text-align: center; /* Use text-align instead of flexbox */
   margin: 0%;
 }
 
@@ -44,10 +57,9 @@ p {
   font-family: "adlery-pro-blockletter", sans-serif;
   font-weight: 20;
   font-style: italic;
-  font-size: 16pt; /* Use "font-size" instead of "size" */
+  font-size: 1rem; /* Use rem or em units instead of pt */
   color: white;
-  align-items: center;
-  justify-content: center;
+  text-align: center; /* Use text-align instead of flexbox */
   margin: 0%;
 }
 
@@ -74,6 +86,18 @@ header {
   opacity: 0;
   transform: translateY(-20px);
   text-align: center;
+}
+/* Animate the header when it becomes visible */
+header.visible {
+  animation: fadeInUp 1s, slideDown 1s forwards;
+}
+@keyframes fadeInUp {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+@keyframes slideDown {
+  from {transform: translateY(+20px)};
+  to   {transform: translateY(0)};
 }
 
 .siteTitle h1 {
@@ -117,6 +141,11 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
   animation: fadeInDropdown 0.3s ease-in-out;
+  color: #ffffff;
+  a{
+    color: #ffffff;
+    background-color: #333;
+  }
 }
 
 /* Keyframes for animations */
@@ -154,30 +183,29 @@ header {
 }
 
 /* Add these CSS rules for section layout */
-#about {
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .sectionTitle {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .sectionContent {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start; /* Add this to align content to the start */
+  justify-content: flex-start;
   width: 100%;
 }
-
 
 .profileImage {
   flex: 1;
   max-width: 50%;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .profileImage img {
@@ -188,28 +216,32 @@ header {
 
 .textContent {
   flex: 1;
-  margin-left: 10px; /* Add margin to separate profileImage and textContent */
+  margin-left: 0.625rem;
   
 }
 /* Styling for .social to center its content */
 .social {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+:root {
+  --icon-color: #ffffff;
 }
 
 /* Styling for social icons */
 .icons {
-  display: flex; /* Use flexbox to center the icons horizontally */
-  align-items: center; /* Center items vertically within the div */
+  display: flex;
+  align-items: center;
 }
 
 .icons i {
-  font-size: 24px; /* Adjust the font size as needed */
-  color: #ffffff; /* Icon color */
-  margin-right: 10px; /* Add some spacing between the icons */
+  font-size: 1.5rem;
+  color: var(--icon-color);
+  margin-right: 0.625rem;
 }
 
 /* Styling for the text next to social icons */
@@ -218,20 +250,8 @@ header {
   font-weight: 20;
   font-style: italic;
   font-size: 16px;
-  color: #ffffff; /* Text color */
-  text-align: left; /* Align text to the left */
-  margin: 0;
-}
-
-
-/* Styling for the text next to social icons */
-.icons span {
-  font-family: "adlery-pro-blockletter", sans-serif;
-  font-weight: 20;
-  font-style: italic;
-  font-size: 16px;
-  color: #ffffff; /* Text color */
-  text-align: left; /* Align text to the left */
+  color: #ffffff;
+  text-align: left;
   margin: 0;
 }
 
@@ -241,7 +261,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /* Styling for individual icon and text containers */
@@ -264,6 +284,11 @@ header {
   margin: 0;
 }
 
+/* 
+  This code snippet styles a section with a background and an icon with text in the center.
+  It utilizes flexbox for layout and applies styling to the icon and text.
+*/
+
 .background {
   padding-top: 20px;
   display: flex;
@@ -271,6 +296,7 @@ header {
   align-items: center;
   width: 100vh; /* Utilize all available space vertically */
 }
+
 .icon {
   text-align: center;
   margin: 0 20px; /* Add spacing between the icon and text */
@@ -287,4 +313,195 @@ header {
   font-size: 20px;
   color: #ffffff; /* Change color to your preference */
   text-align: center;
+}
+
+
+/* Project styles */
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.project-images {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.project-additionalImages {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.project-description {
+  text-align: center;
+}
+
+/* Add media queries for responsive layout */
+@media screen and (max-width: 768px) {
+  .project {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .project-images {
+    margin-bottom: 1rem;
+  }
+
+  .project-additionalImages {
+    width: 100%;
+  }
+}
+
+
+:root {
+  --background-color: #010101;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-duration: 0.3s;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px var(--box-shadow-color);
+  transition: background-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+  flex-basis: 33.33%;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.note {
+  text-align: center;
+  font-size: 0.9rem;
+  size: 12px;
+  color: #777;
+  margin-top: 20px;
+}
+
+.note a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #ffffff;
+  size: 12px;
+}
+
+/* Remove bulletpoints from <ul> */
+.service-card ul {
+  list-style-type: none;
+  font-style: normal;
+  font-family: "adlery-pro-blockletter", sans-serif;
+}
+
+/* Style <li> elements within <ul> */
+.service-card ul li {
+  margin: 5px 0;
+  color: #ffffff;
+  font-family: "adlery-pro-blockletter", sans-serif;
+}
+.apply-now-btn{
+  font-family: "adlery-pro-swash", sans-serif;
+}
+
+/* Footer */
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Code Improvement Suggestions */
+
+/* Suggestion 1: Instead of using pt for font-size, use rem or em units for better responsiveness and accessibility. */
+h1 {
+  font-size: 3rem; /* Use rem or em units instead of pt */
+}
+
+h2 {
+  font-size: 1.5rem; /* Use rem or em units instead of pt */
+}
+
+h3 {
+  font-size: 1.125rem; /* Use rem or em units instead of pt */
+}
+
+p {
+  font-size: 1rem; /* Use rem or em units instead of pt */
+}
+
+/* Suggestion 2: Instead of using `display: flex` and `align-items: center; justify-content: center;` on every text element like `h1`, `h2`, `h3`, `p`, use `text-align: center;` for centering text. */
+h1 {
+  text-align: center; /* Use text-align instead of flexbox */
+}
+
+h2 {
+  text-align: center; /* Use text-align instead of flexbox */
+}
+
+h3 {
+  text-align: center; /* Use text-align instead of flexbox */
+}
+
+p {
+  text-align: center; /* Use text-align instead of flexbox */
+}
+
+/* Suggestion 3: Instead of repeating the same font-family in every selector, define it once in the body selector and it will be inherited by all elements. */
+body {
+  font-family: "adlery-pro", sans-serif;
+}
+
+h1 {
+  font-family: "adlery-pro", sans-serif;
+}
+
+h2 {
+  font-family: "adlery-pro-swash", sans-serif;
+}
+
+h3 {
+  font-family: "adlery-pro-swash", sans-serif;
+}
+
+p {
+  font-family: "adlery-pro-blockletter", sans-serif;
+}
+
+/* Suggestion 4: Instead of defining animations individually for each element, create a general class for animations and apply it to the elements as needed. */
+.animated-element {
+  opacity: 0;
+  transform: translateY(-20px);
+  text-align: center;
+}
+.animated-element.visible {
+  animation: fadeInUp 1s, slideDown 1s forwards;
+}
+@keyframes fadeInUp {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+@keyframes slideDown {
+  from {transform: translateY(+20px)};
+  to   {transform: translateY(0)};
 }
