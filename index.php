@@ -106,22 +106,22 @@
                     <h1>Follow me on social media:</h1>
                 </div>
                 <div class="icons">
-                    <a href="">
+                    <a href="https://twitter.com/ESmalikis">
                         <i class="bi bi-twitter"></i>
                     </a>
-                    <a href="">
+                    <a href="https://youtube.com/@ESmalikis?si=VoRrorED2I6F_4Eo">
                         <i class="bi bi-youtube"></i>
                     </a>
-                    <a href="">
+                    <a href="https://instagram.com/erenesto_smalikis?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
                         <i class="bi bi-instagram"></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/ernissmal">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/ernests-smali%C4%B7is-202a48202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.tiktok.com/@e.smalikis?_t=8gisCd34Ldg&_r=1">
                         <i class="bi bi-tiktok"></i>
                     </a>
                 </div>
