@@ -28,6 +28,68 @@
   </div>
 </nav>
     </header>
+ <!-- Popup for beta--->
+    <style>
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .popup-content h2 {
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .popup-content p {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .popup-content button {
+            background-color: black;
+            color: #ffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Rotate Device</h2>
+            <p>Please rotate your device for the best experience.</p>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('popup');
+        const closePopupButton = document.getElementById('close-popup');
+
+        // Show the popup
+        popup.style.display = 'flex';
+
+        // Close the popup when the button is clicked
+        closePopupButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    </script>
 
     <section id="about">
     <div class="sectionTitle">
@@ -193,6 +255,7 @@ View the full device list <a href="device-list.html">here!</a></p>
 
         <div class="copyrightDescription">
             <i><p>All rights reserved</p></i>
+            <p>Version 1.0 BETA</p>
         </div>
     </footer>
 
