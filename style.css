@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    font-family: 'Dancing Script', cursive;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #555;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 10px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive Navbar */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* Media Query for Responsive Navbar */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    header nav ul.show {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 24px; /* Adjust the size as needed */
+        cursor: pointer;
+        margin-right: 10px; /* Add some margin for better spacing */
+    }
+}
+
+/* Display menu items without burger icon on larger screens */
+@media screen and (min-width: 769px) {
+    header nav ul {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s;
+        position: static;
+        background-color: transparent;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 30px;
+    text-align: center;
+}
+
+section h1 {
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* Skills and Language Styles */
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 70%;
+    background-color: #3498db;
+    height: 15px;
+}
+
+.skill-name {
+    margin-top: 5px;
+}
+
+/* Portfolio Thumbnail Styles */
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.thumbnails li {
+    margin: 15px;
+}
+
+.thumbnails li img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #555;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
