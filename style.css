@@ -60,6 +60,7 @@ header nav ul {
     left: 0;
     width: 100%;
     background-color: var(--nav-bg-color);
+    justify-content: center;
   }
 
   header nav ul.show {
