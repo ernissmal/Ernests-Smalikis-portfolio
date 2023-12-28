@@ -127,3 +127,49 @@ footer a {
   color: #fff;
   text-decoration: none;
 }
+/* Add this media query at the end of your CSS for responsive styling */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    header nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: var(--nav-bg-color);
+      display: none; /* Hide by default */
+    }
+  
+    header nav ul.show {
+      display: flex;
+    }
+  
+    header nav ul li {
+      padding: 10px;
+    }
+  
+    .burger-menu {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  
+    section {
+      padding: 15px; /* Adjust section padding for smaller screens */
+    }
+  
+    section h2 {
+      margin-bottom: 15px;
+    }
+  
+    /* Add more responsive styling as needed */
+  }
+
+.container img {
+    width: 75%; /* Set the width to 75% */
+    border: 5px solid #fff; /* Add a white border for a frame effect */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow effect */
+}
+  
