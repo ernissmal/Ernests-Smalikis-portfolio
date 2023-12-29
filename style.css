@@ -1,176 +1,46 @@
-/* General Styles */
-:root {
-  --text-color: #333;
-  --heading-color: #555;
-  --header-bg-color: #ccc;
-  --nav-bg-color: #ddd;
+body{
+  background-color: black;
+  font-family: 'Times New Roman', Times, serif;
 }
-
-body {
-  /* Media Query for Responsive Navbar */
-  @media screen and (min-width: 769px) {
-    header nav ul {
-      visibility: visible;
-      opacity: 1;
-      transition: visibility 0s, opacity 0.5s;
-      position: static;
-      background-color: transparent;
-    }
-
-    .burger-menu {
-      display: none;
-    }
-  }
+header{
+  background-color: gray;
+  position: sticky;
+  justify-content: center;
+  opacity: 100%;
 }
-
-section {
-  padding: 1.875rem;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  color: var(--text-color);
-  font-family: 'Arial', sans-serif;
-}
-
-h1, h2, h3 {
-  color: var(--heading-color);
-}
-
-/* Header Styles */
-header {
-  background-color: var(--header-bg-color);
-  padding: 10px;
-  text-align: center;
-}
-
-header nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+header h1{
+  justify-content: center;
   display: flex;
+  font-size:xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
-
-/* Media Query for Responsive Navbar */
-@media screen and (max-width: 768px) {
-  header nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--nav-bg-color);
-    justify-content: center;
-  }
-
-  header nav ul.show {
-    display: flex;
-  }
-
-  .burger-menu {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-}
-
-/* Section Styles */
-section {
-  padding: 30px;
+nav{
+  align-self: auto;
   text-align: center;
+  justify-content: center;
 }
-
-section h1 {
+ul li{
+  list-style: none;
+  font-style: oblique;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+}
+ul li a{
+  font-style: initial;
+  color: white;
+}
+#about{
+  background-image: url('imgs/profile.jpg');
+  background-size:cover;
+  color: white;
+  display: flex;
+  align-items: end;
+}
+h1{
   text-align: center;
+  font-weight: 900;
+  font-style: italic;
 }
 
-section h2 {
-  margin-bottom: 20px;
-}
 
-/* Skills and Language Styles */
-.progress-container {
-  margin-bottom: 20px;
-}
-
-.progress-bar {
-  width: 70%;
-  background-color: #3498db;
-  height: 15px;
-}
-
-.skill-name {
-  margin-top: 5px;
-}
-
-/* Portfolio Thumbnail Styles */
-.thumbnails {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.thumbnails li img {
-  width: 100%;
-  height: auto;
-}
-
-/* Footer Styles */
-footer {
-  background-color: var(--header-bg-color);
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-/* Add this media query at the end of your CSS for responsive styling */
-@media screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens here */
-    header nav ul {
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: var(--nav-bg-color);
-      display: none; /* Hide by default */
-    }
-  
-    header nav ul.show {
-      display: flex;
-    }
-  
-    header nav ul li {
-      padding: 10px;
-    }
-  
-    .burger-menu {
-      display: block;
-      font-size: 24px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-  
-    section {
-      padding: 15px; /* Adjust section padding for smaller screens */
-    }
-  
-    section h2 {
-      margin-bottom: 15px;
-    }
-  
-    /* Add more responsive styling as needed */
-  }
-
-.container img {
-    width: 75%; /* Set the width to 75% */
-    border: 5px solid #fff; /* Add a white border for a frame effect */
-    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow effect */
-}
-  
