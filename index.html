@@ -2,180 +2,240 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ernests Smalikis portfolio page</title>
+    <title>Hello, my name is Ernests!</title>
+    <meta name="description" content="Web developer and UI designer portfolio page">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <script></script>
 </head>
 <body>
     <header>
-        <h1>Ernests Smalikis</h1>
         <nav>
-            <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
-            <ul>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#latest">Latest work</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-                <li aria-disabled="true"> <a href="#">FurniShop</a></li>
-            </ul>
+            <div class="pageName">
+                <h1>Ernests Smalikis</h1>
+            </div>
+            <div class="burgerMenu">
+                <div class="burgerIcon">
+                    <h1>Burger</h1>
+                </div>
+                <div class="menuItems">
+                    <ul>
+                        <a href="#about"><li>About</li></a>
+                        <a href="#skills"><li>Skills</li></a>
+                        <a href="#latest"><li>Latest project</li></a>
+                        <a href="#contacts"><li>Contacts</li></a>
+                        <a href="#"><li><button>CALL TO ACTION</button></li></a>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <script>
-            function toggleMenu() {
-                const nav = document.querySelector('header nav ul');
-                nav.classList.toggle('show');
-            }
-        </script>
     </header>
     <section id="about">
-        <div class="container" id="introduction">
-            <h2>About me:</h2>
-            <h3>Hi, my name is Ernests!</h3>
-            <button>Get to know me</button>
-        </div>
+        <h1>Hello, <br> My name is <b>Ernests Smalikis</b></h1>
         <div class="container" id="basics">
-            <h2>Basic information:</h2>
-            <h3>Date of birth:</h3>
-            <p>February 23, 2004</p>
-            <h3>Residence:</h3>
-            <p>Valmiera, Latvia</p>
-            <h3>Education:</h3>
-            <p>Vecpiebalgas secondary school<b><i>(2020)</i></b></p>
-            <p>Valmieras tehnikums <b><i>(Dropped out due to financial family issues in 2022)</i></b></p>
-            <h3>Workplace:</h3>
-            <p>SIA "Rīgas Austrumu Klīniskā Universitātes Slimnīca"</p>
-            <p>Self employed</p>
+            <h2>Basic information</h2>
+            <h3>Born:</h3>
+            <p>February, 2004</p>
+            <h3>Graduated:</h3>
+            <p>Vecpiebalga's secondary school</p>
+            <h3>Residency:</h3>
+            <p>Valmiera, Latvia <br> <i>LV-4201</i></p>
+        </div>
+        <div class="" id="profile">
+            <img src="imgs/profile.jpg" alt="Profile picture" width="414" height="100%">
         </div>
         <div class="container" id="autobiography">
-            Ever since childhood I were passionate about technology and mechanical processes around me, I took deep interest in various school subjects, so I got pretty good grades. <br>
-            At age of 10 I troubleshooted my first laptop, which I in the following months destroyed and reprogrammed again and again by launching self made viruses and lines of code to experiment as a new kid. <br>
-            During years in Valmieras tehnikums, I enhanced my knoweledge about progrmming and technical concepts, which lead me to various amazing experiences, like <a href="http://www.scandiweb.com">Scandiweb web developer's bootcamp</a> and <a href="http://www.accenture.com">Accenture iOS developer's bootcamp</a>, and also amazing internships!<br>
-            Unfortunately I had to dropout of school due to family related issues, but my determination to become a programmer and passion for tech has not died and so I continue my journey in the big tech world.
-        </div>
-        <div class="container" id="hobbies">
-            <h2>My hobbies:</h2>
-            <ul>
-                <li>Coding and web development</li>
-                <li>Photography and graphic design</li>
-                <li>Music production</li>
-                <li>Hiking</li>
-                <li>Reading books</li>
-            </ul>
+            <!--Autobiography-->
         </div>
     </section>
     <section id="skills">
-        <h1>Skills and programming languages:</h1>
-        <h2>Skills:</h2>
-        <div class="container" id="skillset">
-            <div class="progress-container">
-                <div class="progress-bar" value="78"></div>
-                <span class="skill-name">Servers</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="75"></div>
-                <span class="skill-name">Learning</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="78"></div>
-                <span class="skill-name">Database managment</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="75"></div>
-                <span class="skill-name">Learning</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="80"></div>
-                <span class="skill-name">Troubleshooting and problem solving</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="90"></div>
-                <span class="skill-name">Technical repairs</span>
-            </div>
-        </div>
-        <div class="container" id="languages">
-            <h2>Programming languages:</h2>
-            <div class="progress-container">
-                <div class="progress-bar" value="77"></div>
-                <span class="skill-name">Python</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="75"></div>
-                <span class="skill-name">PHP</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="55"></div>
-                <span class="skill-name">Swift</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="60"></div>
-                <span class="skill-name">CSS</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="40"></div>
-                <span class="skill-name">Javascript</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" value="60"></div>
-                <span class="skill-name">SQL</span>
-            </div>
-        </div>
-    </section>
-    <section id="latest">
-        <h1>Latest project:</h1>
-        <img src="imgs/folio-1.jpg" alt="Project 3 Image"/>
-        <div class="project-info">
-            <h2>Electronic Medical Records System (EMRS)</h2>
-            <p>A web application designed to assist healthcare professionals in managing patient medical records, including prescriptions, test results.
-        </div>
+        <h1>Skills</h1>
+        <!--Yet have no idea what to display here-->
+        <!--Neither I have any idea how to display what-->
     </section>
     <section id="portfolio">
-        <h1>Portfolio:</h1>
-        <ul class="thumbnails">
-            <li><a href="#"><img src="imgs/folio-2.jpg" alt="EM
-                Thumbnail"/></a></li>
-                <li><a href="/Projects/TicTacToe">Tic Tac Toe<i class="fa fa-external
-                    fa-fw"></i></a></li>
-            <li><a href="#"><img src="imgs/folio-3.jpg" alt="EM
-                Thumbnail"/></a></li>
-                <li><a href="/Projects/TicTacToe">Tic Tac Toe<i class="fa fa-external
-                    fa-fw"></i></a></li>
-            <li><a href="#"><img src="imgs/PNG image-1A9A1583D06A-1.png" alt="EM
-                Thumbnail"/></a></li>
-                <li><a href="/Projects/TicTacToe">Tic Tac Toe<i class="fa fa-external
-                    fa-fw"></i></a></li>        
-        </ul>
+        <h1>My portfolio</h1>
+        <h2>My latest work</h2>
+        <div class="container">
+            <h3>Project name</h3>
+            <div class="picture" id="main">
+                <img src="imgs/folio-1.jpg" alt="Project main image" width="75%">
+            </div>
+            <div class="additionalImages">
+                <div class="picture" id="1">
+                    <img src="imgs/folio-2.jpg" alt="Additional picture" width="25%">
+                </div>
+                <div class="picture" id="2">
+                    <img src="imgs/folio-3.jpg" alt="Additional picture" width="25%%">
+                </div> 
+            </div>
+            <div class="description">
+                <h4>Description</h4>
+                <p>Description goes here</p>
+            </div>
+            <button>LINK TO PROJECT</button>
+        </div>
+        <div class="gallery">
+            <h2>Other projcets</h2>
+            <tr>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
+                        <div class="frame">
+                            <h3>Project name</h3>
+                            <button>CALL TO ACTION</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </div>
     </section>
     <section id="contacts">
-        <h1>Contact me:</h1>
-        <p>You can contact me through the following channels:</p>
-        <ul class="social-icons">
-            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
-            <li><a href="#"><i class="fa fa-envelope fa-lg"></i></a></li>
-        </ul>
-        <form action="" method="post" enctype="multipart/form-data">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required/>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required/>
-            <label for="message">Message:</label>
-            <textarea name="message" id="message" rows="4" cols="50" required></textarea>
-            <br />
-            <input type="submit" value="Send Message"/>
-        </form>
+        <h1>Contact me</h1>
+            <div class="social">
+                <ul>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+            <div class="general">
+                <ul>
+                    <li>
+                        <a href="http://mailto.smalikisernests@gmail.com">smalikisernests@gmail.com</a>
+                    </li>
+                    <li><p>+371 2253 1822</p></li>
+                </ul>
+            </div>
+            <div address>
+                <h2>Address</h2>
+                <h3>Latvia</h3>
+                <h4>Valmiera, Stacijas iela 41</h4>
+                <h5>LV-4201</h5>
+            </div>
+            <div class="newsletter">
+                <div class="form">
+                    <input type="email" name="Your email" id="email">
+                    <input type="checkbox" name="I agree to receive updates and promotions" id="checkbox">
+                    <button>CALL TO ACTION</button>
+                </div>
+            </div>
     </section>
-
     <footer>
-        &copy; <?php echo date("Y"); ?> - Ernests Smalikis - All rights reserved.<br />
-        <a href="/Imprint">Imprint</a>&nbsp;&bull;&nbsp;<a href="/PrivacyPolicy">
-            Privacy Policy</a>
+        <h1>Ernests Smalikis</h1>
+        <h2>©2024 <br> All rights reserved.</h2>
+        <div class="social">
+            <ul>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+                <li>GitHub</li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
