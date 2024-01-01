@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://cdnjs.cloudflare.com;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, my name is Ernests!</title>
     <meta name="description" content="Web developer and UI designer portfolio page">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-5pZNfFv2bU8sDkpSQ0XdWE0tmkAF3VUmTgF3AHbUqC3f7uBfktPZvQU2eUm2UBAp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
     <script></script>
 </head>
 <body>
@@ -20,7 +21,7 @@
                     <ul>
                         <a href="#about"><li>About</li></a>
                         <a href="#skills"><li>Skills</li></a>
-                        <a href="#latest"><li>Latest project</li></a>
+                        <a href="#portfolio"><li>Latest project</li></a>
                         <a href="#contacts"><li>Contacts</li></a>
                         <a href="#"><li><button>CALL TO ACTION</button></li></a>
                     </ul>
@@ -40,7 +41,7 @@
             <p>Valmiera, Latvia <br> <i>LV-4201</i></p>
         </div>
         <div class="" id="profile">
-            <img src="imgs/profile.jpg" alt="Profile picture" width="414" height="100%">
+            <img src="assets/imgs/profile.jpg" alt="Profile picture" width="414" height="100%">
         </div>
         <div class="container" id="autobiography">
             <!--Autobiography-->
@@ -73,134 +74,17 @@
             </div>
             <button>LINK TO PROJECT</button>
         </div>
-        <div class="gallery">
-            <h2>Other projcets</h2>
-            <tr>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="container">
-                        <img src="imgs/folio-1.jpg" alt="Project" width="25%" height="25%">
-                        <div class="frame">
-                            <h3>Project name</h3>
-                            <button>CALL TO ACTION</button>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </div>
     </section>
     <section id="contacts">
         <h1>Contact me</h1>
-            <div class="social">
-                <ul>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Youtube</li>
-                    <li>GitHub</li>
-                </ul>
-            </div>
+        <div class="social">
+            <ul>
+                <a href="twitter.com/ESmalikis"><li><i class="fab fa-twitter"></i></li></a>
+                <a href="https://www.instagram.com/erenesto_smalikis"><li><i class="fab fa-instagram"></i></li></a>
+                <a href="https://www.youtube.com/@ESmalikis"><li><i class="fab fa-youtube"></i></li></a>
+                <a href="https://github.com/ernissmal"><li><i class="fab fa-github"></i></li></a>
+            </ul>
+        </div>
             <div class="general">
                 <ul>
                     <li>
@@ -209,7 +93,7 @@
                     <li><p>+371 2253 1822</p></li>
                 </ul>
             </div>
-            <div address>
+            <div class="address">
                 <h2>Address</h2>
                 <h3>Latvia</h3>
                 <h4>Valmiera, Stacijas iela 41</h4>
@@ -228,10 +112,10 @@
         <h2>©2024 <br> All rights reserved.</h2>
         <div class="social">
             <ul>
-                <li>Twitter</li>
-                <li>Instagram</li>
-                <li>Youtube</li>
-                <li>GitHub</li>
+                <a href="twitter.com/ESmalikis"><li><i class="fab fa-twitter">Twitter|X</i></li></a>
+                <a href="https://www.instagram.com/erenesto_smalikis"><li><i class="fab fa-instagram">Instagram</i></li></a>
+                <a href="https://www.youtube.com/@ESmalikis"><li><i class="fab fa-youtube">YouTube</i></li></a>
+                <a href="https://github.com/ernissmal"><li><i class="fab fa-github">gitHub</i></li></a>
             </ul>
         </div>
     </footer>

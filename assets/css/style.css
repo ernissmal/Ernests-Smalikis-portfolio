@@ -1,0 +1,121 @@
+/* Font Imports */
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+    /* Add additional formats if needed */
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
+    /* Add additional formats if needed */
+}
+
+@font-face {
+    font-family: 'Roboto Mono Regular';
+    src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+    /* Add additional formats if needed */
+}
+
+/* Body Styles */
+body {
+    background-color: #AFC1B6;
+    color: #101916;
+    font-family: 'Roboto Regular', sans-serif;
+    page-orientation: portrait;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: transparent;
+    position: sticky;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    margin: auto;
+}
+
+/* Navigation List Styles */
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-style: italic;
+    color: #E3E5D8;
+    transition: color 0.3s ease;
+}
+
+/* Button Styles */
+button {
+    background-color: #355245;
+    color: #E3E5D8;
+    border-radius: 6px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    border: #355245;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Heading 2 and 3 Styles */
+h2,
+h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-style: italic;
+}
+
+/* Heading 4 Styles */
+h4 {
+    font-size: 16px;
+    font-style: oblique;
+    text-align: center;
+}
+
+/* Paragraph Styles */
+p {
+    text-align: center;
+}
+
+/* Profile Image Styles */
+#profile img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Additional Styles for Sections */
+#about {
+    text-align: center;
+}
+
+#basics,
+#autobiography {
+    margin-top: 20px;
+}
+
+/* Social Icons Styles */
+.social ul li {
+    font-size: 24px;
+    margin-right: 10px;
+}
