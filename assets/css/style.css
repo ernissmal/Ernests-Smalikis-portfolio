@@ -74,7 +74,7 @@ button {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Heading 2 and 3 Styles */
+/* Heading styles*/
 h2,
 h3 {
     font-size: 20px;
@@ -88,6 +88,11 @@ h3 {
 /* Heading 4 Styles */
 h4 {
     font-size: 16px;
+    font-style: oblique;
+    text-align: center;
+}
+h5 {
+    font-size: 14px;
     font-style: oblique;
     text-align: center;
 }
@@ -119,4 +124,28 @@ p {
 .social ul li {
     font-size: 24px;
     margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color: #101916;
+}
+nav {
+    border: #101916;
+    fill: #355245;
+    fill-opacity: 69%;
+    border-radius: 4px;
+    position:relative
+}
+.version h5{
+    justify-content: right;
+    font-style: italic;
+    text-align: right;
+}
+.container{
+    background-color: #AFC1B6;
+    border: #AFC1B6;
+    border-style: groove;
+    fill: #AFC1B6;
+    fill-opacity: 89%;
+    border-radius: 5px;
 }

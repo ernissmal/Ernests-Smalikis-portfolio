@@ -21,7 +21,9 @@
                         <a href="#skills"><li>Skills</li></a>
                         <a href="#portfolio"><li>Latest project</li></a>
                         <a href="#contacts"><li>Contacts</li></a>
-                        <a href="#"><li><button>CALL TO ACTION</button></li></a>
+                        <!--
+                            <a href="#subscribe"><li><button>CALL TO ACTION</button></li></a>
+                        -->
                     </ul>
                 </div>
             </div>
@@ -42,19 +44,78 @@
             <img src="assets/imgs/profile.jpg" alt="Profile picture" width="414" height="100%">
         </div>
         <div class="container" id="autobiography">
-            <!--Autobiography-->
+            <p>From a young age, I exhibited a keen interest in technology, exploring computers and their components. At the age of 10, my first successful attempt at restoring a worn-out laptop fueled my passion for technology and inspired me to pursue education in programming.</p>
+            <p>I embarked on my educational journey at Valmieras tehnikums, delving into programming and gaining valuable knowledge in computers, servers, and security. Internships became pivotal moments, allowing me to diagnose and troubleshoot hardware issues and later venture into professional web development, creating an AI-powered product showcase.</p>  
+            <p>Despite facing challenges during a web development bootcamp, I emerged with enhanced skills in Git, CSS, and virtualization tools like SSH, Vagrant, and virtual machines. My dedication led me to a security guard position at a local casino due to family circumstances. Still, I continued learning, attending an Accenture bootcamp in iOS development in 2023.</p>  
+            <p>Currently working as a care taker at Rīgas Austrumu Klīniskā Universitātes Slimnīca (RAKUS), I've learned to be humble, adaptable, and grateful in the face of financial challenges. This resilience extends beyond work, influencing my perspective on life and the pursuit of a career in web development, where my interests lie in creating native iOS internet store applications.</p>  
+            <p>The journey, although diverse and filled with challenges, has instilled in me a profound sense of humility and gratitude, making me stronger and more resilient with each passing experience.</p>
         </div>
     </section>
     <section id="skills">
         <h1>Skills</h1>
-        <!--Yet have no idea what to display here-->
-        <!--Neither I have any idea how to display what-->
-    </section>
+        <ul>
+            <li><strong>Programming Languages:</strong>
+                <ul>
+                    <li>Python</li>
+                    <li>Swift</li>
+                </ul>
+            </li>
+            <li><strong>Version Control and Collaboration:</strong>
+                <ul>
+                    <li>Git</li>
+                </ul>
+            </li>
+            <li><strong>Web Development:</strong>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS (with a focus on improving)</li>
+                    <li>Front-end development</li>
+                    <li>Bootstrap</li>
+                    <li>Sass</li>
+                    <li>React (interest in learning)</li>
+                </ul>
+            </li>
+            <li><strong>Virtualization:</strong>
+                <ul>
+                    <li>SSH</li>
+                    <li>Vagrant</li>
+                    <li>Virtual machines (Linux Ubuntu distro)</li>
+                </ul>
+            </li>
+            <li><strong>iOS Development:</strong>
+                <ul>
+                    <li>Swift</li>
+                    <li>Accenture bootcamp in iOS development (attended in 2023)</li>
+                </ul>
+            </li>
+            <li><strong>Workplace Skills:</strong>
+                <ul>
+                    <li>Adaptability</li>
+                    <li>Resilience</li>
+                    <li>Problem-solving</li>
+                    <li>Humility</li>
+                    <li>Gratitude</li>
+                </ul>
+            </li>
+            <li><strong>Professional Tools:</strong>
+                <ul>
+                    <li>Experience in diagnosing and troubleshooting hardware issues</li>
+                    <li>AI-powered product showcase website development</li>
+                </ul>
+            </li>
+            <li><strong>Career Development:</strong>
+                <ul>
+                    <li>Current role as a care taker at RAKUS</li>
+                </ul>
+            </li>
+        </ul>
+    </section>    
     <section id="portfolio">
         <h1>My portfolio</h1>
         <h2>My latest work</h2>
         <div class="container">
-            <h3>Project name</h3>
+            <h3>Password generator</h3>
+            <!--
             <div class="picture" id="main">
                 <img src="assets/imgs/folio-1.jpg" alt="Project main image" width="75%">
             </div>
@@ -63,14 +124,15 @@
                     <img src="assets/imgs/folio-2.jpg" alt="Additional picture" width="25%">
                 </div>
                 <div class="picture" id="2">
-                    <img src="assets/imgs/folio-3.jpg" alt="Additional picture" width="25%%">
+                    <img src="" alt="Additional picture" width="25%%">
                 </div> 
             </div>
+            -->
             <div class="description">
                 <h4>Description</h4>
-                <p>Description goes here</p>
+                <p>Simple password generator, programmed on python is a simple and secure way how to generate secure passwords!</p>
             </div>
-            <button>LINK TO PROJECT</button>
+            <a href="https://github.com/ernissmal/Password-generator.git"><button>LINK TO PROJECT</button></a>
         </div>
     </section>
     <section id="contacts">
@@ -88,7 +150,8 @@
                     <li>
                         <a href="http://mailto.smalikisernests@gmail.com">smalikisernests@gmail.com</a>
                     </li>
-                    <li><p>+371 2253 1822</p></li>
+                    <li>
+                        <a href="">+371 2955 8357</a></li>
                 </ul>
             </div>
             <div class="address">
@@ -97,13 +160,17 @@
                 <h4>Valmiera, Stacijas iela 41</h4>
                 <h5>LV-4201</h5>
             </div>
-            <div class="newsletter">
+            <!---
+            <div class="subscribe" id="subscribe">
                 <div class="form">
                     <input type="email" name="Your email" id="email">
-                    <input type="checkbox" name="I agree to receive updates and promotions" id="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox" title="I agree to terms and conditions.">
+                    <p>By checking the checkbox You agree to receive updates and promotions<br>
+                    By clicking <b>SUBSCRIBE</b> button Your contact information will get uploaded to my database and You will be added to my mailing list.</p>
                     <button>CALL TO ACTION</button>
                 </div>
             </div>
+        -->
     </section>
     <footer>
         <h1>Ernests Smalikis</h1>
@@ -115,6 +182,9 @@
                 <a href="https://www.youtube.com/@ESmalikis"><li><i class="fab fa-youtube">YouTube</i></li></a>
                 <a href="https://github.com/ernissmal"><li><i class="fab fa-github">gitHub</i></li></a>
             </ul>
+        </div>
+        <div class="version">
+            <h5>version 1.0</h5>
         </div>
     </footer>
   </body>
