@@ -1,27 +1,23 @@
-/* Font Imports 
+/* Font Imports */
 @font-face {
     font-family: 'Roboto Regular';
     src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
-    /* Add additional formats if needed */
-
 
 @font-face {
     font-family: 'Roboto Light';
     src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
-    /* Add additional formats if needed */
 }
 
 @font-face {
     font-family: 'Roboto Mono Regular';
     src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
-    /* Add additional formats if needed */
 }
 
 /* Body Styles */
 body {
-    background-color: #AFC1B6;
-    color: #101916;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
     font-family: 'Roboto Regular', sans-serif;
     page-orientation: portrait;
 }
@@ -32,15 +28,25 @@ nav {
     position: sticky;
     text-align: center;
     padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1); /* Light shadow */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 8px;
 }
 
 /* Heading Styles */
-h1 {
-    text-align: center;
+h1, h2, h3 {
     font-size: 24px;
+    text-align: center;
+    color: #ffffff; /* Light text */
+}
+
+h1 {
     font-style: italic;
     margin: auto;
+}
+
+h3 {
+    font-style: italic;
 }
 
 /* Navigation List Styles */
@@ -48,8 +54,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -57,49 +62,35 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-style: italic;
-    color: #E3E5D8;
+    color: #bbbbbb; /* Lighter text */
     transition: color 0.3s ease;
 }
 
 /* Button Styles */
 button {
-    background-color: #355245;
-    color: #E3E5D8;
-    border-radius: 6px;
+    background-color: #00bfff; /* Light blue button */
+    color: #ffffff; /* Light text */
+    border-radius: 8px;
     font-family: 'Arial', 'Helvetica', sans-serif;
     font-size: 14px;
     font-style: italic;
     text-align: center;
-    border: #355245;
+    border: none;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Heading styles*/
-h2,
-h3 {
-    font-size: 20px;
-    text-align: center;
-}
-
-h3 {
-    font-style: italic;
-}
-
 /* Heading 4 Styles */
-h4 {
+h4, h5 {
     font-size: 16px;
     font-style: oblique;
     text-align: center;
-}
-h5 {
-    font-size: 14px;
-    font-style: oblique;
-    text-align: center;
+    color: #ffffff; /* Light text */
 }
 
 /* Paragraph Styles */
 p {
     text-align: center;
+    color: #dddddd; /* Lighter text */
 }
 
 /* Profile Image Styles */
@@ -111,41 +102,30 @@ p {
 }
 
 /* Additional Styles for Sections */
-#about {
+#about, .container {
     text-align: center;
-}
-
-#basics,
-#autobiography {
-    margin-top: 20px;
+    background-color: #121212; /* Dark background */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 8px;
 }
 
 /* Social Icons Styles */
 .social ul li {
     font-size: 24px;
     margin-right: 10px;
+    color: #00bfff; /* Light blue icons */
 }
-a{
+
+/* Link Styles */
+a {
     text-decoration: none;
-    color: #101916;
+    color: #ffffff; /* Light text */
 }
-nav {
-    border: #101916;
-    fill: #355245;
-    fill-opacity: 69%;
-    border-radius: 4px;
-    position:relative
-}
-.version h5{
+
+/* Version Styles */
+.version h5 {
     justify-content: right;
     font-style: italic;
     text-align: right;
-}
-.container{
-    background-color: #AFC1B6;
-    border: #AFC1B6;
-    border-style: groove;
-    fill: #AFC1B6;
-    fill-opacity: 89%;
-    border-radius: 5px;
+    color: #dddddd; /* Lighter text */
 }
