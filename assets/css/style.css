@@ -33,12 +33,16 @@ nav {
     border: 2px solid #ffffff; /* White border */
     border-radius: 8px;
 }
-nav a{
+.navItems{
+    padding-top: 15px;
+    padding: 25px;
+}
+.navItems a{
     padding: 25px;
 }
 
 .social{
-    padding-top:  25px;
+    padding-top:  5px;
 }
 .social a{
     padding: 25px;
