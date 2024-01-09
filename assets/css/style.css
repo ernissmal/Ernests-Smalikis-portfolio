@@ -3,17 +3,14 @@
     font-family: 'Roboto Regular';
     src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'Roboto Light';
     src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'Roboto Mono Regular';
     src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
 }
-
 /* Body Styles */
 body {
     background-color: #121212; /* Dark background */
@@ -21,66 +18,57 @@ body {
     font-family: 'Roboto Regular', sans-serif;
     page-orientation: portrait;
 }
-
 /* Navigation Styles */
 nav {
     background-color: transparent;
     position: sticky;
     text-align: center;
     justify-content: space-between;
-    padding: 25px;
+    padding: 15px; /* Adjusted padding */
     box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1); /* Light shadow */
     border: 2px solid #ffffff; /* White border */
     border-radius: 8px;
 }
-.navItems{
+.navItems {
     padding-top: 15px;
-    padding: 25px;
 }
-.navItems a{
-    padding: 25px;
+.navItems a {
+    padding: 10px; /* Adjusted padding */
+    margin: 0 10px; /* Added margin for spacing between links */
+    text-decoration: none;
+    color: #ffffff; /* Light text */
+    transition: color 0.3s ease; /* Smooth transition on hover */
 }
-
-.social{
-    padding-top:  5px;
+.navItems a:hover {
+    color: #00bfff; /* Change color on hover */
 }
-.social a{
-    padding: 25px;
+.social {
+    padding-top: 5px;
 }
-
+.social a {
+    padding: 10px; /* Adjusted padding */
+    margin: 0 10px; /* Added margin for spacing between icons */
+    color: #ffffff; /* Light text */
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+.social a:hover {
+    color: #00bfff; /* Change color on hover */
+}
 /* Heading Styles */
 h1, h2, h3 {
     font-size: 24px;
     text-align: center;
     color: #ffffff; /* Light text */
 }
-
 h1 {
     font-style: italic;
     margin: auto;
 }
-
 h3 {
     font-style: italic;
 }
-
-/* Navigation List Styles */
-nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    font-style: italic;
-    color: #bbbbbb; /* Lighter text */
-    transition: color 0.3s ease;
-}
-
 /* Button Styles */
 button {
     background-color: #00bfff; /* Light blue button */
@@ -93,7 +81,6 @@ button {
     border: none;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
-
 /* Heading 4 Styles */
 h4, h5 {
     font-size: 16px;
@@ -101,13 +88,11 @@ h4, h5 {
     text-align: center;
     color: #ffffff; /* Light text */
 }
-
 /* Paragraph Styles */
 p {
     text-align: center;
     color: #dddddd; /* Lighter text */
 }
-
 /* Profile Image Styles */
 #profile img {
     max-width: 100%;
@@ -115,7 +100,6 @@ p {
     display: block;
     margin: auto;
 }
-
 /* Additional Styles for Sections */
 #about, .container {
     text-align: center;
@@ -123,20 +107,17 @@ p {
     border: 2px solid #ffffff; /* White border */
     border-radius: 8px;
 }
-
 /* Social Icons Styles */
 .social ul li {
     font-size: 24px;
     margin-right: 10px;
     color: #00bfff; /* Light blue icons */
 }
-
 /* Link Styles */
 a {
     text-decoration: none;
     color: #ffffff; /* Light text */
 }
-
 /* Version Styles */
 .version h5 {
     justify-content: right;
