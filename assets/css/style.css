@@ -89,10 +89,39 @@ h4, h5 {
     color: #ffffff; /* Light text */
 }
 /* Paragraph Styles */
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Apply typing animation to <p> elements */
 p {
     text-align: center;
     color: #dddddd; /* Lighter text */
+    overflow: hidden; /* Hide overflowed content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: typing 3s steps(30) forwards; /* Adjust duration as needed */
 }
+
+/* Optional: Blinking cursor animation */
+p::after {
+    content: '|';
+    display: inline-block;
+    vertical-align: middle;
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}
+
 /* Profile Image Styles */
 #profile img {
     max-width: 100%;
