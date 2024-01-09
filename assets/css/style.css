@@ -1,21 +1,21 @@
 /* Font Imports */
 @font-face {
-    font-family: 'Roboto Regular';
-    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-family: 'Roboto Mono';
+    src: url('assets/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: 'Roboto Light';
-    src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Roboto Mono Regular';
-    src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-family: 'Roboto Mono';
+    src: url('assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 /* Body Styles */
 body {
     background-color: #121212; /* Dark background */
     color: #ffffff; /* Light text */
-    font-family: 'Roboto Regular', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     page-orientation: portrait;
 }
 /* Navigation Styles */
