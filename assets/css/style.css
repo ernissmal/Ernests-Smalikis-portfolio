@@ -34,7 +34,14 @@ nav {
     border-radius: 8px;
 }
 nav a{
-    padding: 10px;
+    padding: 25px;
+}
+
+.social{
+    padding-top:  25px;
+}
+.social a{
+    padding: 25px;
 }
 
 /* Heading Styles */
