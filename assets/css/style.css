@@ -5,17 +5,15 @@ body {
     font-family: 'Roboto Mono', monospace;
     page-orientation: portrait;
 }
-
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h3, h4, h5 {
     color: #ffffff;
     text-align: center;
+    font-size: 20px;
 }
-
 a {
     text-decoration: none;
     color: #ffffff;
 }
-
 /* Navigation Styles */
 nav {
     background-color: transparent;
@@ -27,25 +25,20 @@ nav {
     border: 2px solid #ffffff;
     border-radius: 8px;
 }
-
 .navItems {
     padding-top: 15px;
 }
-
 .navItems a {
     padding: 10px;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
-
 .navItems a:hover {
     color: #00bfff;
 }
-
 .social {
     padding-top: 5px;
 }
-
 .social a {
     padding: 10px;
     margin: 0 10px;
@@ -53,18 +46,9 @@ nav {
     font-size: 20px;
     transition: color 0.3s ease;
 }
-
 .social a:hover {
     color: #00bfff;
 }
-
-/* Heading Styles */
-h1, h3 {
-    font-size: 24px;
-    font-style: italic;
-    margin: auto;
-}
-
 /* Button Styles */
 button {
     background-color: #00bfff;
@@ -77,19 +61,16 @@ button {
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 button:hover {
     background-color: #ffffff;
     color: #00bfff;
 }
-
 /* Profile Frame Styles */
 .profile-frame {
     position: relative;
     overflow: hidden;
     justify-content: center;
 }
-
 .profile-content {
     background: url('../imgs/profile.jpeg') center center no-repeat;
     background-size: cover;
@@ -102,18 +83,15 @@ button:hover {
     height: calc(100vh + 25px);
     position: relative;
 }
-
 /* Center the content */
 .profile-content h1,
 .profile-content h2,
 .profile-content button {
     margin: 0;
 }
-
 #show-more-button {
     margin-top: 20px;
 }
-
 /* Updated .hidden-content Styles */
 .hidden-content {
     display: none;
@@ -131,13 +109,11 @@ button:hover {
     overflow-y: auto;
     max-height: calc(100vh - 120px);
 }
-
 /* Show More Animation */
 .show-more-animation {
     animation: showMoreAnimation 1s forwards;
     display: block !important;
 }
-
 @keyframes showMoreAnimation {
     from {
         opacity: 0;
@@ -148,20 +124,17 @@ button:hover {
         transform: translateY(0);
     }
 }
-
 /* Social Icons Styles */
 .social ul li {
     font-size: 24px;
     margin-right: 10px;
     color: #00bfff;
 }
-
 /* Link Styles */
 a {
     text-decoration: none;
     color: #ffffff;
 }
-
 /* Version Styles */
 .version h5 {
     justify-content: right;
@@ -169,88 +142,31 @@ a {
     text-align: right;
     color: #dddddd;
 }
-
 /* Contacts Section Styles */
-#contacts {
+#contacts,
+#portfolio {
     text-align: center;
     padding: 15px;
 }
-
-.contact-container {
+.contact-container,
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.contact-group {
-    margin: 10px;
-}
-
-/* Portfolio Section Styles */
-#portfolio {
-    text-align: center;
-    padding: 20px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
-
 /* Picture Carousel Styles */
+.slideshow-container,
 .slideshow {
-    position: relative;
-    width: 100%;
     max-width: 800px;
+    position: relative;
     margin: auto;
-    overflow: hidden;
 }
-
+.mySlides,
 .pictures {
-    display: flex;
-    width: 300%; /* Three times the width of one picture to accommodate sliding effect */
-    transition: transform 0.5s ease;
-}
-
-.picture {
-    width: 100%;
-    flex: 0 0 100%; /* Set each picture to take up 100% of the container */
-}
-
-.picture img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-.description {
-    max-width: 800px;
-    text-align: left;
-    color: #ffffff;
-}
-
-h3, h4, h5 {
-    font-size: 20px;
-    color: #ffffff;
-}
-.splide__slide img {
-    width: 100%;
-    height: auto;
-  }
-  /* Picture Carousel Styles */
-.slideshow-container {
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-}
-
-.mySlides {
     display: none;
 }
-
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -265,17 +181,14 @@ h3, h4, h5 {
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-.text {
+.text, .numbertext {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -284,15 +197,6 @@ h3, h4, h5 {
     width: 100%;
     text-align: center;
 }
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 .dot {
     cursor: pointer;
     height: 15px;
@@ -303,16 +207,14 @@ h3, h4, h5 {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
 .active, .dot:hover {
     background-color: #717171;
 }
-
+/* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
 @keyframes fade {
     from { opacity: .4 }
     to { opacity: 1 }
