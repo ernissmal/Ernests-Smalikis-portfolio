@@ -115,7 +115,10 @@ p::after {
     vertical-align: middle;
     animation: blink 0.7s infinite alternate;
 }
-
+em{
+    color: #00bfff;
+    font-size: 18px;
+}
 @keyframes blink {
     to {
         opacity: 0;
@@ -168,6 +171,7 @@ p::after {
 /* Button Styles */
 #show-more-button {
     background-color: #00bfff; /* Light blue button */
+    fill-opacity: 70%;
     color: #ffffff; /* Light text */
     border: none;
     border-radius: 8px;
@@ -177,8 +181,10 @@ p::after {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 #show-more-button:hover {
-    background-color: #ffffff; /* White background on hover */
-    color: #00bfff; /* Change text color on hover */
+    background-color: #ffffff;
+    color: #00bfff;
+    fill-opacity: 70%;
+    border-style: none;
 }
 /* Show More Animation */
 .show-more-animation {
@@ -212,4 +218,17 @@ a {
     font-style: italic;
     text-align: right;
     color: #dddddd; /* Lighter text */
+}
+#contacts {
+    text-align: center;
+    padding: 15px;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    justify-content: center;
+    align-items: center;
+}
+.contact-group {
+    margin: 10px;
 }
