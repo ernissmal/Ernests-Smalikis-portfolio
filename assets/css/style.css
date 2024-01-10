@@ -177,6 +177,8 @@ a {
     align-items: center;
     gap: 20px;
 }
+/* Picture Carousel Styles */
+/* Picture Carousel Styles */
 .slideshow {
     position: relative;
     width: 100%;
@@ -186,12 +188,12 @@ a {
 }
 .pictures {
     display: flex;
-    width: 300%;
+    width: 300%; /* Three times the width of one picture to accommodate sliding effect */
     transition: transform 0.5s ease;
 }
 .picture {
-    width: 70%;
-    opacity: 70%;
+    width: 100%;
+    flex: 0 0 100%; /* Set each picture to take up 100% of the container */
 }
 .picture img {
     width: 100%;
