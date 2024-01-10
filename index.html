@@ -115,11 +115,19 @@
         <h2>My latest work</h2>
         <div class="container">
             <h3>Password generator <b>V 1.1</b></h3>
-            <div class="slideshow">
-                <div class="main-image picture">
-                    <img src="assets/imgs/folio-1.jpg" alt="Project main image" width="30%">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide">
+                              <img src="assets/imgs/folio-1.jpg" alt="image 1">
+                          </li>
+                          <li class="splide__slide">
+                              <img src="assets/imgs/folio-2.jpg" alt="image 2 ">
+                          </li>
+                          <li class="splide__slide">
+                              <img src="assets/imgs/folio-3.jpg" alt="image 3">
+                          </li>
+                      </ul>
                 </div>
-            </div>
             <div class="description">
                 <h4>Description</h4>
                 <p>Simple password generator, programmed on python is a simple and secure way how to generate and store secure passwords!</p>
@@ -128,7 +136,7 @@
             </div>
             <a href="https://github.com/ernissmal/Password-generator.git"><button>LINK TO PROJECT</button></a>
         </div>
-    </section> 
+    </section>
     <section id="contacts">
         <h1>Contact me</h1>
         <div class="contact-container">
@@ -166,49 +174,36 @@
             <h5>version 1.0</h5>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#show-more-button").click(function () {
-                console.log("Button clicked!");
                 $(".hidden-content").toggleClass("show-more-animation");
             });
         });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const picturesContainer = document.querySelector('.pictures');
-            const dotsContainer = document.querySelector('.carousel-nav');
-            const pictures = document.querySelectorAll('.picture');
+        let slideIndex = 0;
+        showSlides();
     
-            let currentIndex = 0;
-    
-            // Create dots for each picture
-            pictures.forEach((_, index) => {
-                const dot = document.createElement('div');
-                dot.classList.add('carousel-dot');
-                dotsContainer.appendChild(dot);
-    
-                // Add click event to each dot
-                dot.addEventListener('click', () => showPicture(index));
-            });
-    
-            // Show initial picture
-            showPicture(currentIndex);
-    
-            function showPicture(index) {
-                currentIndex = index;
-                const translateValue = -index * 100;
-                picturesContainer.style.transform = `translateX(${translateValue}%)`;
-    
-                // Update active dot
-                const dots = document.querySelectorAll('.carousel-dot');
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active-dot', i === index);
-                });
+        function showSlides() {
+            let i;
+            let slides = document.querySelectorAll(".splide__slide");
+        
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-        });
-    </script>          
+        
+            slideIndex++;
+        
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+        
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+    
   </body>
 </body>
 </html>
