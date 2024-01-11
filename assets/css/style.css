@@ -238,3 +238,51 @@ footer h2{
 .version h5{
     font-size: 12px;
 }
+/* Mailing Section Styles */
+#mailing {
+    text-align: center;
+    padding: 20px;
+}
+#mailing h1 {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+#mailing form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mailing form div {
+    margin-bottom: 15px;
+}
+#mailing label {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+#mailing input[type="text"],
+#mailing input[type="email"],
+#mailing input[type="checkbox"],
+#mailing input[type="submit"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #ffffff;
+}
+#mailing input[type="checkbox"]:checked::before {
+    content: '\2713';
+    display: inline-block;
+    margin-right: 5px;
+}
+#mailing input[type="submit"] {
+    background-color: #00bfff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#mailing input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #00bfff;
+}

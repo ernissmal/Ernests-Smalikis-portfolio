@@ -157,7 +157,29 @@
                 <h5>LV-4201</h5>
             </div>
         </div>
-    </section>      
+    </section>    
+    <section id="mailing">
+        <h1>Subscribe to my <em>Mailing List!</em></h1>
+        <form action="/subscribe" method="post">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="first_name" id="firstName" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <input type="checkbox" name="privacy_agreement" id="privacyAgreement" required>
+                <label for="privacyAgreement">I agree to the Privacy Policy</label>
+            </div>
+            <div>
+                <input type="checkbox" name="marketing_offers" id="marketingOffers">
+                <label for="marketingOffers">Send me Marketing Offers</label>
+            </div>
+            <input type="submit" value="Subscribe">
+        </form>
+    </section>     
     <footer>
         <div class="social">
                 <a href="twitter.com/ESmalikis"><i class="fab fa-twitter">Twitter|X</i></a>
