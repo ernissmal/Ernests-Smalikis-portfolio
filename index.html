@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +9,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-
-    <!-- Header Section -->
     <header>
         <nav>
             <div class="logo">
-                <img src="assets/imgs/logo.svg" alt="Website's logo">
+                <img src="assets/imgs/logo-2.svg" alt="Website's logo" height="10%" width="10%">
+                <style>
+                    img {
+                    filter: brightness(150%);
+                    }
+                </style>
             </div>
             <div class="navItems">
                 <a href="#about">About</a>
@@ -32,8 +33,6 @@
             </div>
         </nav>
     </header>
-
-    <!-- About Section -->
     <section id="about">
         <div class="profile-frame">
             <div class="profile-content">
@@ -116,8 +115,6 @@
         </div>
         </div>
     </section>
-
-    <!-- Portfolio Section -->
     <section id="portfolio">
         <h1>My portfolio</h1>
         <h2>My latest work</h2>
@@ -145,8 +142,6 @@
             <a href="https://github.com/ernissmal/Password-generator.git"><button>LINK TO PROJECT</button></a>
         </div>
     </section>
-
-    <!-- Contacts Section -->
     <section id="contacts">
         <h1>Contact me</h1>
         <div class="contact-container">
@@ -169,8 +164,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Mailing Section -->
     <section id="mailing">
         <h1>Subscribe to my <em>Mailing List!</em></h1>
         <form id="subscribeForm" action="assets/php/subscribe.php" method="post">
@@ -193,7 +186,6 @@
             <input type="submit" value="Subscribe">
         </form>
     </section>
-    <!-- Footer Section -->
     <footer>
         <div class="social">
             <a href="https://twitter.com/ESmalikis"><i class="fab fa-twitter">Twitter|X</i></a>
@@ -275,5 +267,4 @@
         }
     </script>
 </body>
-
 </html>
