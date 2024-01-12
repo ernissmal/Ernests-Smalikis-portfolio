@@ -16,14 +16,22 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST["first_name"];
     $email = $_POST["email"];
-    
-    // Perform database insertion (replace placeholders with your actual table and column names)
-    $sql = "INSERT INTO subscribers (first_name, email) VALUES ('$first_name', '$email')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Subscription successful!";
+
+    // Check if the email already exists
+    $check_sql = "SELECT * FROM subscribers WHERE email = '$email'";
+    $result = $conn->query($check_sql);
+
+    if ($result->num_rows > 0) {
+        echo "Email already subscribed!";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // Perform database insertion
+        $insert_sql = "INSERT INTO subscribers (first_name, email) VALUES ('$first_name', '$email')";
+        
+        if ($conn->query($insert_sql) === TRUE) {
+            echo "Subscription successful!";
+        } else {
+            echo "Error: " . $insert_sql . "<br>" . $conn->error;
+        }
     }
 }
 
