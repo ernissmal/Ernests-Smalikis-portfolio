@@ -1,131 +1,288 @@
-/* Font Imports */
-@font-face {
-    font-family: 'Roboto Regular';
-    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto Light';
-    src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto Mono Regular';
-    src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
-}
-
-/* Body Styles */
+/* General Styles */
 body {
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text */
-    font-family: 'Roboto Regular', sans-serif;
+    background-color: #020202ff;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
     page-orientation: portrait;
 }
-
+h1, h2, h3, h4, h5, h3, h4, h5 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
 /* Navigation Styles */
 nav {
     background-color: transparent;
     position: sticky;
     text-align: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.navItems {
+    padding-top: 15px;
+}
+.navItems a {
     padding: 10px;
-    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1); /* Light shadow */
-    border: 2px solid #ffffff; /* White border */
-    border-radius: 8px;
-}
-
-/* Heading Styles */
-h1, h2, h3 {
-    font-size: 24px;
-    text-align: center;
-    color: #ffffff; /* Light text */
-}
-
-h1 {
-    font-style: italic;
-    margin: auto;
-}
-
-h3 {
-    font-style: italic;
-}
-
-/* Navigation List Styles */
-nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    font-style: italic;
-    color: #bbbbbb; /* Lighter text */
+    margin: 0 10px;
     transition: color 0.3s ease;
 }
-
+.navItems a:hover {
+    color: #00bfff;
+}
+.social {
+    padding-top: 5px;
+}
+.social a {
+    padding: 10px;
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+.social a:hover {
+    color: #00bfff;
+}
 /* Button Styles */
 button {
-    background-color: #00bfff; /* Light blue button */
-    color: #ffffff; /* Light text */
+    background-color: #00bfff;
+    color: #ffffff;
     border-radius: 8px;
     font-family: 'Arial', 'Helvetica', sans-serif;
     font-size: 14px;
     font-style: italic;
     text-align: center;
     border: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* Heading 4 Styles */
-h4, h5 {
-    font-size: 16px;
-    font-style: oblique;
+button:hover {
+    background-color: #ffffff;
+    color: #00bfff;
+}
+/* Profile Frame Styles */
+.profile-frame {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+.profile-content {
+    background: url('../imgs/profile.jpeg') center center no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    padding: 75px 50px 100px;
     text-align: center;
-    color: #ffffff; /* Light text */
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
+    background-position: 50% 30%;
+    height: calc(100vh + 25px);
+    position: relative;
 }
-
-/* Paragraph Styles */
-p {
+/* Center the content */
+.profile-content h1,
+.profile-content h2,
+.profile-content button {
+    margin: 0;
+}
+#show-more-button {
+    margin-top: 20px;
+}
+/* Updated .hidden-content Styles */
+.hidden-content {
+    display: none;
+    background-color: rgba(18, 18, 18, 0.75);
+    padding: 20px;
     text-align: center;
-    color: #dddddd; /* Lighter text */
+    position: absolute;
+    bottom: 100px;
+    left: 0%;
+    right: 0%;
+    transform: translateX(-90%);
+    z-index: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
 }
-
-/* Profile Image Styles */
-#profile img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
+/* Show More Animation */
+.show-more-animation {
+    animation: showMoreAnimation 1s forwards;
+    display: block !important;
 }
-
-/* Additional Styles for Sections */
-#about, .container {
-    text-align: center;
-    background-color: #121212; /* Dark background */
-    border: 2px solid #ffffff; /* White border */
-    border-radius: 8px;
+@keyframes showMoreAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
 /* Social Icons Styles */
 .social ul li {
     font-size: 24px;
     margin-right: 10px;
-    color: #00bfff; /* Light blue icons */
+    color: #00bfff;
 }
-
 /* Link Styles */
 a {
     text-decoration: none;
-    color: #ffffff; /* Light text */
+    color: #ffffff;
 }
-
 /* Version Styles */
 .version h5 {
     justify-content: right;
     font-style: italic;
     text-align: right;
-    color: #dddddd; /* Lighter text */
+    color: #dddddd;
+}
+/* Contacts Section Styles */
+#contacts,
+#portfolio {
+    text-align: center;
+    padding: 15px;
+}
+.contact-container,
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+/* Picture Carousel Styles */
+.slideshow-container,
+.slideshow {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+.mySlides,
+.pictures {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.text, .numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+em{
+    color: #00bfff;
+    font-size: 20px;
+    font-style: oblique;
+}
+footer .social{
+    text-align: center;
+    padding: 25px;
+}
+footer h1{
+    font-size: 14px;
+    font-weight: 100;
+    font-style: italic;
+}
+footer h2{
+    font-size: 12px;
+    font-weight: 100;
+    font-style: italic;
+}
+.version h5{
+    font-size: 12px;
+}
+/* Mailing Section Styles */
+#mailing {
+    text-align: center;
+    padding: 20px;
+}
+#mailing h1 {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+#mailing form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mailing form div {
+    margin-bottom: 15px;
+}
+#mailing label {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+#mailing input[type="text"],
+#mailing input[type="email"],
+#mailing input[type="checkbox"],
+#mailing input[type="submit"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #ffffff;
+}
+#mailing input[type="checkbox"]:checked::before {
+    content: '\2713';
+    display: inline-block;
+    margin-right: 5px;
+}
+#mailing input[type="submit"] {
+    background-color: #00bfff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#mailing input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #00bfff;
 }
