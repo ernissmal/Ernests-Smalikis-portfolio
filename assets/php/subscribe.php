@@ -13,11 +13,17 @@ try {
         throw new Exception("Database connection failed: " . $conn->connect_error);
     }
 
-    // Rest of your code for database operations
-
     // Process form data
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // ... (rest of the form processing code)
+        // Retrieve and sanitize form data
+        $first_name = isset($_POST["first_name"]) ? htmlspecialchars(trim($_POST["first_name"]), ENT_QUOTES, 'UTF-8') : '';
+        $email = isset($_POST["email"]) ? filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) : '';
+
+        // Validate email format
+        if ($email === false) {
+            echo "Invalid email format";
+            exit; // Stop execution
+        }
 
         // Check if the email already exists
         $check_sql = $conn->prepare("SELECT * FROM `mailing list` WHERE email = ?");
@@ -28,9 +34,18 @@ try {
         if ($result->num_rows > 0) {
             echo "Email already subscribed!";
         } else {
+            // Check if first_name is not empty before insertion
+            if (empty($first_name)) {
+                echo "First name cannot be empty";
+                exit; // Stop execution
+            }
+
+            // Determine if the marketing checkbox is checked
+            $marketing = isset($_POST["marketing"]) ? 1 : 0; // Represent boolean as 1 or 0
+
             // Perform secure database insertion
-            $insert_sql = $conn->prepare("INSERT INTO `mailing list` (first_name, email) VALUES (?, ?)");
-            $insert_sql->bind_param("ss", $first_name, $email);
+            $insert_sql = $conn->prepare("INSERT INTO `mailing list` (first_name, email, marketing) VALUES (?, ?, ?)");
+            $insert_sql->bind_param("ssi", $first_name, $email, $marketing);
 
             if ($insert_sql->execute() === TRUE) {
                 echo "Subscription successful!";
