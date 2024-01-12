@@ -160,7 +160,7 @@
     </section>    
     <section id="mailing">
         <h1>Subscribe to my <em>Mailing List!</em></h1>
-        <form action="assets/php/subscribe.php" method="post">
+        <form id="subscribeForm" action="assets/php/subscribe.php" method="post">
             <div>
                 <label for="firstName">First Name:</label>
                 <input type="text" name="first_name" id="firstName" required>
@@ -177,6 +177,41 @@
                 <input type="checkbox" name="marketing" id="marketingOffers" value="1">
                 <label for="marketingOffers">Send me Marketing Offers</label>
             </div>
+            <script>
+                // Function to show alerts with proper styling
+                function showAlert(message) {
+                    // You can customize this alert style to match your website's design
+                    alert(message);
+                }
+            
+                $(document).ready(function () {
+                    $("#subscribeForm").submit(function (e) {
+                        e.preventDefault(); // Prevent the default form submission
+            
+                        // Get form data
+                        var formData = $(this).serialize();
+            
+                        // AJAX request
+                        $.ajax({
+                            type: "POST",
+                            url: $(this).attr("action"),
+                            data: formData,
+                            success: function (response) {
+                                // Show the JavaScript alert with the response
+                                showAlert(response);
+                            },
+                            error: function () {
+                                // Handle errors if needed
+                                showAlert("An unexpected error occurred. Please try again later.");
+                            }
+                        });
+                    });
+            
+                    $("#show-more-button").click(function () {
+                        $(".hidden-content").toggleClass("show-more-animation");
+                    });
+                });
+            </script>            
             <input type="submit" value="Subscribe">
         </form>
     </section>     
@@ -223,6 +258,35 @@
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
     </script>
+<script>
+    $(document).ready(function () {
+        $("#subscribeForm").submit(function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            var formData = $(this).serialize();
+
+            // AJAX request
+            $.ajax({
+                type: "POST",
+                url: $(this).attr("action"),
+                data: formData,
+                success: function (response) {
+                    // Show the JavaScript alert with the response
+                    showAlert(response);
+                },
+                error: function () {
+                    // Handle errors if needed
+                    showAlert("An unexpected error occurred. Please try again later.");
+                }
+            });
+        });
+
+        $("#show-more-button").click(function () {
+            $(".hidden-content").toggleClass("show-more-animation");
+        });
+    });
+</script>
   </body>
 </body>
 </html>
