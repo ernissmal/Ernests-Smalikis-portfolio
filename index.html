@@ -13,19 +13,24 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="assets/imgs/logo.svg" alt="Website's logo">
+                <img src="assets/imgs/logo-2.svg" alt="Website's logo" height="10%" width="10%">
+                <style>
+                    img {
+                    filter: brightness(150%);
+                    }
+                </style>
             </div>
-                <div class="navItems">
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Latest project</a>
-                    <a href="#contacts">Contacts</a>
-                </div>
-                <div class="social">
-                    <a href="https://twitter.com/ESmalikis"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/erenesto_smalikis"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@ESmalikis"><i class="fab fa-youtube"></i></a>
-                    <a href="https://github.com/ernissmal"><i class="fab fa-github"></i></a>
-                </div>                
+            <div class="navItems">
+                <a href="#about">About</a>
+                <a href="#portfolio">Latest project</a>
+                <a href="#contacts">Contacts</a>
+            </div>
+            <div class="social">
+                <a href="https://twitter.com/ESmalikis"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/erenesto_smalikis"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@ESmalikis"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/ernissmal"><i class="fab fa-github"></i></a>
+            </div>
         </nav>
     </header>
     <section id="about">
@@ -108,25 +113,26 @@
             </ul>
             </div>
         </div>
-    </section>   
+        </div>
+    </section>
     <section id="portfolio">
         <h1>My portfolio</h1>
         <h2>My latest work</h2>
         <div class="container">
             <h3>Password generator <b>V 1.1</b></h3>
-                <div class="splide__track">
-                      <ul class="splide__list">
-                          <li class="splide__slide">
-                              <img src="assets/imgs/folio-1.jpg" alt="image 1">
-                          </li>
-                          <li class="splide__slide">
-                              <img src="assets/imgs/folio-2.jpg" alt="image 2 ">
-                          </li>
-                          <li class="splide__slide">
-                              <img src="assets/imgs/folio-3.jpg" alt="image 3">
-                          </li>
-                      </ul>
-                </div>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="assets/imgs/folio-1.jpg" alt="image 1">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="assets/imgs/folio-2.jpg" alt="image 2 ">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="assets/imgs/folio-3.jpg" alt="image 3">
+                    </li>
+                </ul>
+            </div>
             <div class="description">
                 <h4>Description</h4>
                 <p>Simple password generator, programmed on python is a simple and secure way how to generate and store secure passwords!</p>
@@ -157,10 +163,10 @@
                 <h5>LV-4201</h5>
             </div>
         </div>
-    </section>    
+    </section>
     <section id="mailing">
         <h1>Subscribe to my <em>Mailing List!</em></h1>
-        <form action="/subscribe" method="post">
+        <form id="subscribeForm" action="assets/php/subscribe.php" method="post">
             <div>
                 <label for="firstName">First Name:</label>
                 <input type="text" name="first_name" id="firstName" required>
@@ -174,55 +180,91 @@
                 <label for="privacyAgreement">I agree to the Privacy Policy</label>
             </div>
             <div>
-                <input type="checkbox" name="marketing_offers" id="marketingOffers">
+                <input type="checkbox" name="marketing" id="marketingOffers" value="1">
                 <label for="marketingOffers">Send me Marketing Offers</label>
-            </div>
+            </div>         
             <input type="submit" value="Subscribe">
         </form>
-    </section>     
+    </section>
     <footer>
         <div class="social">
-                <a href="twitter.com/ESmalikis"><i class="fab fa-twitter">Twitter|X</i></a>
-                <a href="https://www.instagram.com/erenesto_smalikis"><i class="fab fa-instagram">Instagram</i></a>
-                <a href="https://www.youtube.com/@ESmalikis"><i class="fab fa-youtube">YouTube</i></a>
-                <a href="https://github.com/ernissmal"><i class="fab fa-github">gitHub</i></a>
+            <a href="https://twitter.com/ESmalikis"><i class="fab fa-twitter">Twitter|X</i></a>
+            <a href="https://www.instagram.com/erenesto_smalikis"><i class="fab fa-instagram">Instagram</i></a>
+            <a href="https://www.youtube.com/@ESmalikis"><i class="fab fa-youtube">YouTube</i></a>
+            <a href="https://github.com/ernissmal"><i class="fab fa-github">gitHub</i></a>
         </div>
         <h1>Proudly developed by <a href="https://github.com/ernissmal"><i class="fab fa-github">ernissmal</i></a></h1>
         <h2>©2024 <br> All rights reserved.</h2>
         <div class="version">
-            <h5>version 1.0</h5>
+            <h5>version 1.1</h5>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
+        // Function to show alerts with proper styling
+        function showAlert(message) {
+            // You can customize this alert style to match your website's design
+            alert(message);
+        }
+        $(document).ready(function () {
+            $("#subscribeForm").submit(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                // Get form data
+                var formData = $(this).serialize();
+
+                // AJAX request
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr("action"),
+                    data: formData,
+                    success: function (response) {
+                        // Show the JavaScript alert with the response
+                        showAlert(response);
+                    },
+                    error: function () {
+                        // Handle errors if needed
+                        showAlert("An unexpected error occurred. Please try again later.");
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
         $(document).ready(function () {
             $("#show-more-button").click(function () {
                 $(".hidden-content").toggleClass("show-more-animation");
+
+                // Toggle the text of the button
+                if ($(".hidden-content").hasClass("show-more-animation")) {
+                    $("#show-more-button").text("Show Less");
+                } else {
+                    $("#show-more-button").text("Show More");
+                }
             });
         });
     </script>
     <script>
         let slideIndex = 0;
         showSlides();
-    
+
         function showSlides() {
             let i;
             let slides = document.querySelectorAll(".splide__slide");
-        
+
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-        
+
             slideIndex++;
-        
+
             if (slideIndex > slides.length) {
                 slideIndex = 1;
             }
-        
+
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
     </script>
-  </body>
 </body>
 </html>
