@@ -1,0 +1,11 @@
+# Use the official MySQL image as base
+FROM mysql:8.0
+
+# Set root password (change 'root_password' to your desired password)
+ENV MYSQL_ROOT_PASSWORD=root_password
+
+# Create a database named 'portfolio_db'
+ENV MYSQL_DATABASE=portfolio_db
+
+# Expose port 3306 to allow external connections
+EXPOSE 3306
