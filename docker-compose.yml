@@ -1,28 +1,39 @@
-version: '3.3'
+version: '3.8'
 
 services:
-   db:
-     image: mysql:5.7
-     volumes:
-       - db_data:/var/lib/mysql
-     restart: always
-     environment:
-       MYSQL_ROOT_PASSWORD: somewordpress
-       MYSQL_DATABASE: wordpress
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  # Expose port 8000 for Laravel backend
+    volumes:
+      - ./backend:/var/www/html  # Mount the backend code into the container
+    environment:
+      - DB_HOST=db
+      # Add other environment variables as needed
+    depends_on:
+      - db
 
-   wordpress:
-     depends_on:
-       - db
-     image: wordpress:latest
-     ports:
-       - "8000:80"
-     restart: always
-     environment:
-       WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
-       WORDPRESS_DB_NAME: wordpress
-volumes:
-    db_data: {}
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"  # Expose port 3000 for React frontend
+    environment:
+      - REACT_APP_API_URL=http://backend:8000/api  # Define backend API URL
+      # Add other environment variables as needed
+    depends_on:
+      - backend
+
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    ports:
+      - "3306:3306"  # Expose port 3306 for MySQL
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: portfolio_db
+      # Add other database configuration as needed

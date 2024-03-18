@@ -1,0 +1,83 @@
+/* Header.css */
+Header {
+  background-color: #000; /* Black background */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.Header-content {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+li a {
+  color: white; /* White text for contrast */
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-media-list {
+  padding: 0;
+  list-style: none;
+}
+
+.social-media-list li a:hover,
+li a:hover {
+  color: #A8A8A8; /* Light grey for hover effect */
+  text-decoration: none;
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #800020; /* Deep burgundy for the underline */
+  transition: width 0.3s ease-in-out;
+  bottom: -5px;
+}
+
+li a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #800020;
+}
+
+#action a {
+  color: white;
+  border: 2px solid #800020; /* Deep burgundy for a classic look */
+  background-color: transparent;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+#action a:hover {
+  background-color: transparent; /* Deep burgundy background on hover */
+  color: #800020; /* Black text on hover for high contrast */
+  border-style: none;
+}
+
+@media (max-width: 768px) {
+  .Header-content {
+    flex-direction: column;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+}
