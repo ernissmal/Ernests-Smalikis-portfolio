@@ -1,5 +1,6 @@
 // ProjectContainerBox.js
 import React from 'react';
+import './ProjectContainerBox.css';
 
 function ProjectContainerBox({ imageSrc, title, description }) {
   return (

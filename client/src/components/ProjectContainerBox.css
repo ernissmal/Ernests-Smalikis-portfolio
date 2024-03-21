@@ -1,0 +1,36 @@
+/* ProjectContainerBox.css */
+.project-container {
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    padding: 20px; /* Provides space between the content and the container edges */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    perspective: 1000px; /* Adds perspective for 3D effect */
+  }
+  
+  .project-container:hover {
+    transform: rotateY(10deg) rotateX(10deg); /* Rotates the container on hover */
+  }
+  
+  .project-container img {
+    width: 100%; /* Ensures the image fills the container width */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Adds some space below the image */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .project-container:hover img {
+    transform: rotateY(-10deg) rotateX(-10deg); /* Rotates the image on hover */
+  }
+  
+  .project-container h3 {
+    font-size: 18px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Adds some space below the title */
+    color: #333; /* Dark color for good contrast */
+  }
+  
+  .project-container p {
+    font-size: 14px; /* Adjust font size as needed */
+    color: #666; /* Slightly lighter color for description text */
+  }
+  
