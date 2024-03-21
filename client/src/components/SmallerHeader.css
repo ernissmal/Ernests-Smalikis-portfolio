@@ -1,0 +1,8 @@
+/* SmallerHeader.css */
+h4 {
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold; /* Ensures the header stands out */
+    color: #333; /* Dark color for good contrast */
+    margin-bottom: 10px; /* Adds space below the header */
+  }
+  

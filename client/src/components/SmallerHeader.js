@@ -1,5 +1,6 @@
 // SmallerHeader.js
 import React from 'react';
+import './SmallerHeader.css';
 
 function SmallerHeader({ text }) {
   return (
