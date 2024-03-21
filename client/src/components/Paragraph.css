@@ -1,0 +1,20 @@
+/* Paragraph.css */
+p {
+    font-family: 'Helvetica', 'Arial', sans-serif; /* This is a clean and readable font choice. */
+    font-size: 16px; /* Ideal for readability; adjust as needed. */
+    line-height: 1.6; /* Ensures space between lines for better readability. */
+    color: #333; /* A dark grey that's softer on the eyes than pure black. */
+    margin-bottom: 16px; /* Adds some space below paragraphs. */
+    max-width: 600px; /* Limits line length to enhance readability. */
+    margin-left: auto; /* These two margin properties center the paragraph if it's not full width. */
+    margin-right: auto;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    p {
+      font-size: 14px; /* Slightly smaller font on smaller screens for balance. */
+      padding: 0 10px; /* Adds some padding on the sides on smaller screens. */
+    }
+  }
+  
