@@ -1,5 +1,6 @@
 // Section.js
 import React from 'react';
+import './Section.css';
 
 function Section({ title, header, content }) {
   return (
