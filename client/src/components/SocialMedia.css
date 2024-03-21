@@ -1,0 +1,23 @@
+.social-media {
+    display: flex;
+    justify-content: center; /* Aligns icons center horizontally */
+    padding: 20px 0; /* Gives some space above and below the icons */
+    gap: 20px; /* Spacing between each social media icon */
+  }
+  
+  .social-link {
+    color: #29333C; /* Sets the initial color of the icons to match the theme */
+    font-size: 24px; /* Adjust size as needed */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+    display: inline-flex; /* Ensures icons align properly and are centered */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    color: #83949E; /* Lightens the icon on hover or focus for an interactive feel */
+    transform: scale(1.1); /* Slightly enlarges the icon to indicate interactivity */
+    text-decoration: none; /* Prevents any underlining */
+  }
+  
