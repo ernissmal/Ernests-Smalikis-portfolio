@@ -2,44 +2,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #000;
-  color: white;
+  background-color: transparent;
 }
 
 .App {
   text-align: center;
 }
 
-.App-header {
-  background-color: #000;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.App-link:hover {
-  color: #A8A8A8;
-}
-
-.about-section .content {
-  display: block;
-  color: white;
-}
-
-.about-section .content .hoverable {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.about-section .content h3:hover + .hoverable,
-.about-section .content .hoverable:hover {
-  opacity: 1;
-}

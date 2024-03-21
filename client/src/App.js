@@ -6,8 +6,6 @@ import Section from './components/Section';
 import ProgressBar from './components/ProgressBar'; 
 import SmallerHeader from './components/SmallerHeader'; 
 import Paragraph from './components/Paragraph'; 
-//import Image from './components/Image'; 
-//import File from './components/File'; 
 import Button from './components/Button'; 
 import Form from './components/Form'; 
 import ProjectContainerBox from './components/ProjectContainerBox';
