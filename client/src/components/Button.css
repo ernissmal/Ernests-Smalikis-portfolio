@@ -1,0 +1,28 @@
+/* Button.css */
+.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #C3CBCE;
+    background-color: #29333C;
+    border: 0,4px solid #5D7283;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-style:hover, .button-style:focus {
+    background-color: transparent;
+    color: #C3CBCE;
+    border: 0,1px solid #5D7283;
+    border-color: #5D7283;
+}
+
+@media (max-width: 768px) {
+    .button-style {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
