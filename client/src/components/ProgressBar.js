@@ -1,5 +1,6 @@
 // ProgressBar.js
 import React from 'react';
+import './ProgressBar.css';
 
 const ProgressBar = ({ label, percentage }) => {
   return (

@@ -1,0 +1,28 @@
+/* ProgressBar.css */
+.progress-bar {
+    margin: 20px 0; /* Provides spacing around each progress bar */
+    font-family: Arial, sans-serif; /* Ensures text consistency */
+    color: #29333C; /* Text color for the label */
+  }
+  
+  .label {
+    display: block; /* Ensures the label is on its own line */
+    margin-bottom: 5px; /* Spacing between the label and the progress bar */
+    font-size: 14px; /* Adjust as needed */
+  }
+  
+  .progress {
+    background-color: #e0e0e0; /* Light grey background for the progress bar */
+    border-radius: 5px; /* Rounded corners for the progress bar */
+    overflow: hidden; /* Ensures the fill doesn't spill outside the rounded corners */
+    height: 20px; /* Height of the progress bar */
+  }
+  
+  .progress-fill {
+    background-color: #83949E; /* Color for the fill portion of the progress bar */
+    height: 100%; /* Ensures the fill stretches to the full height of the progress bar */
+    width: 0%; /* Default width to 0%, will be overridden inline */
+    border-radius: 5px; /* Matches the border-radius of the progress to maintain consistency */
+    transition: width 0.5s ease-in-out; /* Smooth transition for the width change */
+  }
+  
