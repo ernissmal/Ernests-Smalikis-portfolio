@@ -22,7 +22,7 @@ function App() {
           <SmallerHeader text="Strong foundation for my skills" />
           <Paragraph text="Studied in Valmieras tehnikums as Programming technician and later on continued to seek knowledge through bootcamps, YouTube tutorials, blogs, and Reddit." />
           <SmallerHeader text="Years of Experience" />
-          <Paragraph text="Bringing over X years of experience in software development, UI/UX design, and project management." />
+          <Paragraph text="Bringing over years of experience in software development, UI/UX design, and project management." />
           <SmallerHeader text="Skills" />
           <ProgressBar label="UI/UX Design Tools" percentage={80} />
           <ProgressBar label="Software Diagnostics" percentage={75} />
