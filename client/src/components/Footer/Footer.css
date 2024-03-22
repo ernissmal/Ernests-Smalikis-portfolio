@@ -1,58 +1,64 @@
 /* Footer.css */
+
+/* General styling for the footer */
 .App-footer {
-  background-color: #000; /* Black background for the footer */
-  color: white;
+  background-color: transparent;
+  color: #FFFFFF;
   text-align: center;
   padding: 20px 0;
 }
 
+/* Container for footer content */
 .footer-content {
   margin: 0 auto;
   padding: 20px;
   max-width: 960px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-.social-media-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+/* Styling for the footer links */
+#footer {
+  color: #FFFFFF;
 }
 
-.social-media-list li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-.social-media-list li a {
-  color: white; /* White color for icons */
-  transition: color 0.2s ease-in-out;
-}
-
-.social-media-list li a:hover {
-  color: #800020; /* Deep burgundy for hover effects */
-  text-decoration: none; /* No underline to keep it clean and modern */
-}
-
+/* Version control text styling */
 #version-control {
   text-align: right;
-  color: #AAA; /* Lighter grey for subtlety */
+  color: #AAA;
   width: 100%;
   font-size: 0.8em;
-  margin-top: 20px; /* Add some space above the version control text */
+  margin-top: 20px;
 }
 
+/* Media query for smaller devices */
 @media (max-width: 768px) {
-  .footer-content, #version-control {
-    text-align: center;
+  /* Center align footer content and adjust padding */
+  .footer-content {
+    justify-content: center;
     padding: 10px;
   }
 
+  /* Center align version control text */
   #version-control {
-    margin-top: 10px; /* Adjust space on smaller screens */
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Center align social media icons */
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  /* Adjust size of social media icons for smaller screens */
+  .social-media-icons img {
+    width: 30px; /* Adjust as needed */
+    height: auto;
+    margin: 0 5px; /* Add spacing between icons */
   }
 }
