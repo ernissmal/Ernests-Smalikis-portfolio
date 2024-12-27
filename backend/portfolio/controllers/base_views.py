@@ -3,7 +3,10 @@ from django.http import JsonResponse
 from django.views import View
 from portfolio.main.models.base import BaseModel
 from portfolio.serializers import BaseModelSerializer
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view, permission_classes
 
+@permission_classes([IsAuthenticated])
 class BaseModelView(View):
     model = BaseModel
     serializer_class = BaseModelSerializer
