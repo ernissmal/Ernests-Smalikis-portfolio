@@ -1,0 +1,10 @@
+npm
+vue
+vue-router
+vuex
+axios
+sass
+babel-loader
+eslint
+eslint-plugin-vue
+vue-template-compiler
