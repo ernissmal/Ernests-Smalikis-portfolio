@@ -1,0 +1,13 @@
+Django
+vue
+tailwindcss
+psycopg2-binary
+django-router
+axios
+django-anymail
+bcrypt
+oauthlib
+djangorestframework
+django-cors-headers
+gunicorn
+python-dotenv
