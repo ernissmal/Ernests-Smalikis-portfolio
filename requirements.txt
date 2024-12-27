@@ -10,3 +10,4 @@ oauthlib
 djangorestframework
 django-cors-headers
 gunicorn
+python-dotenv
