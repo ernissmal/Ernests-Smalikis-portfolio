@@ -1,11 +1,23 @@
-version: '3'
+version: '3.8'
 services:
-  frontend:
+  web:
     build: .
     ports:
-      - "8080:8080"
+      - "8000:8000"
     volumes:
-      - .:/app
-      - /app/node_modules
+      - .:/code
     environment:
-      - NODE_ENV=development
+      - DEBUG=1
+      - SECRET_KEY=your_secret_key
+      - DATABASE_URL=postgres://user:password@db:5432/dbname
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=dbname
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+
+volumes:
+  postgres_data:
