@@ -2,9 +2,11 @@ from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 from django.views import View
 from portfolio.main.models.user import User
+from portfolio.serializers import UserSerializer
 
 class UserView(View):
     model = User
+    serializer_class = UserSerializer
 
     def get(self, request, *args, **kwargs):
         """
@@ -12,29 +14,33 @@ class UserView(View):
         """
         if 'id' in kwargs:
             user = get_object_or_404(self.model, id=kwargs['id'])
-            return JsonResponse(user.to_dict())
+            serializer = self.serializer_class(user)
+            return JsonResponse(serializer.data)
         else:
-            users = self.model.objects.all().values()
-            return JsonResponse(list(users), safe=False)
+            users = self.model.objects.all()
+            serializer = self.serializer_class(users, many=True)
+            return JsonResponse(serializer.data, safe=False)
 
     def post(self, request, *args, **kwargs):
         """
         Handle POST request to create a new user.
         """
-        data = request.POST
-        user = self.model.objects.create(**data)
-        return JsonResponse(user.to_dict(), status=201)
+        serializer = self.serializer_class(data=request.POST)
+        if serializer.is_valid():
+            user = serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
 
     def put(self, request, *args, **kwargs):
         """
         Handle PUT request to update an existing user.
         """
         user = get_object_or_404(self.model, id=kwargs['id'])
-        data = request.POST
-        for key, value in data.items():
-            setattr(user, key, value)
-        user.save()
-        return JsonResponse(user.to_dict())
+        serializer = self.serializer_class(user, data=request.POST, partial=True)
+        if serializer.is_valid():
+            user = serializer.save()
+            return JsonResponse(serializer.data)
+        return JsonResponse(serializer.errors, status=400)
 
     def delete(self, request, *args, **kwargs):
         """

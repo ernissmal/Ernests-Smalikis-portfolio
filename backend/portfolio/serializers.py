@@ -1,6 +1,12 @@
 from rest_framework import serializers
 from portfolio.main.models.user import User
 from portfolio.main.models.project import Project
+from portfolio.main.models.base import BaseModel
+
+class BaseModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BaseModel
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
