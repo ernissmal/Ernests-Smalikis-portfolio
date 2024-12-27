@@ -23,6 +23,12 @@ class Project(models.Model):
         help_text="Indicates whether this project should be featured in the portfolio."
     )
     completion_date = models.DateField(_("completion date"), blank=True, null=True)
+    PROJECT_TYPES = [
+        ('AI', 'Artificial Intelligence'),
+        ('Software', 'Software'),
+        ('Web', 'Web Development'),
+    ]
+    type = models.CharField(_("type"), max_length=50, choices=PROJECT_TYPES, default='Software')
 
     class Meta:
         ordering = ["-created_at"]
