@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
+import bcrypt
 
 class UserManager(BaseUserManager):
     """
@@ -48,6 +49,12 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
+    def set_password(self, raw_password):
+        self.password = bcrypt.hashpw(raw_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+    def check_password(self, raw_password):
+        return bcrypt.checkpw(raw_password.encode('utf-8'), self.password.encode('utf-8'))
 
     def get_full_name(self):
         return f"{self.first_name} {self.last_name}".strip()
