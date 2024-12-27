@@ -28158,3 +28158,5 @@ venv/lib/python3.11/site-packages/vue-0.0.1.dist-info/RECORD
 venv/lib/python3.11/site-packages/vue-0.0.1.dist-info/REQUESTED
 venv/lib/python3.11/site-packages/vue-0.0.1.dist-info/top_level.txt
 venv/lib/python3.11/site-packages/vue-0.0.1.dist-info/WHEEL
+venv/
+.env
