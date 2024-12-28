@@ -28160,3 +28160,10 @@ venv/lib/python3.11/site-packages/vue-0.0.1.dist-info/top_level.txt
 venv/lib/python3.11/site-packages/vue-0.0.1.dist-info/WHEEL
 venv/
 .env
+front-end-requirements 2.txt
+front-end-requirements 3.txt
+old-index 2.html
+backend/requirements 2.txt
+frontend/.gitignore 2
+frontend/babel.config 2.js
+frontend/vue.config 2.js
