@@ -6,23 +6,22 @@
       <Card title="Projects" content="Here are some of the projects I have worked on." />
       <Form />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
-import Footer from '@/components/Footer.vue';
-import Card from '@/components/Card.vue';
-import Form from '@/components/Form.vue';
+import Navbar from '@/components/NavBar.vue';
+import PageFooter from '@/components/PageFooter.vue';
+import CardComponent from '@/components/CardComponent.vue';
+import FormComponent from '@/components/FormComponent.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Navbar,
-    Footer,
-    Card,
-    Form
+    CardComponent,
+    FormComponent
+
   }
 }
 </script>

@@ -7,20 +7,18 @@
       <Card title="Project 2" content="Description of project 2." />
       <Card title="Project 3" content="Description of project 3." />
     </div>
-    <Footer />
+    < />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
-import Footer from '@/components/Footer.vue';
+//import Navbar from '@/components/Navbar.vue';
 import Card from '@/components/Card.vue';
 
 export default {
   name: 'ProjectsPage',
   components: {
     Navbar,
-    Footer,
     Card
   }
 }
