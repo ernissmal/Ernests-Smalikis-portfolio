@@ -212,3 +212,17 @@ npm-debug.log
 yarn-error.log
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,vuejs,python,venv
+frontend/src/services/api.js
+frontend/src/assets/imgs/.DS_Store
+frontend/src/assets/fonts/.DS_Store
+frontend/src/assets/vue.svg
+frontend/src/assets/.DS_Store
+frontend/src/vite.config.js
+frontend/public/vite.svg
+frontend/src/package.json
+frontend/.vscode/extensions.json
+frontend/README.md
+frontend/vite.config.js
+frontend/package.json
+frontend/package-lock.json
+.DS_Store
