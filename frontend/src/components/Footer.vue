@@ -1,62 +1,40 @@
 <template>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2023 Ernests Smalikis. All rights reserved.</p>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <footer>
+        <div class="social">
+            <a href="https://twitter.com/ESmalikis"><i class="fab fa-twitter">Twitter|X</i></a>
+            <a href="https://www.instagram.com/erenesto_smalikis"><i class="fab fa-instagram">Instagram</i></a>
+            <a href="https://www.youtube.com/@ESmalikis"><i class="fab fa-youtube">YouTube</i></a>
+            <a href="https://github.com/ernissmal"><i class="fab fa-github">gitHub</i></a>
+        </div>
+        <h1>Proudly developed by <a href="https://github.com/ernissmal"><i class="fab fa-github">ernissmal</i></a></h1>
+        <h2>©2025 <br> All rights reserved.</h2>
+        <div class="version">
+            <h5>version 2.0</h5>
         </div>
     </footer>
 </template>
 
 <script>
 export default {
-    name: 'Footer',
-};
+    name: 'Footer'
+}
 </script>
 
 <style scoped>
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  padding: 2rem 1rem;
+  background: #111;
+  text-align: center;
+  color: #aaa;
 }
 
-.footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.social-links a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
-.footer-content p {
-    margin: 0;
-}
-
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.footer-nav li {
-    margin: 0 10px;
-}
-
-.footer-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-nav a:hover {
-    text-decoration: underline;
+.social-links a:hover {
+  color: white;
 }
 </style>
