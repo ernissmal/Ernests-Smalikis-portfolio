@@ -2,7 +2,7 @@
 body {
     background-color: #020202ff;
     color: #ffffff;
-    font-family: 'Roboto Mono', monospace;
+    font-family: monospace, 'Roboto Mono', 'Courier New', Courier;
     page-orientation: portrait;
 }
 h1, h2, h3, h4, h5, h3, h4, h5 {
@@ -307,4 +307,13 @@ footer h2{
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
 }
