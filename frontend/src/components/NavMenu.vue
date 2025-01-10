@@ -20,14 +20,14 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 80px; /* Increased height */
     background-color: #000;
 }
 
 .nav-menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px; /* Increased gap */
     padding: 0;
     margin: 0;
 }
@@ -39,7 +39,7 @@ export default {
 .nav-menu a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px; /* Increased font size */
     transition: color 0.3s ease;
 }
 
