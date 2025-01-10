@@ -1,12 +1,12 @@
 <template>
     <div class="social-icons">
-        <a href="https://www.linkedin.com/in/ernestssmalikis" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/ernestssmalikis" target="_blank">
             <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/ernestssmalikis" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/ernestssmalikis" target="_blank">
             <i class="fab fa-github"></i>
         </a>
-        <a href="https://twitter.com/ernestssmalikis" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/ernestssmalikis" target="_blank">
             <i class="fab fa-twitter"></i>
         </a>
     </div>
