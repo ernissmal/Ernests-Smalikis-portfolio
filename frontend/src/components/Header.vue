@@ -1,32 +1,26 @@
 <template>
-    <header>
+    <header class="header">
         <Logo />
         <NavMenu />
-        <SocialLinks />
+        <SocialIcons />
     </header>
 </template>
 
 <script>
 import Logo from './Logo.vue';
 import NavMenu from './NavMenu.vue';
-import SocialLinks from './SocialLinks.vue';
+import SocialIcons from './SocialIcons.vue';
 
 export default {
     name: 'Header',
     components: {
         Logo,
         NavMenu,
-        SocialLinks
+        SocialIcons
     }
 }
 </script>
 
 <style scoped>
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #f8f9fa;
-}
+/* Remove existing styles */
 </style>
