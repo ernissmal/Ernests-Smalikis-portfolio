@@ -21,6 +21,8 @@ nav {
     text-align: center;
     justify-content: space-between;
     padding: 15px;
+    width: 100%; /* Added to expand width */
+    display: flex; /* Added to ensure flexbox layout */
 }
 .navItems {
     padding-top: 15px;
