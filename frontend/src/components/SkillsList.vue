@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <BaseBlock>
         <h2>Skills List</h2>
         <div v-for="(skills, category) in skillCategories" :key="category">
             <h3 @click="toggleCategory(category)">{{ category }}</h3>
@@ -7,11 +7,14 @@
                 <li v-for="skill in skills" :key="skill">{{ skill }}</li>
             </ul>
         </div>
-    </div>
+    </BaseBlock>
 </template>
 
 <script>
+import BaseBlock from "./BaseBlock.vue";
+
 export default {
+    components: { BaseBlock },
     data() {
         return {
             activeCategory: null,

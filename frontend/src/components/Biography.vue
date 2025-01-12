@@ -1,13 +1,25 @@
 <template>
-    <div class="biography">
+    <BaseBlock :id="id" :section="section">
         <h1>{{ title }}</h1>
         <p>{{ content }}</p>
-    </div>
+    </BaseBlock>
 </template>
 
 <script>
+import BaseBlock from "./BaseBlock.vue";
+
 export default {
-    name: 'Biography',
+    components: { BaseBlock },
+    props: {
+        id: {
+            type: String,
+            required: true,
+        },
+        section: {
+            type: String,
+            required: true,
+        },
+    },
     data() {
         return {
             title: 'Biography',

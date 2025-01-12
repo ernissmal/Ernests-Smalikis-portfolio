@@ -1,14 +1,17 @@
 <template>
-    <div>
+    <BaseBlock>
         <button @click="toggleDetails">{{ buttonText }}</button>
         <div v-if="showDetails">
             <slot></slot>
         </div>
-    </div>
+    </BaseBlock>
 </template>
 
 <script>
+import BaseBlock from "./BaseBlock.vue";
+
 export default {
+    components: { BaseBlock },
     data() {
         return {
             showDetails: false

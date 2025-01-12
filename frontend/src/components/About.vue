@@ -1,22 +1,24 @@
 <template>
-    <div class="about">
+    <BaseBlock class="about">
         <Biography />
         <SkillsList />
         <ToggleDetails />
-    </div>
+    </BaseBlock>
 </template>
 
 <script>
 import Biography from './Biography.vue';
 import SkillsList from './SkillsList.vue';
 import ToggleDetails from './ToggleDetails.vue';
+import BaseBlock from './BaseBlock.vue';
 
 export default {
     name: 'About',
     components: {
         Biography,
         SkillsList,
-        ToggleDetails
+        ToggleDetails,
+        BaseBlock
     }
 }
 </script>

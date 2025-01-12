@@ -10,6 +10,7 @@
 import BaseBlock from "./BaseBlock.vue";
 
 export default {
+    components: { BaseBlock },
     props: {
         id: String,
         section: String,
@@ -18,6 +19,5 @@ export default {
             required: true, // [{ label: "Click Me", handler: () => alert("Clicked!") }]
         },
     },
-    components: { BaseBlock },
 };
 </script>
