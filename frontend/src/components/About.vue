@@ -1,8 +1,8 @@
 <template>
     <BaseBlock class="about">
         <div class="buttons">
-            <button @click="setActiveSection('biography')">Biography</button>
-            <button @click="setActiveSection('skillset')">Skillset</button>
+            <button @click="setActiveSection('biography')" :class="{ active: activeSection === 'biography' }">Biography</button>
+            <button @click="setActiveSection('skillset')" :class="{ active: activeSection === 'skillset' }">Skillset</button>
         </div>
         <ContentRenderer :blocks="activeBlocks" />
     </BaseBlock>
@@ -61,5 +61,22 @@ export default {
 }
 button {
     margin: 0 10px;
+    background-color: #00bfff;
+    color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+button:hover {
+    background-color: #ffffff;
+    color: #00bfff;
+}
+button.active {
+    background-color: #ffffff;
+    color: #00bfff;
 }
 </style>
