@@ -4,7 +4,7 @@
             <button @click="setActiveSection('biography')" :class="{ active: activeSection === 'biography' }">Biography</button>
             <button @click="setActiveSection('skillset')" :class="{ active: activeSection === 'skillset' }">Skillset</button>
         </div>
-        <ContentRenderer :blocks="activeBlocks" />
+        <component :is="activeComponent" />
     </BaseBlock>
 </template>
 
@@ -26,20 +26,12 @@ export default {
     },
     data() {
         return {
-            activeSection: 'biography',
-            blocks: {
-                biography: [
-                    { type: 'Biography', id: 'bio1', section: 'biography', props: {} }
-                ],
-                skillset: [
-                    { type: 'SkillsList', id: 'skills1', section: 'skillset', props: {} }
-                ]
-            }
+            activeSection: 'biography'
         };
     },
     computed: {
-        activeBlocks() {
-            return this.blocks[this.activeSection];
+        activeComponent() {
+            return this.activeSection === 'biography' ? 'Biography' : 'SkillsList';
         }
     },
     methods: {
