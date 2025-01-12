@@ -61,10 +61,10 @@ export default {
 }
 button {
     margin: 0 10px;
-    background-color: #00bfff;
+    background-color: #000000;
     color: #ffffff;
     border-radius: 8px;
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: monospace, 'Roboto Mono', 'Courier New', Courier;
     font-size: 14px;
     font-style: italic;
     text-align: center;
@@ -73,10 +73,10 @@ button {
 }
 button:hover {
     background-color: #ffffff;
-    color: #00bfff;
+    color: #000000;
 }
 button.active {
     background-color: #ffffff;
-    color: #00bfff;
+    color: #000000;
 }
 </style>
