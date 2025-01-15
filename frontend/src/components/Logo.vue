@@ -26,3 +26,5 @@ export default {
     height: auto;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>

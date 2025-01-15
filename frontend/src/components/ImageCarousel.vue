@@ -81,3 +81,5 @@ export default {
     right: 10px;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>

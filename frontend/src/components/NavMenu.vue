@@ -47,3 +47,5 @@ export default {
     color: #ccc;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
