@@ -1,5 +1,5 @@
 <template>
-    <div class="subscribe-form">
+    <BaseBlock id="subscribe-form" section="subscribe">
         <h2>Subscribe to our Newsletter</h2>
         <form @submit.prevent="submitForm">
             <div class="form-group">
@@ -8,12 +8,15 @@
             </div>
             <button type="submit">Subscribe</button>
         </form>
-    </div>
+    </BaseBlock>
 </template>
 
 <script>
+import BaseBlock from "./BaseBlock.vue";
+
 export default {
     name: 'SubscribeForm',
+    components: { BaseBlock },
     data() {
         return {
             email: ''
