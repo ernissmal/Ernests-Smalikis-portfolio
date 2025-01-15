@@ -1,20 +1,40 @@
 <template>
     <div class="contacts">
         <h1>Contact Us</h1>
-        <AddressCard />
-        <SocialIcons />
+        <ContentRenderer :blocks="blocks" />
     </div>
 </template>
 
 <script>
-import SocialIcons from './SocialIcons.vue';
-import AddressCard from './AddressCard.vue';
+import ContentRenderer from './ContentRenderer.vue';
 
 export default {
     name: 'Contacts',
     components: {
-        SocialIcons,
-        AddressCard
+        ContentRenderer
+    },
+    data() {
+        return {
+            blocks: [
+                {
+                    type: 'BaseBlock',
+                    id: 'address-card',
+                    section: 'address',
+                    props: {
+                        name: 'Ernests Smalikis',
+                        street: '123 Main St',
+                        city: 'Anytown',
+                        state: 'CA',
+                        zip: '12345'
+                    }
+                },
+                {
+                    type: 'SocialIcons',
+                    id: 'social-icons',
+                    section: 'social'
+                }
+            ]
+        };
     }
 }
 </script>

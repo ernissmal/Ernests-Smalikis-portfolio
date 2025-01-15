@@ -17,6 +17,8 @@ import ActionBlock from "./ActionBlock.vue";
 import TextBlock from "./TextBlock.vue";
 import ImageBlock from "./ImageBlock.vue";
 import DatabaseInputBlock from "./DatabaseInputBlock.vue";
+import AddressCard from "./AddressCard.vue";
+import SocialIcons from "./SocialIcons.vue";
 
 export default {
     components: {
@@ -25,6 +27,8 @@ export default {
         TextBlock,
         ImageBlock,
         DatabaseInputBlock,
+        AddressCard,
+        SocialIcons,
     },
     props: {
         blocks: {
