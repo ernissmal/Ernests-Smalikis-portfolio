@@ -1,16 +1,23 @@
 <template>
-    <div class="project-card">
-        <img :src="thumbnail" alt="Project Thumbnail" class="project-thumbnail" />
-        <div class="project-info">
-            <h3 class="project-title">{{ title }}</h3>
-            <span class="project-tag">{{ tag }}</span>
+    <BaseBlock :id="project.id" section="project-card">
+        <div class="project-card">
+            <img :src="thumbnail" alt="Project Thumbnail" class="project-thumbnail" />
+            <div class="project-info">
+                <h3 class="project-title">{{ title }}</h3>
+                <span class="project-tag">{{ tag }}</span>
+            </div>
         </div>
-    </div>
+    </BaseBlock>
 </template>
 
 <script>
+import BaseBlock from './BaseBlock.vue';
+
 export default {
     name: 'ProjectCard',
+    components: {
+        BaseBlock
+    },
     props: {
         thumbnail: {
             type: String,
@@ -22,6 +29,10 @@ export default {
         },
         tag: {
             type: String,
+            required: true
+        },
+        project: {
+            type: Object,
             required: true
         }
     }
