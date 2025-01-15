@@ -60,3 +60,5 @@ export default {
     text-decoration: underline;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
