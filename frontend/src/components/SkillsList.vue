@@ -88,3 +88,5 @@ export default {
     opacity: 1;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
