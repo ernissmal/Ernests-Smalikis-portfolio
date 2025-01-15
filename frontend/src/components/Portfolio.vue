@@ -60,3 +60,5 @@ export default {
     gap: 20px;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
