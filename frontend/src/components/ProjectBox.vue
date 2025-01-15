@@ -29,3 +29,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+/* ...existing code... */
+</style>
+
+<style src="../assets/css/style.css"></style>
