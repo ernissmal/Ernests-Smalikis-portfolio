@@ -17,3 +17,42 @@ a {
     color: #ffffff;
     transition: color 0.3s ease;
 }
+/* Unified Button Styles */
+.btn {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+    font-family: monospace, 'Roboto Mono', 'Courier New', Courier;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.btn.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Buttons Container Styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+/* Apply unified button styles */
+button {
+    margin: 0 10px;
+}
+button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+button.active {
+    background-color: #ffffff;
+    color: #000000;
+}
