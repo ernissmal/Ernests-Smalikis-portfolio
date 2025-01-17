@@ -52,8 +52,8 @@ nav {
 .social a:hover {
     color: #ffffff;
 }
-/* Button Styles */
-button {
+/* Unified Button Styles */
+.btn {
     background-color: #000000;
     color: #ffffff;
     border-radius: 8px;
@@ -64,10 +64,46 @@ button {
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.btn.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Buttons Container Styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Apply unified button styles */
+button {
+    composes: btn;
+    margin: 0 10px;
+}
 button:hover {
     background-color: #ffffff;
     color: #000000;
 }
+button.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Footer Navigation Styles */
+.footer-nav a {
+    composes: btn;
+    margin: 0 10px;
+}
+.footer-nav a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 /* Profile Frame Styles */
 .profile-frame {
     position: relative;
@@ -289,10 +325,7 @@ footer h2{
     margin-right: 5px;
 }
 #mailing input[type="submit"] {
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    composes: btn;
 }
 #mailing input[type="submit"]:hover {
     background-color: #ffffff;
