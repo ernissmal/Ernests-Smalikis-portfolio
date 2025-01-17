@@ -30,7 +30,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #333;
+    background-color: transparent;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -58,6 +58,7 @@ export default {
 
 .footer-nav a:hover {
     text-decoration: underline;
+    color: #000000;
 }
 </style>
 
