@@ -1,0 +1,28 @@
+/* Social Icons Styles */
+.social ul li {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Contacts Section Styles */
+#contacts,
+#portfolio {
+    text-align: center;
+    padding: 15px;
+}
+.contact-container,
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
