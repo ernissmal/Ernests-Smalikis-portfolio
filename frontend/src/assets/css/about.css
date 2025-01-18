@@ -91,19 +91,33 @@ button:hover, button.active {
 
 /* Biography Styles */
 .biography {
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 10px;
+    background-color: transparent;
     border-radius: 8px;
+    color: #fff;
+    border: 1px solid #ddd;
+    transition: border 0.3s ease, background-color 0.3s ease;
 }
 
-.biography h1, .skills-list h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.biography:hover {
+    border: 2px solid #ddd;
+    background-color: rgba(240, 240, 240, 0.1);
+}
+
+.biography h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .biography p {
     font-size: 16px;
     line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.biography:hover p {
+    opacity: 1;
 }
 
 /* Skills List Styles */
