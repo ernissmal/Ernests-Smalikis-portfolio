@@ -131,10 +131,12 @@
     display: inline-block;
     margin-top: 8px;
     padding: 4px 8px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border-radius: 4px;
     font-size: 0.875rem;
+    float: right;
+    opacity: 30%;
 }
 
 .project-box {
@@ -170,6 +172,6 @@
 }
 
 .project-info a {
-    color: #007bff;
+    color: #fff;
     text-decoration: none;
 }
