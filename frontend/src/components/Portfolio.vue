@@ -61,5 +61,5 @@ export default {
 }
 </style>
 
-<style src="../assets/css/global.css"></style>
+<style src="../assets/css/style.css"></style>
 <style src="../assets/css/portfolio.css"></style>
