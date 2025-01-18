@@ -51,9 +51,8 @@
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     background-color: #000;
     color: #fff;
     padding: 20px 0;
@@ -62,6 +61,14 @@
 
 .footer-content p {
     margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-nav ul {
