@@ -38,6 +38,15 @@
 .social-icons {
     display: flex;
     gap: 20px;
+    color: #333;
+    background-color: transparent;
+}
+
+.social-icons :hover{
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    background-color: transparent;
 }
 
 .footer-content {
