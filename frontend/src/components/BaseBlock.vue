@@ -1,6 +1,11 @@
 <template>
     <div :id="id" :class="section" class="content-block">
         <slot></slot> <!-- Placeholder for child content -->
+        <div v-if="actions.length">
+            <button v-for="(action, index) in actions" :key="index" @click="action.handler">
+                {{ action.label }}
+            </button>
+        </div>
     </div>
 </template>
 
@@ -15,6 +20,10 @@ export default {
             type: String,
             required: true,
         },
+        actions: {
+            type: Array,
+            default: () => [] // [{ label: "Click Me", handler: () => alert("Clicked!") }]
+        }
     },
 };
 </script>
