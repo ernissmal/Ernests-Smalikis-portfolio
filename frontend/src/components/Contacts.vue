@@ -1,6 +1,6 @@
 <template>
     <div class="contacts">
-        <h1>Contact Us</h1>
+        <h1>Contact me</h1>
         <div class="address-card">
             <h2>{{ address.name }}</h2>
             <p>{{ address.street }}</p>
