@@ -7,5 +7,9 @@ app = FastAPI()
 app.include_router(portfolio_routes.router)
 
 @app.get("/")
-async def root():
-    return {"message": "Portfolio Backend is running"}
+def read_root():
+    return {"Hello": "World"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
