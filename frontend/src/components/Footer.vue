@@ -24,43 +24,5 @@ export default {
 }
 </script>
 
-<style scoped>
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: transparent;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.footer-nav li {
-    margin: 0 10px;
-}
-
-.footer-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-nav a:hover {
-    text-decoration: underline;
-    color: #000000;
-}
-</style>
-
 <style src="../assets/css/style.css"></style>
 <style src="../assets/css/header-footer.css"></style>
