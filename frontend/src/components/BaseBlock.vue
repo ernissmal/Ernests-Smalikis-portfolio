@@ -28,13 +28,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.content-block {
-    margin: 1rem 0;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-</style>
-
 <style src="../assets/css/style.css"></style>
