@@ -2,9 +2,9 @@
     <div class="portfolio">
         <h1>My Portfolio</h1>
         <ImageCarousel :projects="projects" />
-        <div id="projects-section" class="projects">
+        <BaseBlock id="projects-section" section="projects">
             <ContentRenderer :blocks="projectBlocks" />
-        </div>
+        </BaseBlock>
     </div>
 </template>
 
@@ -13,6 +13,7 @@ import ProjectCard from './ProjectCard.vue';
 import ProjectBox from './ProjectBox.vue';
 import ImageCarousel from './ImageCarousel.vue';
 import ContentRenderer from './ContentRenderer.vue';
+import BaseBlock from './BaseBlock.vue';
 
 export default {
     name: 'Portfolio',
@@ -20,7 +21,8 @@ export default {
         ProjectCard,
         ProjectBox,
         ImageCarousel,
-        ContentRenderer
+        ContentRenderer,
+        BaseBlock
     },
     data() {
         return {
