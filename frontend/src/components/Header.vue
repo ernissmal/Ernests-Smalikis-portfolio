@@ -24,3 +24,6 @@ export default {
 <style scoped>
 /* Remove existing styles */
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/header-footer.css"></style>

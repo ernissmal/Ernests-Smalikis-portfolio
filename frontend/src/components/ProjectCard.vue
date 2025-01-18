@@ -77,3 +77,6 @@ export default {
     font-size: 0.875rem;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/portfolio.css"></style>

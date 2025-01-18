@@ -4,52 +4,21 @@ body {
     color: #ffffff;
     font-family: monospace, 'Roboto Mono', 'Courier New', Courier;
     page-orientation: portrait;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 h1, h2, h3, h4, h5 {
     color: #ffffff;
     text-align: center;
     font-size: 20px;
+    transition: color 0.3s ease;
 }
 a {
     text-decoration: none;
     color: #ffffff;
-}
-/* Navigation Styles */
-nav {
-    background-color: transparent;
-    position: sticky;
-    text-align: center;
-    justify-content: space-between;
-    padding: 15px;
-    width: 100%; /* Added to expand width */
-    display: flex; /* Added to ensure flexbox layout */
-}
-.navItems {
-    padding-top: 15px;
-}
-.navItems a {
-    padding: 10px;
-    margin: 0 10px;
     transition: color 0.3s ease;
 }
-.navItems a:hover {
-    color: #ffffff;
-}
-.social {
-    padding-top: 5px;
-}
-.social a {
-    padding: 10px;
-    margin: 0 10px;
-    color: #ffffff;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-.social a:hover {
-    color: #ffffff;
-}
-/* Button Styles */
-button {
+/* Unified Button Styles */
+.btn {
     background-color: #000000;
     color: #ffffff;
     border-radius: 8px;
@@ -60,263 +29,30 @@ button {
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.btn.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Buttons Container Styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+/* Apply unified button styles */
+button {
+    margin: 0 10px;
+}
 button:hover {
     background-color: #ffffff;
     color: #000000;
 }
-/* Profile Frame Styles */
-.profile-frame {
-    position: relative;
-    overflow: hidden;
-    justify-content: center;
-}
-.profile-content {
-    background: url('../imgs/profile.jpeg') center center no-repeat;
-    background-size: cover;
-    color: #ffffff;
-    padding: 75px 50px 100px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.2);
-    background-position: 50% 30%;
-    height: calc(100vh + 25px);
-    position: relative;
-}
-/* Center the content */
-.profile-content h1,
-.profile-content h2,
-.profile-content button {
-    margin: 0;
-}
-#show-more-button {
-    margin-top: 20px;
-}
-/* Updated .hidden-content Styles */
-.hidden-content {
-    display: none;
-    background-color: rgba(18, 18, 18, 0.75);
-    padding: 20px;
-    text-align: center;
-    position: absolute;
-    bottom: 100px;
-    left: 0%;
-    right: 0%;
-    transform: translateX(-90%);
-    z-index: 0;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
-    max-height: calc(100vh - 120px);
-}
-/* Show More Animation */
-.show-more-animation {
-    animation: showMoreAnimation 1s forwards;
-    display: block !important;
-}
-@keyframes showMoreAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* Social Icons Styles */
-.social ul li {
-    font-size: 24px;
-    margin-right: 10px;
-    color: #ffffff;
-}
-/* Link Styles */
-a {
-    text-decoration: none;
-    color: #ffffff;
-}
-/* Version Styles */
-.version h5 {
-    justify-content: right;
-    font-style: italic;
-    text-align: right;
-    color: #dddddd;
-}
-/* Contacts Section Styles */
-#contacts,
-#portfolio {
-    text-align: center;
-    padding: 15px;
-}
-.contact-container,
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-/* Picture Carousel Styles */
-.slideshow-container,
-.slideshow {
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-}
-.mySlides,
-.pictures {
-    display: none;
-}
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-.text, .numbertext {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-    background-color: #717171;
-}
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@keyframes fade {
-    from { opacity: .4 }
-    to { opacity: 1 }
-}
-em{
-    color: #ffffff;
-    font-size: 20px;
-    font-style: oblique;
-}
-footer .social{
-    text-align: center;
-    padding: 25px;
-}
-footer h1{
-    font-size: 14px;
-    font-weight: 100;
-    font-style: italic;
-}
-footer h2{
-    font-size: 12px;
-    font-weight: 100;
-    font-style: italic;
-}
-.version h5{
-    font-size: 12px;
-}
-/* Mailing Section Styles */
-#mailing {
-    text-align: center;
-    padding: 20px;
-}
-#mailing h1 {
-    font-size: 24px;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-#mailing form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#mailing form div {
-    margin-bottom: 15px;
-}
-#mailing label {
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-#mailing input[type="text"],
-#mailing input[type="email"],
-#mailing input[type="checkbox"],
-#mailing input[type="submit"] {
-    padding: 10px;
-    margin-top: 5px;
-    border: 2px solid #ffffff;
-    border-radius: 8px;
-    background-color: transparent;
-    color: #ffffff;
-}
-#mailing input[type="checkbox"]:checked::before {
-    content: '\2713';
-    display: inline-block;
-    margin-right: 5px;
-}
-#mailing input[type="submit"] {
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-#mailing input[type="submit"]:hover {
+button.active {
     background-color: #ffffff;
     color: #000000;
-}
-/* Add this to your existing CSS styles */
-.alert-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.alert-box {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-/* Header Styles */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #000000;
-    color: #ffffff;
 }

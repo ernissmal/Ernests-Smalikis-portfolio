@@ -1,0 +1,62 @@
+/* Profile Frame Styles */
+.profile-frame {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+.profile-content {
+    background: url('../imgs/profile.jpeg') center center no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    padding: 75px 50px 100px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
+    background-position: 50% 30%;
+    height: calc(100vh + 25px);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+/* Center the content */
+.profile-content h1,
+.profile-content h2,
+.profile-content button {
+    margin: 0;
+}
+#show-more-button {
+    margin-top: 20px;
+}
+/* Updated .hidden-content Styles */
+.hidden-content {
+    display: none;
+    background-color: rgba(18, 18, 18, 0.75);
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    left: 0%;
+    right: 0%;
+    transform: translateX(-90%);
+    z-index: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+    transition: background-color 0.3s ease;
+}
+/* Show More Animation */
+.show-more-animation {
+    animation: showMoreAnimation 1s forwards;
+    display: block !important;
+}
+@keyframes showMoreAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

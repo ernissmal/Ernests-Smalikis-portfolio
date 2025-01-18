@@ -27,3 +27,5 @@
     border-radius: 8px;
   }
   </style>
+
+<style src="../assets/css/style.css"></style>

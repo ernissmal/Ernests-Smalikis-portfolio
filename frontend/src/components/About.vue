@@ -72,3 +72,6 @@ button.active {
     color: #000000;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/about.css"></style>

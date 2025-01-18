@@ -32,4 +32,7 @@
     components: { BaseBlock },
   };
   </script>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/portfolio.css"></style>
   

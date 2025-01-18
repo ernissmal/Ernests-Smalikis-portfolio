@@ -46,3 +46,6 @@ export default {
     color: #555;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/header-footer.css"></style>

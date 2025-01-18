@@ -45,3 +45,6 @@ export default {
     padding: 20px;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/contacts.css"></style>

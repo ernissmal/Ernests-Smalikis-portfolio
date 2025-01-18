@@ -51,3 +51,6 @@ export default {
     margin: 4px 0;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/contacts.css"></style>

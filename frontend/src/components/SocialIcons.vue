@@ -34,3 +34,6 @@ export default {
     color: #0073b1; /* LinkedIn color */
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/contacts.css"></style>

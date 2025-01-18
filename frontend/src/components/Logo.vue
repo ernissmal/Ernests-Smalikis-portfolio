@@ -26,3 +26,6 @@ export default {
     height: auto;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/header-footer.css"></style>

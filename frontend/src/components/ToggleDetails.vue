@@ -35,3 +35,5 @@ button {
     margin-bottom: 10px;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>

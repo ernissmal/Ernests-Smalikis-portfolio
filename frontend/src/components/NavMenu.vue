@@ -44,6 +44,11 @@ export default {
 }
 
 .nav-menu a:hover {
-    color: #ccc;
+    text-decoration: underline;
+    color: #000000;
+    background-color: #fff;
 }
 </style>
+
+<style src="../assets/css/style.css"></style>
+<style src="../assets/css/header-footer.css"></style>
