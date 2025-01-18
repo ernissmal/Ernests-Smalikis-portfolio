@@ -1,33 +1,33 @@
 <template>
     <div class="portfolio">
         <h1>My Portfolio</h1>
-        <ImageCarousel />
-        <BaseBlock id="projects-section" section="projects">
+        <ImageCarousel :projects="projects" />
+        <div id="projects-section" class="projects">
             <ContentRenderer :blocks="projectBlocks" />
-        </BaseBlock>
+        </div>
     </div>
 </template>
 
 <script>
 import ProjectCard from './ProjectCard.vue';
+import ProjectBox from './ProjectBox.vue';
 import ImageCarousel from './ImageCarousel.vue';
-import BaseBlock from './BaseBlock.vue';
 import ContentRenderer from './ContentRenderer.vue';
 
 export default {
     name: 'Portfolio',
     components: {
         ProjectCard,
+        ProjectBox,
         ImageCarousel,
-        BaseBlock,
         ContentRenderer
     },
     data() {
         return {
             projects: [
-                { id: 1, title: 'Project 1', description: 'Description for project 1' },
-                { id: 2, title: 'Project 2', description: 'Description for project 2' },
-                // Add more projects as needed
+                { id: 1, title: 'Project 1', description: 'Description for project 1', imageUrl: 'image1.jpg' },
+                { id: 2, title: 'Project 2', description: 'Description for project 2', imageUrl: 'image2.jpg' },
+                { id: 3, title: 'Project 3', description: 'Description for project 3', imageUrl: 'image3.jpg' },
             ],
             projectBlocks: [
                 {
