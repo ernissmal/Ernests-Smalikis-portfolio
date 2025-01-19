@@ -13,14 +13,11 @@ RUN npm install
 # Copy the rest of the frontend code to the container
 COPY . .
 
-# Build the application (for production)
+# Build the application in production mode
 RUN npm run build
 
 # Expose the port Vite will run on (default is 5173)
 EXPOSE 5173
 
-# Set default environment variable for Vite
-ENV NODE_ENV=development
-
-# Default command to run the Vite development server
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+# Start the Vite development server or serve the built files for production
+CMD ["npm", "run", "dev"]

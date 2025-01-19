@@ -11,7 +11,7 @@ services:
     environment:
       - NODE_ENV=development
       - VITE_API_URL=http://backend:8000
-    command: sh -c "if [ \"$NODE_ENV\" = \"production\" ]; then npm run preview -- --host 0.0.0.0; else npm run dev -- --host 0.0.0.0; fi"
+    command: npm run dev -- --host 0.0.0.0
     networks:
       - app_network
     depends_on:
