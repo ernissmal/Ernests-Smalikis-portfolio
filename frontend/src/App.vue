@@ -8,15 +8,16 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <Header />
-  <main>
-    <About />
-    <Portfolio />
-    <Contacts />
-    <SubscribeForm />
-  </main>
-  <Footer />
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'App'
+};
+</script>
 
 <style scoped>
 main {
