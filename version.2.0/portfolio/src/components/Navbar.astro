@@ -1,33 +1,75 @@
 ---
+interface Props {
+    currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
 ---
-<nav class="bg-background-dark/95 backdrop-blur-sm text-white border-b border-accent/10 fixed w-full z-50">
+<nav class="bg-background-dark/95 backdrop-blur-sm text-white border-b border-accent/10 fixed w-full z-50 animate-fade-in">
     <div class="container mx-auto flex justify-between items-center px-4 py-5">
         <div class="flex items-center space-x-2">
-            <div class="text-xl font-bold bg-gradient-to-r from-primary-light to-accent-light bg-clip-text text-transparent">
-                Ernests Smaliķis
-            </div>
+            <a href="/" class="group">
+                <div class="text-xl font-bold bg-gradient-to-r from-primary-light via-accent to-primary-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow hover:scale-105 transition-transform duration-300">
+                    Ernests Smaliķis
+                </div>
+            </a>
         </div>
         <div class="hidden md:flex space-x-8">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/journey" class="nav-link">Journey</a>
-            <a href="/projects" class="nav-link">Projects</a>
-            <a href="/vision" class="nav-link">Vision</a>
+            <a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''} animate-slide-in`} style="animation-delay: 0ms;">
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    Home
+                </span>
+            </a>
+            <a href="/journey" class={`nav-link ${currentPath === '/journey' ? 'active' : ''} animate-slide-in`} style="animation-delay: 100ms;">
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                    </svg>
+                    Journey
+                </span>
+            </a>
+            <a href="/projects" class={`nav-link ${currentPath === '/projects' ? 'active' : ''} animate-slide-in`} style="animation-delay: 200ms;">
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                    Projects
+                </span>
+            </a>
+            <a href="/vision" class={`nav-link ${currentPath === '/vision' ? 'active' : ''} animate-slide-in`} style="animation-delay: 300ms;">
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                    </svg>
+                    Vision
+                </span>
+            </a>
         </div>
-        <button class="md:hidden text-white focus:outline-none">
+        <button class="md:hidden text-white focus:outline-none hover:text-accent-light transition-colors duration-200">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
             </svg>
         </button>
     </div>
 </nav>
+
 <style>
     .nav-link {
         @apply relative text-gray-300 hover:text-white transition-colors duration-200 py-2;
     }
     .nav-link::after {
-        @apply content-[''] absolute left-0 -bottom-1 w-0 h-0.5 bg-accent-light transition-all duration-300;
+        @apply content-[''] absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-accent to-primary transition-all duration-300;
     }
     .nav-link:hover::after {
         @apply w-full;
+    }
+    .nav-link.active {
+        @apply text-white;
+    }
+    .nav-link.active::after {
+        @apply w-full bg-gradient-to-r from-accent-light to-primary-light;
     }
 </style>
