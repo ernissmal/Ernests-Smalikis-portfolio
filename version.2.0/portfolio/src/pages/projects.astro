@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="Projects | Ernests Smalikis">
+		<Navbar />
+		<main class="container mx-auto px-4 py-8">
+			<section class="max-w-4xl mx-auto">
+				<h1 class="text-4xl font-bold mb-6">📐 What I Build</h1>
+				<div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+					<p class="text-lg mb-6">
+						I focus on lean, high-impact software with a strong backend and security posture. My work spans:
+					</p>
+					
+					<ul class="list-disc list-inside space-y-2 mb-8">
+						<li>Backend APIs & automation tools</li>
+						<li>Static and full-stack web apps</li>
+						<li>AI/ML-powered text processing and OSINT utilities</li>
+						<li>Privacy-first tools for individuals and small businesses</li>
+						<li>Real-time systems with low-latency performance requirements</li>
+					</ul>
+					
+					<p class="text-lg italic mb-8">Tools are tested in the wild — not just in dev environments.</p>
+
+					<h2 class="text-2xl font-bold mb-6">Featured Projects</h2>
+					
+					<div class="space-y-6">
+						<div class="border-l-4 border-blue-500 pl-4">
+							<h3 class="text-xl font-bold">XStagePass</h3>
+							<p>Event management software with task-based access control, Google Drive image uploads, and real-time updates. Supports both hosted and self-hosted deployments.</p>
+						</div>
+						
+						<div class="border-l-4 border-green-500 pl-4">
+							<h3 class="text-xl font-bold">LuceneX Insight</h3>
+							<p>AI-driven browser tool for extracting and summarizing text while ignoring markup and noise. Designed for OSINT and journalism workflows.</p>
+						</div>
+						
+						<div class="border-l-4 border-yellow-500 pl-4">
+							<h3 class="text-xl font-bold">SpotEye</h3>
+							<p>Surveillance optimization tool that tags and prioritizes video events using smart filtering and human-in-the-loop learning.</p>
+						</div>
+						
+						<div class="border-l-4 border-purple-500 pl-4">
+							<h3 class="text-xl font-bold">XHashPass</h3>
+							<p>A battle-tested evolution of my first tool — Password generator. Lightweight, secure, and built with modern cryptographic standards in mind.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+</Layout>

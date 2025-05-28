@@ -1,16 +1,43 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Ernests Smalikis | Software Engineer">
+		<Navbar />
+		<main class="container mx-auto px-4 py-8">
+			<section class="max-w-4xl mx-auto">
+				<h1 class="text-4xl font-bold mb-6">👤 Who I Am</h1>
+				<div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+					<p class="text-lg mb-4">
+						I'm a self-employed software engineer, systems thinker, and problem-solver. My journey didn't start with formal credentials or a polished resume — it began with a relentless curiosity and a clear need to build real tools that solve real problems.
+					</p>
+					<p class="text-lg">
+						Through years of self-teaching, working hands-on with code, building tools from scratch, and adapting under pressure, I've carved out a practical and highly adaptive skill set in backend development, automation, and systems design.
+					</p>
+				</div>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+					<div class="bg-white p-6 rounded-lg shadow-lg">
+						<h2 class="text-2xl font-bold mb-4">Core Skills</h2>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Backend Development</li>
+							<li>Systems Design</li>
+							<li>Automation</li>
+							<li>Problem Solving</li>
+							<li>Security-First Development</li>
+						</ul>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-lg">
+						<h2 class="text-2xl font-bold mb-4">Quick Links</h2>
+						<ul class="space-y-2">
+							<li><a href="/journey" class="text-blue-600 hover:text-blue-800">🛠️ My Journey</a></li>
+							<li><a href="/projects" class="text-blue-600 hover:text-blue-800">📐 What I Build</a></li>
+							<li><a href="/vision" class="text-blue-600 hover:text-blue-800">🎯 My Vision</a></li>
+							<li><a href="https://lucenex.lv" class="text-blue-600 hover:text-blue-800">🔗 LuceneX Website</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+</Layout>
