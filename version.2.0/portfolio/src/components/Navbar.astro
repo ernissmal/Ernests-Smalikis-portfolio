@@ -1,13 +1,33 @@
 ---
 ---
-<nav class="bg-gray-900 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <div class="text-xl font-bold">Ernests Smaliķis</div>
-        <div class="space-x-4">
-            <a href="/" class="hover:text-gray-300">Home</a>
-            <a href="/journey" class="hover:text-gray-300">Journey</a>
-            <a href="/projects" class="hover:text-gray-300">Projects</a>
-            <a href="/vision" class="hover:text-gray-300">Vision</a>
+<nav class="bg-background-dark/95 backdrop-blur-sm text-white border-b border-accent/10 fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 py-5">
+        <div class="flex items-center space-x-2">
+            <div class="text-xl font-bold bg-gradient-to-r from-primary-light to-accent-light bg-clip-text text-transparent">
+                Ernests Smaliķis
+            </div>
         </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/journey" class="nav-link">Journey</a>
+            <a href="/projects" class="nav-link">Projects</a>
+            <a href="/vision" class="nav-link">Vision</a>
+        </div>
+        <button class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+            </svg>
+        </button>
     </div>
 </nav>
+<style>
+    .nav-link {
+        @apply relative text-gray-300 hover:text-white transition-colors duration-200 py-2;
+    }
+    .nav-link::after {
+        @apply content-[''] absolute left-0 -bottom-1 w-0 h-0.5 bg-accent-light transition-all duration-300;
+    }
+    .nav-link:hover::after {
+        @apply w-full;
+    }
+</style>
