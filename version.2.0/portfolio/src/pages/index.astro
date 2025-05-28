@@ -4,40 +4,109 @@ import Navbar from '../components/Navbar.astro';
 ---
 
 <Layout title="Ernests Smalikis | Software Engineer">
-		<Navbar />
-		<main class="container mx-auto px-4 py-8">
-			<section class="max-w-4xl mx-auto">
-				<h1 class="text-4xl font-bold mb-6">👤 Who I Am</h1>
-				<div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-					<p class="text-lg mb-4">
-						I'm a self-employed software engineer, systems thinker, and problem-solver. My journey didn't start with formal credentials or a polished resume — it began with a relentless curiosity and a clear need to build real tools that solve real problems.
-					</p>
-					<p class="text-lg">
-						Through years of self-teaching, working hands-on with code, building tools from scratch, and adapting under pressure, I've carved out a practical and highly adaptive skill set in backend development, automation, and systems design.
-					</p>
-				</div>
-				
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-					<div class="bg-white p-6 rounded-lg shadow-lg">
-						<h2 class="text-2xl font-bold mb-4">Core Skills</h2>
-						<ul class="list-disc list-inside space-y-2">
-							<li>Backend Development</li>
-							<li>Systems Design</li>
-							<li>Automation</li>
-							<li>Problem Solving</li>
-							<li>Security-First Development</li>
-						</ul>
-					</div>
-					<div class="bg-white p-6 rounded-lg shadow-lg">
-						<h2 class="text-2xl font-bold mb-4">Quick Links</h2>
-						<ul class="space-y-2">
-							<li><a href="/journey" class="text-blue-600 hover:text-blue-800">🛠️ My Journey</a></li>
-							<li><a href="/projects" class="text-blue-600 hover:text-blue-800">📐 What I Build</a></li>
-							<li><a href="/vision" class="text-blue-600 hover:text-blue-800">🎯 My Vision</a></li>
-							<li><a href="https://lucenex.lv" class="text-blue-600 hover:text-blue-800">🔗 LuceneX Website</a></li>
-						</ul>
+	<Navbar />
+	<main class="pt-24 pb-16">
+		<div class="container mx-auto px-4">
+			<section class="max-w-5xl mx-auto mb-20">
+				<div class="relative">
+					<div class="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-25"></div>
+					<div class="relative bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-800 p-8 rounded-lg shadow-xl">
+						<h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+							Software Engineer & Systems Architect
+						</h1>
+						<div class="prose dark:prose-invert prose-lg max-w-none">
+							<p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+								I'm a self-employed software engineer, systems thinker, and problem-solver with a passion for building innovative solutions. My journey is driven by relentless curiosity and the desire to create impactful tools that solve real-world challenges.
+							</p>
+							<p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+								Through years of hands-on experience and continuous learning, I've developed expertise in backend development, automation, and systems design, always prioritizing security and scalability.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
-		</main>
+
+			<section class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<div class="group">
+					<div class="relative">
+						<div class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-accent/50 rounded-lg blur opacity-25 transition group-hover:opacity-100"></div>
+						<div class="relative bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-800 p-8 rounded-lg shadow-xl">
+							<h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center">
+								<span class="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg mr-3">
+									<svg class="w-6 h-6 text-primary-dark dark:text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+									</svg>
+								</span>
+								Core Expertise
+							</h2>
+							<ul class="space-y-4">
+								<li class="flex items-center space-x-3">
+									<span class="h-px w-8 bg-primary/30"></span>
+									<span class="text-gray-700 dark:text-gray-300">Backend Development</span>
+								</li>
+								<li class="flex items-center space-x-3">
+									<span class="h-px w-8 bg-primary/30"></span>
+									<span class="text-gray-700 dark:text-gray-300">Systems Architecture</span>
+								</li>
+								<li class="flex items-center space-x-3">
+									<span class="h-px w-8 bg-primary/30"></span>
+									<span class="text-gray-700 dark:text-gray-300">Process Automation</span>
+								</li>
+								<li class="flex items-center space-x-3">
+									<span class="h-px w-8 bg-primary/30"></span>
+									<span class="text-gray-700 dark:text-gray-300">Security Implementation</span>
+								</li>
+								<li class="flex items-center space-x-3">
+									<span class="h-px w-8 bg-primary/30"></span>
+									<span class="text-gray-700 dark:text-gray-300">Technical Leadership</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="group">
+					<div class="relative">
+						<div class="absolute -inset-1 bg-gradient-to-r from-accent/50 to-primary/50 rounded-lg blur opacity-25 transition group-hover:opacity-100"></div>
+						<div class="relative bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-800 p-8 rounded-lg shadow-xl">
+							<h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center">
+								<span class="bg-accent/10 dark:bg-accent/20 p-2 rounded-lg mr-3">
+									<svg class="w-6 h-6 text-accent-dark dark:text-accent-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+									</svg>
+								</span>
+								Quick Links
+							</h2>
+							<div class="space-y-4">
+								<a href="/journey" class="block group/link">
+									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover:bg-gray-50 dark:hover:bg-gray-800/50">
+										<span class="text-primary">🛠️</span>
+										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-primary dark:group-hover/link:text-primary-light transition">My Journey</span>
+									</div>
+								</a>
+								<a href="/projects" class="block group/link">
+									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover:bg-gray-50 dark:hover:bg-gray-800/50">
+										<span class="text-primary">📐</span>
+										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-primary dark:group-hover/link:text-primary-light transition">What I Build</span>
+									</div>
+								</a>
+								<a href="/vision" class="block group/link">
+									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover:bg-gray-50 dark:hover:bg-gray-800/50">
+										<span class="text-primary">🎯</span>
+										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-primary dark:group-hover/link:text-primary-light transition">My Vision</span>
+									</div>
+								</a>
+								<a href="https://lucenex.lv" class="block group/link">
+									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover:bg-gray-50 dark:hover:bg-gray-800/50">
+										<span class="text-primary">🔗</span>
+										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-primary dark:group-hover/link:text-primary-light transition">LuceneX Website</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
 </Layout>
