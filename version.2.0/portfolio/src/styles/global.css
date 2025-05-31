@@ -17,6 +17,7 @@
   --color-accent-light: #fb7185;
   --color-background: #f8fafc;
   --color-card: #ffffff;
+  --color-card-rgb: 255, 255, 255;
   --color-text: #1e293b;
   --color-text-light: #64748b;
   --color-border: #e2e8f0;
@@ -43,6 +44,7 @@
   --color-accent-light: #fda4af;
   --color-background: #0f172a;
   --color-card: #1e293b;
+  --color-card-rgb: 30, 41, 59;
   --color-text: #e2e8f0;
   --color-text-light: #94a3b8;
   --color-border: #334155;
