@@ -30,9 +30,9 @@ const { title } = Astro.props;
 			<div class="fixed inset-0 -z-10 pointer-events-none">
 				<div class="absolute inset-0 gradient-bg-primary animate-gradient-flow"></div>
 				<div class="absolute inset-0 gradient-bg-accent mix-blend-lighten"></div>
-				<div class="absolute inset-0 bg-gradient-top opacity-30 mix-blend-lighten"></div>
-				<div class="absolute inset-0 bg-gradient-bottom opacity-20 mix-blend-multiply"></div>
-				<div class="absolute inset-0 bg-grid-pattern opacity-[0.02] dark:opacity-[0.02]"></div>
+				<div class="absolute inset-0 bg-gradient-top" style="opacity: 0.3; mix-blend-mode: lighten;"></div>
+				<div class="absolute inset-0 bg-gradient-bottom" style="opacity: 0.2; mix-blend-mode: multiply;"></div>
+				<div class="absolute inset-0 bg-grid-pattern" style="opacity: 0.02;"></div>
 			</div>
 
 			<!-- Floating, Loud CTA Button -->
