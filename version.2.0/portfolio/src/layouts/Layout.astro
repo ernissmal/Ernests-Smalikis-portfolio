@@ -20,28 +20,16 @@ const { title } = Astro.props;
 		<link rel="stylesheet" href="/global.css">
 		<title>{title}</title>
 	</head>
-	<body class="bg-light dark:bg-dark text-gray-900 dark:text-gray-100 min-h-screen font-sans" style="background-color: #ffffff; color: #111827; font-family: 'Inter', sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
-		<div class="min-h-screen relative overflow-x-hidden">
-			<div class="z-10 relative animate-fade-in">
+	<body style="background-color: #fafafa; color: #333; font-family: 'Inter', sans-serif; min-height: 100vh; line-height: 1.6;">
+		<div class="page-container">
+			<div class="content">
 				<slot />
 			</div>
 
-			<!-- Animated, Layered Gradient Background -->
-			<div class="fixed inset-0 -z-10 pointer-events-none">
-				<div class="absolute inset-0 gradient-bg-primary animate-gradient-flow"></div>
-				<div class="absolute inset-0 gradient-bg-accent mix-blend-lighten"></div>
-				<div class="absolute inset-0 bg-gradient-top" style="opacity: 0.3; mix-blend-mode: lighten;"></div>
-				<div class="absolute inset-0 bg-gradient-bottom" style="opacity: 0.2; mix-blend-mode: multiply;"></div>
-				<div class="absolute inset-0 bg-grid-pattern" style="opacity: 0.02;"></div>
-			</div>
-
-			<!-- Floating, Loud CTA Button -->
-			<a href="/projects" class="fixed bottom-8 right-8 z-50 group" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 50;">
-				<button class="loud-cta animate-bounce-soft">
-					<span style="display: inline-flex; align-items: center; gap: 1rem;">
-						<span style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); font-size: 1.875rem;">🚀</span>
-						<span>See My Projects</span>
-					</span>
+			<!-- Simple, unobtrusive CTA -->
+			<a href="/projects" class="cta-button">
+				<button>
+					<span>View Projects</span>
 				</button>
 			</a>
 		</div>
