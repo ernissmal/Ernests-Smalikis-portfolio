@@ -62,6 +62,13 @@ const navLinks = [
         z-index: 100;
         box-shadow: var(--shadow-sm);
         transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+    
+    html.dark nav {
+        background-color: rgba(30, 41, 59, 0.85);
     }
 
     .nav-container {
