@@ -1,24 +1,92 @@
 ---
 export interface Props {
 	title: string;
+	description?: string;
+	image?: string;
+	type?: 'website' | 'article';
 }
 
-const { title } = Astro.props;
+const { 
+	title,
+	description = "Software Engineer specializing in web development, iOS development, and Python programming. Experienced in building scalable solutions and innovative applications.",
+	image = '/og-image.jpg',
+	type = 'website'
+} = Astro.props;
+
+// Base URL for canonical and OG tags
+const baseUrl = import.meta.env.SITE ?? "https://ernests-smalikis.com"; // Replace with your actual domain
+const currentUrl = new URL(Astro.url.pathname, baseUrl).toString();
+const imageUrl = new URL(image, baseUrl).toString();
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="light">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Ernests Smalikis - Software Engineer Portfolio">
 		<meta name="viewport" content="width=device-width" />
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title}>
+		<meta name="description" content={description}>
+		<meta name="keywords" content="software engineer, web developer, iOS developer, Python programmer, Latvia developer, portfolio, systems architect, automation expert">
+		<link rel="canonical" href={currentUrl}>
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={type}>
+		<meta property="og:url" content={currentUrl}>
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content={imageUrl}>
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content={currentUrl}>
+		<meta property="twitter:title" content={title}>
+		<meta property="twitter:description" content={description}>
+		<meta property="twitter:image" content={imageUrl}>
+		
+		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		
+		<!-- Font Preloading -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" as="style">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+		
+		<!-- Styles -->
 		<link rel="stylesheet" href="/global.css">
-		<title>{title}</title>
+		
+		<!-- Generator -->
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- JSON-LD Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Ernests Smalikis",
+				"url": "{baseUrl}",
+				"sameAs": [
+					"https://twitter.com/ESmalikis",
+					"https://github.com/ernissmal",
+					"https://www.instagram.com/erenesto_smalikis",
+					"https://www.youtube.com/@ESmalikis"
+				],
+				"jobTitle": "Software Engineer",
+				"description": "Passionate software engineer specializing in web development, iOS applications, and systems architecture",
+				"knowsAbout": [
+					"Web Development",
+					"iOS Development",
+					"Python Programming",
+					"Systems Architecture",
+					"Automation",
+					"Software Engineering"
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<div class="page-container">
