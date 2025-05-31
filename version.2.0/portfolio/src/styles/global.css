@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './opacity-utilities.css';
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-glass;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md rounded-xl border border-white/20 shadow-card;
+  }
+  
+  .button-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-medium shadow-button hover:shadow-hover transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .button-secondary {
+    @apply bg-transparent border border-primary text-primary px-6 py-3 rounded-xl font-medium hover:bg-primary hover:text-white transition-all duration-300;
+  }
+  
+  .button-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-xl font-medium shadow-accent hover:shadow-hover transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-cta;
+  }
+}
