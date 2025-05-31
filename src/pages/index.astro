@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import { Image } from 'astro:assets';
+
+const pageTitle = "Ernests Smalikis | Software Engineer & Systems Architect";
+const pageDescription = "Experienced software engineer specializing in web development, iOS applications, and systems architecture. Passionate about building innovative solutions and solving complex problems.";
+---
+
+<Layout 
+	title={pageTitle}
+	description={pageDescription}
+>
+	<Navbar />
+	<main class="container mx-auto pt-32 pb-20">
+		<article class="section max-w-4xl mx-auto">
+			<div class="card p-8 md:p-12">
+				<header>
+					<h1 class="text-4xl md:text-5xl font-bold mb-6">
+						Software Engineer & Systems Architect
+					</h1>
+				</header>
+				<div class="content">
+					<p class="text-lg md:text-xl mb-8 max-w-2xl">
+						I'm a self-employed software engineer, systems thinker, and problem-solver with a passion for building innovative solutions. My journey is driven by relentless curiosity and the desire to create impactful tools that solve real-world challenges.
+					</p>
+					<p class="text-base md:text-lg mb-8 max-w-2xl">
+						Through years of hands-on experience and continuous learning, I've developed expertise in backend development, automation, and systems design, always prioritizing security and scalability.
+					</p>
+					<div class="cta-group">
+						<a href="/projects" class="button-primary inline-block" rel="prefetch" aria-label="View my portfolio projects">
+							See My Projects
+						</a>
+					</div>
+				</div>
+			</div>
+		</article>
+		
+		<!-- Add structured data for the professional profile -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "ProfilePage",
+				"mainEntity": {
+					"@type": "Person",
+					"name": "Ernests Smalikis",
+					"jobTitle": "Software Engineer",
+					"description": "Self-employed software engineer and systems architect specializing in web development and automation",
+					"knowsAbout": [
+						"Backend Development",
+						"Systems Architecture",
+						"Automation",
+						"Security",
+						"Scalability"
+					],
+					"url": "https://ernests-smalikis.com",
+					"sameAs": [
+						"https://github.com/ernissmal",
+						"https://twitter.com/ESmalikis"
+					]
+				}
+			}
+		</script>
+	</main>
+</Layout>
+
+<style>
+	.button-primary {
+		background-color: var(--primary);
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: var(--radius-md);
+		font-weight: 500;
+		transition: all 0.2s ease;
+	}
+	
+	.button-primary:hover {
+		background-color: var(--primary-dark);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-md);
+	}
+</style>
