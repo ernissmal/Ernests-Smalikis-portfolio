@@ -1,14 +1,14 @@
 /* Define CSS variables for colors */
 :root {
-  --primary-rgb: 0, 112, 243;
-  --primary-dark-rgb: 0, 88, 198;
-  --primary-light-rgb: 77, 154, 255;
-  --secondary-rgb: 45, 55, 72;
-  --secondary-dark-rgb: 26, 32, 44;
-  --secondary-light-rgb: 74, 85, 104;
-  --accent-rgb: 255, 59, 48;
-  --accent-dark-rgb: 214, 48, 48;
-  --accent-light-rgb: 255, 107, 96;
+  --primary-rgb: 37, 99, 235;
+  --primary-dark-rgb: 29, 78, 216;
+  --primary-light-rgb: 59, 130, 246;
+  --secondary-rgb: 100, 116, 139;
+  --secondary-dark-rgb: 71, 85, 105;
+  --secondary-light-rgb: 148, 163, 184;
+  --accent-rgb: 244, 63, 94;
+  --accent-dark-rgb: 225, 29, 72;
+  --accent-light-rgb: 251, 113, 133;
 }
 
 /* Opacity utility classes for primary color */
@@ -63,6 +63,31 @@
 }
 .dark .dark\:bg-accent-20 {
   background-color: rgba(var(--accent-rgb), 0.2);
+}
+
+/* Border opacity utility classes */
+.border-primary-10 {
+  border-color: rgba(var(--primary-rgb), 0.1);
+}
+.border-primary-20 {
+  border-color: rgba(var(--primary-rgb), 0.2);
+}
+.border-secondary-10 {
+  border-color: rgba(var(--secondary-rgb), 0.1);
+}
+.border-accent-10 {
+  border-color: rgba(var(--accent-rgb), 0.1);
+}
+
+/* Text opacity utility classes */
+.text-primary-80 {
+  color: rgba(var(--primary-rgb), 0.8);
+}
+.text-secondary-80 {
+  color: rgba(var(--secondary-rgb), 0.8);
+}
+.text-accent-80 {
+  color: rgba(var(--accent-rgb), 0.8);
 }
 
 /* Selection text color */
