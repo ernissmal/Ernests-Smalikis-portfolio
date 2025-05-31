@@ -3,9 +3,9 @@ const currentPath = Astro.url.pathname;
 ---
 <nav style="background-color: rgba(18, 18, 18, 0.95); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: white; border-bottom: 1px solid rgba(255, 59, 48, 0.1); position: fixed; width: 100%; z-index: 50;" class="animate-fade-in">
     <div class="container mx-auto flex justify-between items-center px-4 py-5" style="margin-left: auto; margin-right: auto; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1rem;">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2" style="display: flex; align-items: center; gap: 0.5rem;">
             <a href="/" class="group">
-                <div class="text-xl font-bold bg-gradient-to-r from-primary-light via-accent to-primary-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow hover:scale-105 transition-transform duration-300">
+                <div class="gradient-text" style="font-size: 1.25rem; font-weight: 700; transition: transform 0.3s;">
                     Ernests Smaliķis
                 </div>
             </a>
@@ -54,18 +54,53 @@ const currentPath = Astro.url.pathname;
 
 <style>
     .nav-link {
-        @apply relative text-gray-300 hover:text-white transition-colors duration-200 py-2;
+        position: relative;
+        color: rgb(209, 213, 219);
+        transition: color 0.2s ease;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
+    
+    .nav-link:hover {
+        color: white;
+    }
+    
     .nav-link::after {
-        @apply content-[''] absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-accent to-primary transition-all duration-300;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.25rem;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(to right, #ff3b30, #0070f3);
+        transition: all 0.3s ease;
     }
+    
     .nav-link:hover::after {
-        @apply w-full;
+        width: 100%;
     }
+    
     .nav-link.active {
-        @apply text-white;
+        color: white;
     }
+    
     .nav-link.active::after {
-        @apply w-full bg-gradient-to-r from-accent-light to-primary-light;
+        width: 100%;
+        background: linear-gradient(to right, #ff6b60, #4d9aff);
+    }
+    
+    @keyframes slide-in {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-slide-in {
+        animation: slide-in 0.5s ease forwards;
     }
 </style>
