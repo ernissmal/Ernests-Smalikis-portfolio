@@ -5,50 +5,73 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title="Projects | Ernests Smalikis">
 	<Navbar />
-	<main class="content-container pt-32 pb-20">
-		<section class="max-w-4xl mx-auto mb-16">
-			<h1 class="text-4xl md:text-5xl font-extrabold mb-10 gradient-text text-center drop-shadow-lg animate-fade-in">📐 What I Build</h1>
-			<div class="glass-card p-10 md:p-14 mb-12 animate-slide-up">
-				<p class="text-lg md:text-xl mb-8 text-secondary-light dark:text-secondary text-center">
+	<main class="container mx-auto pt-32 pb-20">
+		<section class="section max-w-4xl mx-auto">
+			<h1 class="text-4xl md:text-5xl font-bold mb-10 text-center">📐 What I Build</h1>
+			
+			<div class="card p-8 md:p-12 mb-12">
+				<p class="text-lg md:text-xl mb-8 text-center">
 					I focus on lean, high-impact software with a strong backend and security posture. My work spans:
 				</p>
-				<ul class="list-disc list-inside space-y-2 mb-8 text-lg">
-					<li>Backend APIs & automation tools</li>
-					<li>Static and full-stack web apps</li>
-					<li>AI/ML-powered text processing and OSINT utilities</li>
-					<li>Privacy-first tools for individuals and small businesses</li>
-					<li>Real-time systems with low-latency performance requirements</li>
+				
+				<ul class="space-y-4 mb-8 text-lg">
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Backend APIs & automation tools</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Static and full-stack web apps</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>AI/ML-powered text processing and OSINT utilities</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Privacy-first tools for individuals and small businesses</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Real-time systems with low-latency performance requirements</span>
+					</li>
 				</ul>
-				<p class="text-lg italic mb-8 text-center text-accent">Tools are tested in the wild — not just in dev environments.</p>
-				<h2 class="text-2xl font-bold mb-6 gradient-text">Featured Projects</h2>
-				<div class="space-y-8">
-					<div class="glass-card p-6 border-l-4 border-primary/80">
-						<h3 class="text-xl font-bold mb-2">XStagePass</h3>
+				
+				<p class="text-lg italic mb-10 text-center text-accent">
+					Tools are tested in the wild — not just in dev environments.
+				</p>
+				
+				<h2 class="text-2xl font-bold mb-8 text-primary">Featured Projects</h2>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="card border-t-4 border-primary">
+						<h3 class="text-xl font-bold mb-3">XStagePass</h3>
 						<p>Event management software with task-based access control, Google Drive image uploads, and real-time updates. Supports both hosted and self-hosted deployments.</p>
 					</div>
 					
-					<div class="glass-card p-6 border-l-4 border-primary/80">
-						<h3 class="text-xl font-bold mb-2">LuceneX Insight</h3>
+					<div class="card border-t-4 border-accent">
+						<h3 class="text-xl font-bold mb-3">LuceneX Insight</h3>
 						<p>AI-driven browser tool for extracting and summarizing text while ignoring markup and noise. Designed for OSINT and journalism workflows.</p>
 					</div>
 					
-					<div class="glass-card p-6 border-l-4 border-primary/80">
-						<h3 class="text-xl font-bold mb-2">SpotEye</h3>
+					<div class="card border-t-4 border-secondary">
+						<h3 class="text-xl font-bold mb-3">SpotEye</h3>
 						<p>Surveillance optimization tool that tags and prioritizes video events using smart filtering and human-in-the-loop learning.</p>
 					</div>
 					
-					<div class="glass-card p-6 border-l-4 border-primary/80">
-						<h3 class="text-xl font-bold mb-2">XHashPass</h3>
+					<div class="card border-t-4 border-primary">
+						<h3 class="text-xl font-bold mb-3">XHashPass</h3>
 						<p>A battle-tested evolution of my first tool — Password generator. Lightweight, secure, and built with modern cryptographic standards in mind.</p>
 					</div>
 				</div>
 			</div>
-			<a href="/vision" class="loud-cta mx-auto block w-max mt-8">
-				<span class="inline-flex items-center gap-3">
-					<span class="drop-shadow-lg text-2xl">🎯</span>
+			
+			<div class="text-center">
+				<a href="/vision" class="button-primary inline-flex items-center gap-3">
+					<span>🎯</span>
 					<span>See My Vision</span>
-				</span>
-			</a>
+				</a>
+			</div>
 		</section>
 	</main>
 </Layout>
