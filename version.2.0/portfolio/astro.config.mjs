@@ -4,7 +4,18 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind({
-    configFile: './tailwind.config.cjs',
-  })],
+  site: 'https://ernests-smalikis.com',
+  integrations: [
+    tailwind({
+      configFile: './tailwind.config.cjs',
+    })
+  ],
+  build: {
+    // Enable inlining of critical CSS
+    inlineStylesheets: 'auto'
+  },
+  compressHTML: true,
+  experimental: {
+    clientPrerender: true
+  }
 });
