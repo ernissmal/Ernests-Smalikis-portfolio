@@ -5,124 +5,89 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title="Vision | Ernests Smalikis">
 	<Navbar />
-	<main class="content-container pt-32 pb-20">
-		<section class="max-w-3xl mx-auto mb-16">
-			<div class="text-center mb-16 animate-fade-in">
+	<main class="container mx-auto pt-32 pb-20">
+		<section class="max-w-3xl mx-auto">
+			<div class="text-center mb-16">
 				<span class="text-6xl mb-6 block">🌍</span>
-				<h1 class="text-4xl md:text-5xl font-extrabold mb-4 gradient-text drop-shadow-lg">Vision</h1>
-				<p class="text-xl text-secondary-light dark:text-secondary mt-4">
+				<h1 class="text-4xl md:text-5xl font-bold mb-4">Vision</h1>
+				<p class="text-xl text-secondary">
 					Engineering a Future Where Technology is Human
 				</p>
 			</div>
-			<div class="space-y-12 animate-slide-up">
-				<div class="glass-card p-10 md:p-14">
+			
+			<div class="space-y-12">
+				<div class="card p-8">
 					<p class="text-lg leading-relaxed mb-6">
 						My vision is to shape a digital world that is not only functional and secure, but also inclusive, intuitive, and honest. I want to build tools that make people feel in control, not overwhelmed—products that work for the user, not the other way around.
 					</p>
-					<p class="text-lg leading-relaxed text-secondary-light dark:text-secondary italic border-l-2 border-accent/30 pl-4 my-6">
+					<blockquote class="text-lg leading-relaxed text-secondary italic border-l-4 border-primary pl-4 py-2 my-6">
 						Technology should liberate, not complicate. That belief is at the heart of everything I create.
-					</p>
+					</blockquote>
 				</div>
-				<div class="glass-card p-10 md:p-14">
-					<div class="flex items-center space-x-3 mb-6">
-						<span class="text-3xl">🎯</span>
+				
+				<div class="card p-8">
+					<div class="flex items-center mb-6">
+						<span class="text-3xl mr-3">🎯</span>
 						<h2 class="text-2xl font-bold">My Mission</h2>
 					</div>
 					<p class="text-lg mb-4 leading-relaxed">
 						I help individuals and small businesses simplify their digital lives through high-quality, tailor-made software solutions. Whether it's automating tasks, securing systems, or launching digital platforms—I build tools that are ready to deploy, easy to use, and built to last.
 					</p>
-					<p class="text-lg leading-relaxed text-secondary-light dark:text-secondary">
+					<p class="text-lg leading-relaxed text-secondary">
 						As I grow, so does my ambition: to put Latvia on the map as a hub for digital innovation, starting with reliable, world-class tools made locally.
 					</p>
 				</div>
+				
 				<div>
-					<div class="flex items-center space-x-3 mb-8">
-						<span class="text-3xl">💡</span>
+					<div class="flex items-center mb-8">
+						<span class="text-3xl mr-3">💡</span>
 						<h2 class="text-2xl font-bold">What I Stand For</h2>
 					</div>
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-						<div class="glass-card p-6">
-							<h3 class="font-semibold text-lg mb-3 text-primary-light dark:text-primary-light">Innovative Reliability</h3>
-							<p class="text-secondary-light dark:text-secondary">New tech should solve real problems—not just look cool. I blend cutting-edge technology with tried-and-tested methods to deliver results.</p>
+						<div class="card p-6">
+							<h3 class="font-semibold text-lg mb-3 text-primary">Innovative Reliability</h3>
+							<p class="text-secondary">New tech should solve real problems—not just look cool. I blend cutting-edge technology with tried-and-tested methods to deliver results.</p>
 						</div>
-						<div class="glass-card p-6">
-							<h3 class="font-semibold text-lg mb-3 text-primary-light dark:text-primary-light">Human-First Simplicity</h3>
-							<p class="text-secondary-light dark:text-secondary">I design interfaces and systems that non-tech users can understand, trust, and love using.</p>
+						<div class="card p-6">
+							<h3 class="font-semibold text-lg mb-3 text-primary">Human-First Simplicity</h3>
+							<p class="text-secondary">I design interfaces and systems that non-tech users can understand, trust, and love using.</p>
 						</div>
-						<div class="glass-card p-6">
-							<h3 class="font-semibold text-lg mb-3 text-primary-light dark:text-primary-light">No-Bullshit Development</h3>
-							<p class="text-secondary-light dark:text-secondary">I avoid overengineering. My focus is always on performance, usability, and clarity.</p>
+						<div class="card p-6">
+							<h3 class="font-semibold text-lg mb-3 text-primary">Transparent Security</h3>
+							<p class="text-secondary">Security shouldn't be a mystery. My systems are built with protection that's visible, understandable, and never compromised.</p>
 						</div>
-					</div>
-				</div>
-				<div>
-					<div class="flex items-center space-x-3 mb-8">
-						<span class="text-3xl">🧭</span>
-						<h2 class="text-2xl font-bold">Core Values</h2>
-					</div>
-					<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-						<div class="glass-card p-4">
-							<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Innovation</h3>
-							<p class="text-sm text-secondary-light dark:text-secondary">I continuously explore new ways to improve digital life.</p>
-						</div>
-						<div class="glass-card p-4">
-							<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Quality</h3>
-							<p class="text-sm text-secondary-light dark:text-secondary">I don't ship unless I'm confident it works—fast, clean, secure.</p>
-						</div>
-						<div class="glass-card p-4">
-							<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Partnership</h3>
-							<p class="text-sm text-secondary-light dark:text-secondary">I treat clients as collaborators. Their success is my success.</p>
-						</div>
-						<div class="glass-card p-4">
-							<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Integrity</h3>
-							<p class="text-sm text-secondary-light dark:text-secondary">I believe in transparency, fairness, and standing by my word.</p>
-						</div>
-					</div>
-				</div>
-				<div class="glass-card p-10 md:p-14">
-					<div class="flex items-center space-x-3 mb-6">
-						<span class="text-3xl">🔮</span>
-						<h2 class="text-2xl font-bold">The Bigger Picture</h2>
-					</div>
-					<p class="text-lg mb-6 leading-relaxed">
-						My long-term goal is to grow LuceneX into a boutique tech brand recognized for making technology understandable and accessible. I aim to:
-					</p>
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-						<div class="glass-card p-4 flex items-start space-x-3">
-							<span class="text-accent">⚡️</span>
-							<p>Build tools anyone can deploy and use within minutes</p>
-						</div>
-						<div class="glass-card p-4 flex items-start space-x-3">
-							<span class="text-accent">💪</span>
-							<p>Help businesses become more independent and resilient</p>
-						</div>
-						<div class="glass-card p-4 flex items-start space-x-3">
-							<span class="text-accent">🔒</span>
-							<p>Redefine cybersecurity and AI for everyday use</p>
-						</div>
-						<div class="glass-card p-4 flex items-start space-x-3">
-							<span class="text-accent">🚀</span>
-							<p>Prove that Latvia can lead Europe's next wave of digital innovation</p>
-						</div>
-					</div>
-					<p class="text-lg leading-relaxed text-secondary-light dark:text-secondary">
-						This isn't just a job. It's a responsibility—and I intend to carry it with purpose, clarity, and discipline.
-					</p>
-				</div>
-				<div class="glass-card p-10 md:p-14" style="background: linear-gradient(to right, rgba(0, 112, 243, 0.05), rgba(255, 59, 48, 0.05), rgba(0, 112, 243, 0.05));">
-					<div class="flex items-center justify-between">
-						<div>
-							<h2 class="text-2xl font-bold mb-4">LuceneX Brand</h2>
-							<p class="text-lg mb-4 leading-relaxed">
-								Under the LuceneX brand, I've developed a growing set of systems that reflect my values: performance-first, privacy-conscious, and practical.
-							</p>
-						</div>
-						<a href="https://lucenex.lv" class="loud-cta whitespace-nowrap">
-							Visit LuceneX
-						</a>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
 </Layout>
+
+<style>
+	.card {
+		animation: fadeIn 0.6s ease-out forwards;
+	}
+	
+	.card:nth-child(1) {
+		animation-delay: 0.2s;
+	}
+	
+	.card:nth-child(2) {
+		animation-delay: 0.4s;
+	}
+	
+	.card:nth-child(3) {
+		animation-delay: 0.6s;
+	}
+	
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>
