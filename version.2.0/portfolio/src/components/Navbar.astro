@@ -1,8 +1,8 @@
 ---
 const currentPath = Astro.url.pathname;
 ---
-<nav class="bg-background-dark/95 backdrop-blur-sm text-white border-b border-accent/10 fixed w-full z-50 animate-fade-in">
-    <div class="container mx-auto flex justify-between items-center px-4 py-5">
+<nav style="background-color: rgba(18, 18, 18, 0.95); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: white; border-bottom: 1px solid rgba(255, 59, 48, 0.1); position: fixed; width: 100%; z-index: 50;" class="animate-fade-in">
+    <div class="container mx-auto flex justify-between items-center px-4 py-5" style="margin-left: auto; margin-right: auto; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1rem;">
         <div class="flex items-center space-x-2">
             <a href="/" class="group">
                 <div class="text-xl font-bold bg-gradient-to-r from-primary-light via-accent to-primary-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow hover:scale-105 transition-transform duration-300">
