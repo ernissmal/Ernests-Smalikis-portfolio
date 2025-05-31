@@ -10,8 +10,11 @@ const {
 } = Astro.props;
 
 // Base URL for canonical and OG tags
-const baseUrl = "https://ernests-smalikis.com"; // Replace with your actual domain
+const baseUrl = "https://ernests-smalikis.com";
 const currentUrl = new URL(Astro.url.pathname, baseUrl).toString();
+
+// Cache control headers
+Astro.response.headers.set('Cache-Control', 'public, max-age=604800, immutable');
 ---
 
 <!DOCTYPE html>
@@ -20,12 +23,20 @@ const currentUrl = new URL(Astro.url.pathname, baseUrl).toString();
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		
+		<!-- Security headers -->
+		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+		<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+		<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'" />
+		
 		<!-- Primary Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 		<meta name="keywords" content="software engineer, web developer, iOS developer, Python programmer, Latvia developer, portfolio, systems architect, automation expert" />
 		<link rel="canonical" href={currentUrl} />
+		<meta name="author" content="Ernests Smalikis" />
+		<meta name="robots" content="index, follow" />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
@@ -44,12 +55,20 @@ const currentUrl = new URL(Astro.url.pathname, baseUrl).toString();
 		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 		
-		<!-- Font Preloading -->
-		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" as="style" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- Resource Hints -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+		
+		<!-- Font Loading Optimization -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+		<noscript>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+		</noscript>
 		
 		<!-- Styles -->
 		<link rel="stylesheet" href="/global.css" />
@@ -63,7 +82,7 @@ const currentUrl = new URL(Astro.url.pathname, baseUrl).toString();
 				"@context": "https://schema.org",
 				"@type": "Person",
 				"name": "Ernests Smalikis",
-				"url": "https://ernests-smalikis.com",
+				"url": "{baseUrl}",
 				"sameAs": [
 					"https://twitter.com/ESmalikis",
 					"https://github.com/ernissmal",
@@ -79,7 +98,20 @@ const currentUrl = new URL(Astro.url.pathname, baseUrl).toString();
 					"Systems Architecture",
 					"Automation",
 					"Software Engineering"
-				]
+				],
+				"alumniOf": {
+					"@type": "CollegeOrUniversity",
+					"name": "Valmieras tehnikums"
+				},
+				"workLocation": {
+					"@type": "Place",
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Valmiera",
+						"addressRegion": "Vidzeme",
+						"addressCountry": "Latvia"
+					}
+				}
 			}
 		</script>
 	</head>
