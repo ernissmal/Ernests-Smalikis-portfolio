@@ -1,106 +1,96 @@
 ---
 const currentPath = Astro.url.pathname;
 ---
-<nav style="background-color: rgba(18, 18, 18, 0.95); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: white; border-bottom: 1px solid rgba(255, 59, 48, 0.1); position: fixed; width: 100%; z-index: 50;" class="animate-fade-in">
-    <div class="container mx-auto flex justify-between items-center px-4 py-5" style="margin-left: auto; margin-right: auto; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1rem;">
-        <div class="flex items-center space-x-2" style="display: flex; align-items: center; gap: 0.5rem;">
-            <a href="/" class="group">
-                <div class="gradient-text" style="font-size: 1.25rem; font-weight: 700; transition: transform 0.3s;">
-                    Ernests Smaliķis
-                </div>
-            </a>
+<nav>
+    <div class="nav-container">
+        <a href="/" class="logo">
+            Ernests Smaliķis
+        </a>
+        <div class="nav-links">
+            <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+            <a href="/journey" class={currentPath === '/journey' ? 'active' : ''}>Journey</a>
+            <a href="/projects" class={currentPath === '/projects' ? 'active' : ''}>Projects</a>
+            <a href="/vision" class={currentPath === '/vision' ? 'active' : ''}>Vision</a>
         </div>
-        <div class="hidden md:flex space-x-8">
-            <a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''} animate-slide-in`} style="animation-delay: 0ms;">
-                <span class="flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                    </svg>
-                    Home
-                </span>
-            </a>
-            <a href="/journey" class={`nav-link ${currentPath === '/journey' ? 'active' : ''} animate-slide-in`} style="animation-delay: 100ms;">
-                <span class="flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-                    </svg>
-                    Journey
-                </span>
-            </a>
-            <a href="/projects" class={`nav-link ${currentPath === '/projects' ? 'active' : ''} animate-slide-in`} style="animation-delay: 200ms;">
-                <span class="flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                    </svg>
-                    Projects
-                </span>
-            </a>
-            <a href="/vision" class={`nav-link ${currentPath === '/vision' ? 'active' : ''} animate-slide-in`} style="animation-delay: 300ms;">
-                <span class="flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                    </svg>
-                    Vision
-                </span>
-            </a>
-        </div>
-        <button class="md:hidden text-white focus:outline-none hover:text-accent-light transition-colors duration-200">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
-            </svg>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
     </div>
 </nav>
 
 <style>
-    .nav-link {
+    nav {
+        background-color: white;
+        border-bottom: 1px solid var(--border);
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+    }
+
+    .logo {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 32px;
+    }
+
+    .nav-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover, 
+    .nav-links a.active {
+        color: var(--primary);
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        width: 24px;
+        height: 18px;
         position: relative;
-        color: rgb(209, 213, 219);
-        transition: color 0.2s ease;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        flex-direction: column;
+        justify-content: space-between;
     }
-    
-    .nav-link:hover {
-        color: white;
-    }
-    
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -0.25rem;
-        width: 0;
+
+    .mobile-menu-btn span {
+        display: block;
         height: 2px;
-        background: linear-gradient(to right, #ff3b30, #0070f3);
-        transition: all 0.3s ease;
-    }
-    
-    .nav-link:hover::after {
         width: 100%;
+        background-color: var(--text);
+        transition: transform 0.3s;
     }
-    
-    .nav-link.active {
-        color: white;
-    }
-    
-    .nav-link.active::after {
-        width: 100%;
-        background: linear-gradient(to right, #ff6b60, #4d9aff);
-    }
-    
-    @keyframes slide-in {
-        0% {
-            opacity: 0;
-            transform: translateY(-10px);
+
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
         }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
+
+        .mobile-menu-btn {
+            display: flex;
         }
-    }
-    
-    .animate-slide-in {
-        animation: slide-in 0.5s ease forwards;
     }
 </style>
