@@ -19,7 +19,7 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 min-h-screen font-sans antialiased selection:bg-primary/20 selection:text-primary-dark dark:selection:text-primary-light">
+	<body class="bg-bg-light dark:bg-bg-dark text-gray-900 dark:text-gray-100 min-h-screen font-sans antialiased selection:bg-primary/20 selection:text-primary-dark dark:selection:text-primary-light">
 		<div class="min-h-screen relative overflow-x-hidden">
 			<div class="z-10 relative animate-fade-in">
 				<slot />
@@ -27,8 +27,8 @@ const { title } = Astro.props;
 
 			<!-- Animated, Layered Gradient Background -->
 			<div class="fixed inset-0 -z-10 pointer-events-none">
-				<div class="absolute inset-0 bg-gradient-radial from-primary/60 via-accent/30 to-background-light dark:to-background-dark animate-gradient-flow opacity-90"></div>
-				<div class="absolute inset-0 bg-gradient-conic from-accent/20 via-primary/10 to-background-light dark:to-background-dark opacity-30 mix-blend-lighten"></div>
+				<div class="absolute inset-0 bg-gradient-radial from-primary/60 via-accent/30 to-bg-light dark:to-bg-dark animate-gradient-flow opacity-90"></div>
+				<div class="absolute inset-0 bg-gradient-conic from-accent/20 via-primary/10 to-bg-light dark:to-bg-dark opacity-30 mix-blend-lighten"></div>
 				<div class="absolute inset-0 bg-gradient-top opacity-30 mix-blend-lighten"></div>
 				<div class="absolute inset-0 bg-gradient-bottom opacity-20 mix-blend-multiply"></div>
 				<div class="absolute inset-0 bg-grid-pattern opacity-[0.02] dark:opacity-[0.02]"></div>
@@ -79,7 +79,7 @@ const { title } = Astro.props;
 	}
 
 	::-webkit-scrollbar-track {
-		@apply bg-background-light dark:bg-background-dark;
+		@apply bg-bg-light dark:bg-bg-dark;
 	}
 
 	::-webkit-scrollbar-thumb {
