@@ -61,6 +61,7 @@ const navLinks = [
         width: 100%;
         z-index: 100;
         box-shadow: var(--shadow-sm);
+        transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .nav-container {
@@ -78,6 +79,7 @@ const navLinks = [
         color: var(--text);
         text-decoration: none;
         letter-spacing: -0.01em;
+        transition: color 0.3s ease;
     }
 
     .nav-links {
@@ -108,7 +110,7 @@ const navLinks = [
         width: 0;
         height: 2px;
         background-color: var(--primary);
-        transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out, background-color 0.3s ease;
     }
     
     .nav-links a:hover::after,
@@ -134,7 +136,7 @@ const navLinks = [
         height: 2px;
         width: 100%;
         background-color: var(--text);
-        transition: transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
     }
     
     .mobile-menu-btn.open span:nth-child(1) {
@@ -156,7 +158,7 @@ const navLinks = [
         padding: 1rem;
         border-bottom: 1px solid var(--border);
         transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
         position: absolute;
         top: 100%;
         left: 0;
@@ -174,7 +176,7 @@ const navLinks = [
         text-decoration: none;
         font-weight: 500;
         border-radius: var(--radius-md);
-        transition: background-color 0.2s;
+        transition: background-color 0.2s, color 0.3s ease;
     }
     
     .mobile-menu a:hover,
