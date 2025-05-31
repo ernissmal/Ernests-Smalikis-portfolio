@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import { Image } from 'astro:assets';
 
 const pageTitle = "Ernests Smalikis | Software Engineer & Systems Architect";
 const pageDescription = "Experienced software engineer specializing in web development, iOS applications, and systems architecture. Passionate about building innovative solutions and solving complex problems.";
@@ -27,7 +28,7 @@ const pageDescription = "Experienced software engineer specializing in web devel
 						Through years of hands-on experience and continuous learning, I've developed expertise in backend development, automation, and systems design, always prioritizing security and scalability.
 					</p>
 					<div class="cta-group">
-						<a href="/projects" class="button-primary inline-block" aria-label="View my portfolio projects">
+						<a href="/projects" class="button-primary inline-block" rel="prefetch" aria-label="View my portfolio projects">
 							See My Projects
 						</a>
 					</div>
