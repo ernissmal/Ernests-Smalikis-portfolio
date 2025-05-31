@@ -70,12 +70,13 @@ const navLinks = [
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.25rem;
+        padding: 1rem 1.5rem;
+        height: 70px;
     }
 
     .logo {
-        font-weight: 600;
-        font-size: 1.1rem;
+        font-weight: 700;
+        font-size: 1.25rem;
         color: var(--text);
         text-decoration: none;
         letter-spacing: -0.01em;
@@ -84,22 +85,23 @@ const navLinks = [
 
     .nav-links {
         display: flex;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     .nav-links a {
         color: var(--text-light);
         text-decoration: none;
-        font-size: 0.95rem;
+        font-size: 1rem;
         font-weight: 500;
-        transition: color 0.2s;
+        transition: color 0.2s, transform 0.2s;
         position: relative;
-        padding: 0.25rem 0;
+        padding: 0.5rem 0;
     }
 
     .nav-links a:hover, 
     .nav-links a.active {
         color: var(--primary);
+        transform: translateY(-1px);
     }
     
     .nav-links a::after {
@@ -110,7 +112,8 @@ const navLinks = [
         width: 0;
         height: 2px;
         background-color: var(--primary);
-        transition: width 0.2s ease-in-out, background-color 0.3s ease;
+        transition: width 0.3s ease-out, background-color 0.3s ease;
+        border-radius: 1px;
     }
     
     .nav-links a:hover::after,
@@ -157,21 +160,27 @@ const navLinks = [
         background-color: var(--card);
         padding: 1rem;
         border-bottom: 1px solid var(--border);
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         position: absolute;
-        top: 100%;
+        top: 70px;
         left: 0;
         width: 100%;
         z-index: 90;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        pointer-events: none;
     }
     
     .mobile-menu.open {
+        opacity: 1;
         transform: translateY(0);
+        pointer-events: auto;
     }
     
     .mobile-menu a {
         padding: 0.75rem 1.25rem;
+        margin-bottom: 0.5rem;
         color: var(--text);
         text-decoration: none;
         font-weight: 500;
@@ -196,6 +205,11 @@ const navLinks = [
         
         .mobile-menu {
             display: flex;
+        }
+        
+        nav {
+            backdrop-filter: blur(8px);
+            background-color: rgba(var(--card-rgb), 0.85);
         }
         
         :global(body.menu-open) {
