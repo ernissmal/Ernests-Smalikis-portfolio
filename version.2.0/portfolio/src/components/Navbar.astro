@@ -42,12 +42,34 @@ const navLinks = [
     document.addEventListener('DOMContentLoaded', () => {
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
         
         if (menuBtn && mobileMenu) {
+            // Toggle menu when button is clicked
             menuBtn.addEventListener('click', () => {
                 menuBtn.classList.toggle('open');
                 mobileMenu.classList.toggle('open');
                 document.body.classList.toggle('menu-open');
+            });
+            
+            // Close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (mobileMenu.classList.contains('open') && 
+                    !mobileMenu.contains(e.target) && 
+                    !menuBtn.contains(e.target)) {
+                    menuBtn.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                    document.body.classList.remove('menu-open');
+                }
             });
         }
     });
@@ -55,20 +77,21 @@ const navLinks = [
 
 <style>
     nav {
-        background-color: var(--card);
+        background-color: rgba(255, 255, 255, 0.85);
         border-bottom: 1px solid var(--border);
         position: fixed;
         width: 100%;
+        left: 0;
+        top: 0;
         z-index: 100;
         box-shadow: var(--shadow-sm);
         transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0.85);
     }
     
     html.dark nav {
-        background-color: rgba(30, 41, 59, 0.85);
+        background-color: rgba(30, 41, 59, 0.95);
     }
 
     .nav-container {
@@ -77,8 +100,10 @@ const navLinks = [
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.5rem;
+        padding: 0 2rem;
         height: 70px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .logo {
@@ -87,7 +112,30 @@ const navLinks = [
         color: var(--text);
         text-decoration: none;
         letter-spacing: -0.01em;
-        transition: color 0.3s ease;
+        transition: color 0.3s ease, transform 0.2s ease;
+        position: relative;
+        padding: 0.25rem 0;
+    }
+    
+    .logo:hover {
+        color: var(--primary);
+        transform: translateY(-1px);
+    }
+    
+    .logo::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary);
+        transition: width 0.3s ease-out;
+        border-radius: 1px;
+    }
+    
+    .logo:hover::after {
+        width: 100%;
     }
 
     .nav-links {
@@ -133,20 +181,27 @@ const navLinks = [
         background: none;
         border: none;
         cursor: pointer;
-        padding: 0;
-        width: 24px;
-        height: 18px;
+        padding: 8px;
+        width: 40px;
+        height: 34px;
         position: relative;
         flex-direction: column;
         justify-content: space-between;
+        border-radius: var(--radius-sm);
+        transition: background-color 0.2s;
+    }
+    
+    .mobile-menu-btn:hover {
+        background-color: rgba(37, 99, 235, 0.1);
     }
 
     .mobile-menu-btn span {
         display: block;
         height: 2px;
-        width: 100%;
+        width: 24px;
         background-color: var(--text);
         transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+        margin: 0 auto;
     }
     
     .mobile-menu-btn.open span:nth-child(1) {
@@ -164,19 +219,23 @@ const navLinks = [
     .mobile-menu {
         display: none;
         flex-direction: column;
-        background-color: var(--card);
-        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 1.25rem;
         border-bottom: 1px solid var(--border);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-md);
         position: absolute;
         top: 70px;
         left: 0;
         width: 100%;
         z-index: 90;
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
         pointer-events: none;
+    }
+    
+    html.dark .mobile-menu {
+        background-color: rgba(30, 41, 59, 0.95);
     }
     
     .mobile-menu.open {
@@ -192,13 +251,16 @@ const navLinks = [
         text-decoration: none;
         font-weight: 500;
         border-radius: var(--radius-md);
-        transition: background-color 0.2s, color 0.3s ease;
+        transition: background-color 0.2s, color 0.3s ease, transform 0.2s;
+        display: flex;
+        align-items: center;
     }
     
     .mobile-menu a:hover,
     .mobile-menu a.active {
         background-color: rgba(37, 99, 235, 0.1);
         color: var(--primary);
+        transform: translateX(4px);
     }
 
     @media (max-width: 768px) {
@@ -214,9 +276,12 @@ const navLinks = [
             display: flex;
         }
         
-        nav {
-            backdrop-filter: blur(8px);
-            background-color: rgba(var(--card-rgb), 0.85);
+        .nav-container {
+            height: 60px;
+        }
+        
+        .logo {
+            font-size: 1.1rem;
         }
         
         :global(body.menu-open) {
