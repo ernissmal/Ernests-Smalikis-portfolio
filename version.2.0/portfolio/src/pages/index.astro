@@ -5,112 +5,105 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title="Ernests Smalikis | Software Engineer">
 	<Navbar />
-	<main class="pt-32 pb-20">
-		<div class="content-container">
-			<section class="max-w-4xl mx-auto mb-20">
-				<div class="relative">
-					<div class="absolute -inset-1 bg-gradient-primary rounded-2xl blur-xl opacity-40"></div>
-					<div class="relative glass-card p-12 md:p-16 flex flex-col items-center text-center">
-						<h1 class="text-5xl md:text-6xl font-extrabold mb-8 gradient-text drop-shadow-lg">
-							Software Engineer & Systems Architect
-						</h1>
-						<p class="text-xl md:text-2xl text-secondary-light dark:text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
-							I'm a self-employed software engineer, systems thinker, and problem-solver with a passion for building innovative solutions. My journey is driven by relentless curiosity and the desire to create impactful tools that solve real-world challenges.
-						</p>
-						<p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-							Through years of hands-on experience and continuous learning, I've developed expertise in backend development, automation, and systems design, always prioritizing security and scalability.
-						</p>
-						<a href="/projects" class="loud-cta mt-4 inline-block">
-							<span class="inline-flex items-center gap-3">
-								<span class="drop-shadow-lg text-2xl">🚀</span>
-								<span>See My Projects</span>
-							</span>
-						</a>
-					</div>
-				</div>
-			</section>
+	<main class="container mx-auto pt-32 pb-20">
+		<section class="section max-w-4xl mx-auto">
+			<div class="card p-8 md:p-12">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Software Engineer & Systems Architect
+				</h1>
+				<p class="text-lg md:text-xl mb-8 max-w-2xl">
+					I'm a self-employed software engineer, systems thinker, and problem-solver with a passion for building innovative solutions. My journey is driven by relentless curiosity and the desire to create impactful tools that solve real-world challenges.
+				</p>
+				<p class="text-base md:text-lg mb-8 max-w-2xl">
+					Through years of hands-on experience and continuous learning, I've developed expertise in backend development, automation, and systems design, always prioritizing security and scalability.
+				</p>
+				<a href="/projects" class="button-primary inline-block">
+					See My Projects
+				</a>
+			</div>
+		</section>
 
-			<section class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-				<div class="group">
-					<div class="relative">
-						<div class="absolute -inset-1 bg-gradient-card rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition"></div>
-						<div class="relative glass-card p-8 flex flex-col h-full">
-							<h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center">
-								<span class="bg-primary-10 dark-bg-primary-20 p-2 rounded-lg mr-3" style="padding: 0.5rem; border-radius: 0.5rem; margin-right: 0.75rem;">
-									<svg class="w-6 h-6 text-primary-dark dark:text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-									</svg>
-								</span>
-								Core Expertise
-							</h2>
-							<ul class="space-y-4">
-								<li class="flex items-center space-x-3">
-									<span class="h-px w-8 bg-primary-30"></span>
-									<span class="text-gray-700 dark:text-gray-300">Backend Development</span>
-								</li>
-								<li class="flex items-center space-x-3">
-									<span class="h-px w-8 bg-primary-30"></span>
-									<span class="text-gray-700 dark:text-gray-300">Systems Architecture</span>
-								</li>
-								<li class="flex items-center space-x-3">
-									<span class="h-px w-8 bg-primary-30"></span>
-									<span class="text-gray-700 dark:text-gray-300">Process Automation</span>
-								</li>
-								<li class="flex items-center space-x-3">
-									<span class="h-px w-8 bg-primary-30"></span>
-									<span class="text-gray-700 dark:text-gray-300">Security Implementation</span>
-								</li>
-								<li class="flex items-center space-x-3">
-									<span class="h-px w-8 bg-primary-30"></span>
-									<span class="text-gray-700 dark:text-gray-300">Technical Leadership</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+		<section class="section grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+			<div class="card p-8">
+				<h2 class="text-2xl font-bold mb-6 flex items-center">
+					<span class="bg-primary-10 p-2 rounded-md mr-3 text-primary">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+						</svg>
+					</span>
+					Core Expertise
+				</h2>
+				<ul class="space-y-4">
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Backend Development</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Systems Architecture</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Process Automation</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Security Implementation</span>
+					</li>
+					<li class="flex items-center space-x-3">
+						<span class="h-px w-8 bg-primary"></span>
+						<span>Technical Leadership</span>
+					</li>
+				</ul>
+			</div>
 
-				<div class="group">
-					<div class="relative">
-						<div class="absolute -inset-1 bg-gradient-card rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition"></div>
-						<div class="relative glass-card p-8 flex flex-col h-full">
-							<h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center">
-								<span class="bg-accent-10 dark-bg-accent-20 p-2 rounded-lg mr-3" style="padding: 0.5rem; border-radius: 0.5rem; margin-right: 0.75rem;">
-									<svg class="w-6 h-6 text-accent-dark dark:text-accent-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-									</svg>
-								</span>
-								Quick Links
-							</h2>
-							<div class="space-y-4">
-								<a href="/journey" class="block group/link">
-									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover-bg-primary-10 dark-hover-bg-primary-20" style="display: flex; align-items: center; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;">
-										<span class="text-primary">🛠️</span>
-										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-primary dark:group-hover/link:text-primary-light transition">My Journey</span>
-									</div>
-								</a>
-								<a href="/projects" class="block group/link">
-									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover-bg-accent-10 dark-hover-bg-accent-20" style="display: flex; align-items: center; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;">
-										<span class="text-accent">📐</span>
-										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-accent dark:group-hover/link:text-accent-light transition">What I Build</span>
-									</div>
-								</a>
-								<a href="/vision" class="block group/link">
-									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover-bg-secondary-10 dark-hover-bg-secondary-20" style="display: flex; align-items: center; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;">
-										<span class="text-secondary">🎯</span>
-										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-secondary dark:group-hover/link:text-secondary-light transition">My Vision</span>
-									</div>
-								</a>
-								<a href="https://lucenex.lv" class="block group/link">
-									<div class="flex items-center space-x-3 p-3 rounded-lg transition hover-bg-primary-10 dark-hover-bg-primary-20" style="display: flex; align-items: center; padding: 0.75rem; border-radius: 0.5rem; transition: background-color 0.2s;">
-										<span class="text-primary">🔗</span>
-										<span class="text-gray-700 dark:text-gray-300 group-hover/link:text-primary dark:group-hover/link:text-primary-light transition">LuceneX</span>
-									</div>
-								</a>
-							</div>
+			<div class="card p-8">
+				<h2 class="text-2xl font-bold mb-6 flex items-center">
+					<span class="bg-accent-10 p-2 rounded-md mr-3 text-accent">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
+					</span>
+					Quick Links
+				</h2>
+				<div class="space-y-3">
+					<a href="/journey" class="block group">
+						<div class="flex items-center p-3 rounded-md transition hover:bg-primary-10">
+							<span class="text-primary mr-3">🛠️</span>
+							<span class="group-hover:text-primary">My Journey</span>
 						</div>
-					</div>
+					</a>
+					<a href="/projects" class="block group">
+						<div class="flex items-center p-3 rounded-md transition hover:bg-accent-10">
+							<span class="text-accent mr-3">📐</span>
+							<span class="group-hover:text-accent">What I Build</span>
+						</div>
+					</a>
+					<a href="/vision" class="block group">
+						<div class="flex items-center p-3 rounded-md transition hover:bg-secondary-10">
+							<span class="text-secondary mr-3">🎯</span>
+							<span class="group-hover:text-secondary">My Vision</span>
+						</div>
+					</a>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 	</main>
 </Layout>
+
+<style>
+	.button-primary {
+		background-color: var(--primary);
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: var(--radius-md);
+		font-weight: 500;
+		transition: all 0.2s ease;
+	}
+	
+	.button-primary:hover {
+		background-color: var(--primary-dark);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-md);
+	}
+</style>
