@@ -5,101 +5,144 @@ import Navbar from '../components/Navbar.astro';
 
 <Layout title="Vision | Ernests Smalikis">
 		<Navbar />
-		<main class="container mx-auto px-4 py-8">
-			<section class="max-w-4xl mx-auto">
-				<h1 class="text-4xl font-bold mb-6 animate-fade-in">🌍 Vision</h1>
-				<div class="glass-card p-6 mb-8 animate-slide-up">
-					<p class="text-lg mb-6">
+		<main class="container mx-auto px-4 py-12">
+			<section class="max-w-3xl mx-auto">
+				<!-- Hero Section -->
+				<div class="text-center mb-16 animate-fade-in">
+					<span class="text-6xl mb-6 block">🌍</span>
+					<h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Vision</h1>
+					<p class="text-xl text-secondary-light dark:text-secondary mt-4">
 						Engineering a Future Where Technology is Human
 					</p>
-					
-					<div class="mb-8">
-						<p class="mb-4">
+				</div>
+
+				<!-- Main Content -->
+				<div class="space-y-12 animate-slide-up">
+					<!-- Vision Statement -->
+					<div class="prose prose-lg dark:prose-invert max-w-none">
+						<p class="text-lg leading-relaxed">
 							My vision is to shape a digital world that is not only functional and secure, but also inclusive, intuitive, and honest. I want to build tools that make people feel in control, not overwhelmed—products that work for the user, not the other way around.
 						</p>
-						<p class="mb-6">
+						<p class="text-lg leading-relaxed text-secondary-light dark:text-secondary italic border-l-2 border-accent/30 pl-4 my-6">
 							Technology should liberate, not complicate. That belief is at the heart of everything I create.
 						</p>
-						
-						<h2 class="text-2xl font-bold mb-4">🎯 My Mission</h2>
-						<p class="mb-4">
+					</div>
+
+					<!-- Mission Section -->
+					<div class="glass-card p-8 hover:shadow-lg transition-all duration-300">
+						<div class="flex items-center space-x-3 mb-6">
+							<span class="text-3xl">🎯</span>
+							<h2 class="text-2xl font-bold">My Mission</h2>
+						</div>
+						<p class="text-lg mb-4 leading-relaxed">
 							I help individuals and small businesses simplify their digital lives through high-quality, tailor-made software solutions. Whether it's automating tasks, securing systems, or launching digital platforms—I build tools that are ready to deploy, easy to use, and built to last.
 						</p>
-						<p class="mb-6">
+						<p class="text-lg leading-relaxed text-secondary-light dark:text-secondary">
 							As I grow, so does my ambition: to put Latvia on the map as a hub for digital innovation, starting with reliable, world-class tools made locally.
 						</p>
-						
-						<h2 class="text-2xl font-bold mb-4">💡 What I Stand For</h2>
-						<p class="mb-4">
-							I don't just code—I solve problems, automate work, and streamline experiences. My approach is built on three key ideas:
-						</p>
-						
-						<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h3 class="font-bold mb-2">Innovative Reliability</h3>
-								<p>New tech should solve real problems—not just look cool. I blend cutting-edge technology with tried-and-tested methods to deliver results.</p>
-							</div>
-							
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h3 class="font-bold mb-2">Human-First Simplicity</h3>
-								<p>I design interfaces and systems that non-tech users can understand, trust, and love using.</p>
-							</div>
-							
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h3 class="font-bold mb-2">No-Bullshit Development</h3>
-								<p>I avoid overengineering. My focus is always on performance, usability, and clarity.</p>
-							</div>
+					</div>
+
+					<!-- Core Principles -->
+					<div>
+						<div class="flex items-center space-x-3 mb-8">
+							<span class="text-3xl">💡</span>
+							<h2 class="text-2xl font-bold">What I Stand For</h2>
 						</div>
-						
-						<h2 class="text-2xl font-bold mb-4">🧭 Core Values I Live and Build By</h2>
-						<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h3 class="font-bold mb-2">Innovation</h3>
-								<p>I continuously explore new ways to improve digital life.</p>
+						<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+							<div class="glass-card p-6 hover:shadow-lg transition-all duration-300">
+								<h3 class="font-semibold text-lg mb-3 text-primary-light dark:text-primary-light">Innovative Reliability</h3>
+								<p class="text-secondary-light dark:text-secondary">New tech should solve real problems—not just look cool. I blend cutting-edge technology with tried-and-tested methods to deliver results.</p>
 							</div>
 							
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h3 class="font-bold mb-2">Quality</h3>
-								<p>I don't ship unless I'm confident it works—fast, clean, secure.</p>
+							<div class="glass-card p-6 hover:shadow-lg transition-all duration-300">
+								<h3 class="font-semibold text-lg mb-3 text-primary-light dark:text-primary-light">Human-First Simplicity</h3>
+								<p class="text-secondary-light dark:text-secondary">I design interfaces and systems that non-tech users can understand, trust, and love using.</p>
 							</div>
 							
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h3 class="font-bold mb-2">Partnership</h3>
-								<p>I treat clients as collaborators. Their success is my success.</p>
-							</div>
-							
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h3 class="font-bold mb-2">Integrity</h3>
-								<p>I believe in transparency, fairness, and standing by my word.</p>
+							<div class="glass-card p-6 hover:shadow-lg transition-all duration-300">
+								<h3 class="font-semibold text-lg mb-3 text-primary-light dark:text-primary-light">No-Bullshit Development</h3>
+								<p class="text-secondary-light dark:text-secondary">I avoid overengineering. My focus is always on performance, usability, and clarity.</p>
 							</div>
 						</div>
 					</div>
-					
-					<div class="border-t pt-6">
-						<h2 class="text-2xl font-bold mb-4">🔮 The Bigger Picture</h2>
-						<p class="text-lg mb-4">
+
+					<!-- Core Values -->
+					<div>
+						<div class="flex items-center space-x-3 mb-8">
+							<span class="text-3xl">🧭</span>
+							<h2 class="text-2xl font-bold">Core Values</h2>
+						</div>
+						<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+							<div class="glass-card p-4 hover:shadow-lg transition-all duration-300">
+								<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Innovation</h3>
+								<p class="text-sm text-secondary-light dark:text-secondary">I continuously explore new ways to improve digital life.</p>
+							</div>
+							
+							<div class="glass-card p-4 hover:shadow-lg transition-all duration-300">
+								<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Quality</h3>
+								<p class="text-sm text-secondary-light dark:text-secondary">I don't ship unless I'm confident it works—fast, clean, secure.</p>
+							</div>
+							
+							<div class="glass-card p-4 hover:shadow-lg transition-all duration-300">
+								<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Partnership</h3>
+								<p class="text-sm text-secondary-light dark:text-secondary">I treat clients as collaborators. Their success is my success.</p>
+							</div>
+							
+							<div class="glass-card p-4 hover:shadow-lg transition-all duration-300">
+								<h3 class="font-semibold mb-2 text-primary-light dark:text-primary-light">Integrity</h3>
+								<p class="text-sm text-secondary-light dark:text-secondary">I believe in transparency, fairness, and standing by my word.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- The Bigger Picture -->
+					<div class="glass-card p-8 hover:shadow-lg transition-all duration-300">
+						<div class="flex items-center space-x-3 mb-6">
+							<span class="text-3xl">🔮</span>
+							<h2 class="text-2xl font-bold">The Bigger Picture</h2>
+						</div>
+						<p class="text-lg mb-6 leading-relaxed">
 							My long-term goal is to grow LuceneX into a boutique tech brand recognized for making technology understandable and accessible. I aim to:
 						</p>
-						<ul class="list-disc pl-6 mb-6">
-							<li class="mb-2">Build tools anyone can deploy and use within minutes</li>
-							<li class="mb-2">Help businesses become more independent and resilient</li>
-							<li class="mb-2">Redefine cybersecurity and AI for everyday use</li>
-							<li class="mb-2">Prove that Latvia can lead Europe's next wave of digital innovation</li>
-						</ul>
-						<p class="text-lg">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+							<div class="glass-card p-4 flex items-start space-x-3">
+								<span class="text-accent">⚡️</span>
+								<p>Build tools anyone can deploy and use within minutes</p>
+							</div>
+							<div class="glass-card p-4 flex items-start space-x-3">
+								<span class="text-accent">💪</span>
+								<p>Help businesses become more independent and resilient</p>
+							</div>
+							<div class="glass-card p-4 flex items-start space-x-3">
+								<span class="text-accent">🔒</span>
+								<p>Redefine cybersecurity and AI for everyday use</p>
+							</div>
+							<div class="glass-card p-4 flex items-start space-x-3">
+								<span class="text-accent">🚀</span>
+								<p>Prove that Latvia can lead Europe's next wave of digital innovation</p>
+							</div>
+						</div>
+						<p class="text-lg leading-relaxed text-secondary-light dark:text-secondary">
 							This isn't just a job. It's a responsibility—and I intend to carry it with purpose, clarity, and discipline.
 						</p>
 					</div>
-					
-					<div class="mt-8 bg-blue-50 p-6 rounded-lg">
-						<h2 class="text-2xl font-bold mb-4">LuceneX Brand</h2>
-						<p class="text-lg mb-4">
-							Under the LuceneX brand, I've developed a growing set of systems that reflect my values: performance-first, privacy-conscious, and practical.
-						</p>
-						<a href="https://lucenex.lv" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-							Visit LuceneX
-						</a>
+
+					<!-- LuceneX Brand -->
+					<div class="glass-card p-8 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 hover:shadow-lg transition-all duration-300">
+						<div class="flex items-center justify-between">
+							<div>
+								<h2 class="text-2xl font-bold mb-4">LuceneX Brand</h2>
+								<p class="text-lg mb-4 leading-relaxed">
+									Under the LuceneX brand, I've developed a growing set of systems that reflect my values: performance-first, privacy-conscious, and practical.
+								</p>
+							</div>
+							<a href="https://lucenex.lv" 
+								class="btn-primary whitespace-nowrap">
+								Visit LuceneX
+							</a>
+						</div>
 					</div>
+				</div>
 				</div>
 			</section>
 		</main>
