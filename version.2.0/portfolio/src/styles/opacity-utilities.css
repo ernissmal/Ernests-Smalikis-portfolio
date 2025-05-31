@@ -1,0 +1,63 @@
+/* Opacity utility classes for primary color */
+.bg-primary-10 {
+  background-color: rgba(0, 112, 243, 0.1);
+}
+.bg-primary-20 {
+  background-color: rgba(0, 112, 243, 0.2);
+}
+.bg-primary-30 {
+  background-color: rgba(0, 112, 243, 0.3);
+}
+.dark .dark\:bg-primary-20 {
+  background-color: rgba(0, 112, 243, 0.2);
+}
+.hover\:bg-primary-10:hover {
+  background-color: rgba(0, 112, 243, 0.1);
+}
+.dark .dark\:hover\:bg-primary-20:hover {
+  background-color: rgba(0, 112, 243, 0.2);
+}
+.hover\:bg-primary-30:hover {
+  background-color: rgba(0, 112, 243, 0.3);
+}
+
+/* Opacity utility classes for secondary color */
+.bg-secondary-10 {
+  background-color: rgba(45, 55, 72, 0.1);
+}
+.bg-secondary-20 {
+  background-color: rgba(45, 55, 72, 0.2);
+}
+.hover\:bg-secondary-10:hover {
+  background-color: rgba(45, 55, 72, 0.1);
+}
+.dark .dark\:hover\:bg-secondary-20:hover {
+  background-color: rgba(45, 55, 72, 0.2);
+}
+
+/* Opacity utility classes for accent color */
+.bg-accent-10 {
+  background-color: rgba(255, 59, 48, 0.1);
+}
+.bg-accent-20 {
+  background-color: rgba(255, 59, 48, 0.2);
+}
+.hover\:bg-accent-10:hover {
+  background-color: rgba(255, 59, 48, 0.1);
+}
+.dark .dark\:hover\:bg-accent-20:hover {
+  background-color: rgba(255, 59, 48, 0.2);
+}
+.dark .dark\:bg-accent-20 {
+  background-color: rgba(255, 59, 48, 0.2);
+}
+
+/* Selection text color */
+::selection {
+  background-color: rgba(0, 112, 243, 0.2);
+  color: #0058c6;
+}
+
+.dark ::selection {
+  color: #4d9aff;
+}
