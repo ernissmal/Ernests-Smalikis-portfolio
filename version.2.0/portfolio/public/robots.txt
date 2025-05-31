@@ -1,0 +1,16 @@
+# www.robotstxt.org
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ernests-smalikis.com/sitemap.xml
+
+# Common crawl optimizations
+Crawl-delay: 10
+
+# Block specific paths that don't need indexing
+Disallow: /api/
+Disallow: /cdn-cgi/
+Disallow: /admin/
+Disallow: /drafts/
