@@ -2,21 +2,16 @@
 export interface Props {
 	title: string;
 	description?: string;
-	image?: string;
-	type?: 'website' | 'article';
 }
 
 const { 
 	title,
-	description = "Software Engineer specializing in web development, iOS development, and Python programming. Experienced in building scalable solutions and innovative applications.",
-	image = '/og-image.jpg',
-	type = 'website'
+	description = "Software Engineer specializing in web development, iOS development, and Python programming. View my portfolio, projects, and professional journey."
 } = Astro.props;
 
 // Base URL for canonical and OG tags
-const baseUrl = import.meta.env.SITE ?? "https://ernests-smalikis.com"; // Replace with your actual domain
+const baseUrl = "https://ernests-smalikis.com"; // Replace with your actual domain
 const currentUrl = new URL(Astro.url.pathname, baseUrl).toString();
-const imageUrl = new URL(image, baseUrl).toString();
 ---
 
 <!DOCTYPE html>
@@ -27,37 +22,37 @@ const imageUrl = new URL(image, baseUrl).toString();
 		
 		<!-- Primary Meta Tags -->
 		<title>{title}</title>
-		<meta name="title" content={title}>
-		<meta name="description" content={description}>
-		<meta name="keywords" content="software engineer, web developer, iOS developer, Python programmer, Latvia developer, portfolio, systems architect, automation expert">
-		<link rel="canonical" href={currentUrl}>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="software engineer, web developer, iOS developer, Python programmer, Latvia developer, portfolio, systems architect, automation expert" />
+		<link rel="canonical" href={currentUrl} />
 		
 		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content={type}>
-		<meta property="og:url" content={currentUrl}>
-		<meta property="og:title" content={title}>
-		<meta property="og:description" content={description}>
-		<meta property="og:image" content={imageUrl}>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={currentUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={`${baseUrl}/og-image.jpg`} />
 		
 		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content={currentUrl}>
-		<meta property="twitter:title" content={title}>
-		<meta property="twitter:description" content={description}>
-		<meta property="twitter:image" content={imageUrl}>
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={currentUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={`${baseUrl}/og-image.jpg`} />
 		
 		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		
 		<!-- Font Preloading -->
-		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" as="style">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" as="style" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
 		
 		<!-- Styles -->
-		<link rel="stylesheet" href="/global.css">
+		<link rel="stylesheet" href="/global.css" />
 		
 		<!-- Generator -->
 		<meta name="generator" content={Astro.generator} />
@@ -68,7 +63,7 @@ const imageUrl = new URL(image, baseUrl).toString();
 				"@context": "https://schema.org",
 				"@type": "Person",
 				"name": "Ernests Smalikis",
-				"url": "{baseUrl}",
+				"url": "https://ernests-smalikis.com",
 				"sameAs": [
 					"https://twitter.com/ESmalikis",
 					"https://github.com/ernissmal",
