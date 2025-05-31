@@ -8,6 +8,139 @@ import Navbar from '../components/Navbar.astro';
 	<main class="container mx-auto pt-32 pb-20 px-4">
 		<section class="section max-w-4xl mx-auto">
 			<div class="text-center mb-12">
+				<span class="inline-block px-4 py-1.5 bg-primary bg-opacity-10 text-primary rounded-full text-sm font-medium mb-4 dark:bg-primary dark:bg-opacity-20">Portfolio</span>
+				<h1 class="text-4xl md:text-5xl font-bold mb-4">📐 What I Build</h1>
+				<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+				<p class="text-lg md:text-xl max-w-2xl mx-auto text-secondary">
+					Creating high-impact software solutions with security and performance in mind
+				</p>
+			</div>
+			
+			<div class="card p-8 md:p-12 mb-12 relative overflow-hidden border border-gray-200 dark:border-gray-700">
+				<div class="absolute top-0 right-0 w-32 h-32 -mt-8 -mr-8 bg-primary bg-opacity-5 rounded-full dark:bg-primary dark:bg-opacity-10"></div>
+				<div class="absolute bottom-0 left-0 w-24 h-24 -mb-6 -ml-6 bg-accent bg-opacity-5 rounded-full dark:bg-accent dark:bg-opacity-10"></div>
+				
+				<p class="text-lg md:text-xl mb-8 text-center relative z-10">
+					I focus on lean, high-impact software with a strong backend and security posture. My work spans:
+				</p>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 relative z-10">
+					<ul class="space-y-4 text-lg">
+						<li class="flex items-center space-x-3">
+							<span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary dark:bg-primary dark:bg-opacity-20">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+							</span>
+							<span>Backend APIs & automation tools</span>
+						</li>
+						<li class="flex items-center space-x-3">
+							<span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary dark:bg-primary dark:bg-opacity-20">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+							</span>
+							<span>Static and full-stack web apps</span>
+						</li>
+						<li class="flex items-center space-x-3">
+							<span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary dark:bg-primary dark:bg-opacity-20">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+							</span>
+							<span>AI/ML-powered text processing tools</span>
+						</li>
+					</ul>
+					
+					<ul class="space-y-4 text-lg">
+						<li class="flex items-center space-x-3">
+							<span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary dark:bg-primary dark:bg-opacity-20">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+							</span>
+							<span>Privacy-first tools for individuals</span>
+						</li>
+						<li class="flex items-center space-x-3">
+							<span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full text-primary dark:bg-primary dark:bg-opacity-20">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+							</span>
+							<span>Real-time systems with low-latency</span>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="relative z-10 py-4 px-6 bg-accent bg-opacity-5 border-l-4 border-accent rounded-r-md mb-10 dark:bg-accent dark:bg-opacity-10">
+					<p class="text-lg italic text-center">
+						Tools are tested in the wild — not just in dev environments.
+					</p>
+				</div>
+				
+				<div class="relative z-10">
+					<div class="flex items-center mb-8">
+						<h2 class="text-2xl font-bold text-primary">Featured Projects</h2>
+						<div class="h-px flex-grow bg-gray-200 ml-4 dark:bg-gray-700"></div>
+					</div>
+					
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div class="card border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 relative overflow-hidden dark:border-gray-700">
+							<div class="absolute top-0 right-0 w-16 h-16 bg-primary bg-opacity-10 rounded-bl-full dark:bg-primary dark:bg-opacity-20"></div>
+							<h3 class="text-xl font-bold mb-3 border-b-2 border-primary pb-2 inline-block">XStagePass</h3>
+							<p class="mb-4">Event management software with task-based access control, Google Drive image uploads, and real-time updates. Supports both hosted and self-hosted deployments.</p>
+							<div class="flex gap-2">
+								<span class="text-xs px-2 py-1 bg-primary bg-opacity-10 text-primary rounded dark:bg-primary dark:bg-opacity-20">Backend</span>
+								<span class="text-xs px-2 py-1 bg-primary bg-opacity-10 text-primary rounded dark:bg-primary dark:bg-opacity-20">Real-time</span>
+							</div>
+						</div>
+						
+						<div class="card border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 relative overflow-hidden dark:border-gray-700">
+							<div class="absolute top-0 right-0 w-16 h-16 bg-accent bg-opacity-10 rounded-bl-full dark:bg-accent dark:bg-opacity-20"></div>
+							<h3 class="text-xl font-bold mb-3 border-b-2 border-accent pb-2 inline-block">LuceneX Insight</h3>
+							<p class="mb-4">AI-driven browser tool for extracting and summarizing text while ignoring markup and noise. Designed for OSINT and journalism workflows.</p>
+							<div class="flex gap-2">
+								<span class="text-xs px-2 py-1 bg-accent bg-opacity-10 text-accent rounded dark:bg-accent dark:bg-opacity-20">AI/ML</span>
+								<span class="text-xs px-2 py-1 bg-accent bg-opacity-10 text-accent rounded dark:bg-accent dark:bg-opacity-20">Browser</span>
+							</div>
+						</div>
+						
+						<div class="card border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 relative overflow-hidden dark:border-gray-700">
+							<div class="absolute top-0 right-0 w-16 h-16 bg-secondary bg-opacity-10 rounded-bl-full dark:bg-secondary dark:bg-opacity-20"></div>
+							<h3 class="text-xl font-bold mb-3 border-b-2 border-secondary pb-2 inline-block">SpotEye</h3>
+							<p class="mb-4">Surveillance optimization tool that tags and prioritizes video events using smart filtering and human-in-the-loop learning.</p>
+							<div class="flex gap-2">
+								<span class="text-xs px-2 py-1 bg-secondary bg-opacity-10 text-secondary rounded dark:bg-secondary dark:bg-opacity-20">Video</span>
+								<span class="text-xs px-2 py-1 bg-secondary bg-opacity-10 text-secondary rounded dark:bg-secondary dark:bg-opacity-20">ML</span>
+							</div>
+						</div>
+						
+						<div class="card border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 relative overflow-hidden dark:border-gray-700">
+							<div class="absolute top-0 right-0 w-16 h-16 bg-primary bg-opacity-10 rounded-bl-full dark:bg-primary dark:bg-opacity-20"></div>
+							<h3 class="text-xl font-bold mb-3 border-b-2 border-primary pb-2 inline-block">XHashPass</h3>
+							<p class="mb-4">A battle-tested evolution of my first tool — Password generator. Lightweight, secure, and built with modern cryptographic standards in mind.</p>
+							<div class="flex gap-2">
+								<span class="text-xs px-2 py-1 bg-primary bg-opacity-10 text-primary rounded dark:bg-primary dark:bg-opacity-20">Security</span>
+								<span class="text-xs px-2 py-1 bg-primary bg-opacity-10 text-primary rounded dark:bg-primary dark:bg-opacity-20">Utility</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="text-center">
+				<a href="/vision" class="button-primary inline-flex items-center gap-3 px-6 py-3 shadow-sm">
+					<span>🎯</span>
+					<span>See My Vision</span>
+				</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+	<Navbar />
+	<main class="container mx-auto pt-32 pb-20 px-4">
+		<section class="section max-w-4xl mx-auto">
+			<div class="text-center mb-12">
 				<span class="inline-block px-4 py-1.5 bg-primary bg-opacity-10 text-primary rounded-full text-sm font-medium mb-4">Portfolio</span>
 				<h1 class="text-4xl md:text-5xl font-bold mb-4">📐 What I Build</h1>
 				<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
