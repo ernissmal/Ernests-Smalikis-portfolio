@@ -1,63 +1,76 @@
+/* Define CSS variables for colors */
+:root {
+  --primary: rgb(0, 112, 243);
+  --primary-dark: rgb(0, 88, 198);
+  --primary-light: rgb(77, 154, 255);
+  --secondary: rgb(45, 55, 72);
+  --secondary-dark: rgb(26, 32, 44);
+  --secondary-light: rgb(74, 85, 104);
+  --accent: rgb(255, 59, 48);
+  --accent-dark: rgb(214, 48, 48);
+  --accent-light: rgb(255, 107, 96);
+}
+
 /* Opacity utility classes for primary color */
 .bg-primary-10 {
-  background-color: rgba(0, 112, 243, 0.1);
+  background-color: rgba(var(--primary), 0.1);
 }
 .bg-primary-20 {
-  background-color: rgba(0, 112, 243, 0.2);
+  background-color: rgba(var(--primary), 0.2);
 }
 .bg-primary-30 {
-  background-color: rgba(0, 112, 243, 0.3);
+  background-color: rgba(var(--primary), 0.3);
 }
 .dark .dark\:bg-primary-20 {
-  background-color: rgba(0, 112, 243, 0.2);
+  background-color: rgba(var(--primary), 0.2);
 }
 .hover\:bg-primary-10:hover {
-  background-color: rgba(0, 112, 243, 0.1);
+  background-color: rgba(var(--primary), 0.1);
 }
 .dark .dark\:hover\:bg-primary-20:hover {
-  background-color: rgba(0, 112, 243, 0.2);
+  background-color: rgba(var(--primary), 0.2);
 }
 .hover\:bg-primary-30:hover {
-  background-color: rgba(0, 112, 243, 0.3);
+  background-color: rgba(var(--primary), 0.3);
 }
 
 /* Opacity utility classes for secondary color */
 .bg-secondary-10 {
-  background-color: rgba(45, 55, 72, 0.1);
+  background-color: rgba(var(--secondary), 0.1);
 }
 .bg-secondary-20 {
-  background-color: rgba(45, 55, 72, 0.2);
+  background-color: rgba(var(--secondary), 0.2);
 }
 .hover\:bg-secondary-10:hover {
-  background-color: rgba(45, 55, 72, 0.1);
+  background-color: rgba(var(--secondary), 0.1);
 }
 .dark .dark\:hover\:bg-secondary-20:hover {
-  background-color: rgba(45, 55, 72, 0.2);
+  background-color: rgba(var(--secondary), 0.2);
 }
 
 /* Opacity utility classes for accent color */
 .bg-accent-10 {
-  background-color: rgba(255, 59, 48, 0.1);
+  background-color: rgba(var(--accent), 0.1);
 }
 .bg-accent-20 {
-  background-color: rgba(255, 59, 48, 0.2);
+  background-color: rgba(var(--accent), 0.2);
 }
 .hover\:bg-accent-10:hover {
-  background-color: rgba(255, 59, 48, 0.1);
+  background-color: rgba(var(--accent), 0.1);
 }
 .dark .dark\:hover\:bg-accent-20:hover {
-  background-color: rgba(255, 59, 48, 0.2);
+  background-color: rgba(var(--accent), 0.2);
 }
 .dark .dark\:bg-accent-20 {
-  background-color: rgba(255, 59, 48, 0.2);
+  background-color: rgba(var(--accent), 0.2);
 }
 
 /* Selection text color */
 ::selection {
-  background-color: rgba(0, 112, 243, 0.2);
-  color: #0058c6;
+  background-color: rgba(var(--primary), 0.2);
+  color: var(--primary-dark);
 }
 
 .dark ::selection {
-  color: #4d9aff;
+  color: var(--primary-light);
 }
