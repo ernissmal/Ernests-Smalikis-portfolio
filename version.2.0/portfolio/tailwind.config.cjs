@@ -96,7 +96,6 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/line-clamp'),
         plugin(function({ addUtilities }) {
             // Custom utilities for cards
             const cardUtilities = {
