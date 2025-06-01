@@ -4,7 +4,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ernests-smalikis.com',
+  site: 'https://ernestssmalikis.github.io',
+  base: '/Ernests-Smalikis-portfolio',
   integrations: [
     tailwind({
       configFile: './tailwind.config.cjs',
