@@ -6,41 +6,37 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        run: |
+          git clone https://github.com/ernissmal/Ernests-Smalikis-portfolio.git .
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      
       - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: 'npm'
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+      
       - name: Install dependencies
         run: npm ci
+      
       - name: Build
         run: npm run build
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      
+      - name: Deploy
+        run: |
+          git checkout --orphan gh-pages
+          git rm -rf .
+          mv dist/* .
+          rm -rf dist
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push origin gh-pages --force
